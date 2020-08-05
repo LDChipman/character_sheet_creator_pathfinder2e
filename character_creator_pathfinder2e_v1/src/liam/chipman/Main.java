@@ -52,12 +52,19 @@ public class Main {
 
     public static int chooseOption(int options){
         Scanner scan = new Scanner(System.in);
-        int option = scan.nextInt();
-        if (option > options){
-            delayedPrint("That wasn't one of the given numbers please try again.");
-            option = chooseOption(options);
+        try {
+            int option = scan.nextInt();
+            if (option > options){
+                delayedPrint("That wasn't one of the given numbers please try again.");
+                option = chooseOption(options);
+            }
+            return option;
         }
-        return option;
+        catch (InputMismatchException e){
+            delayedPrint("That wasn't one of the given numbers please try again.");
+            int option = chooseOption(options);
+            return option;
+        }
     }
 
     public static void delayedPrint(String text){
