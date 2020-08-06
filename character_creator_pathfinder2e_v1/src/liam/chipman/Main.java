@@ -11,7 +11,9 @@ public class Main {
     public static int int_score = 0;
     public static int wis_score = 0;
     public static int cha_score = 0;
+
     public static int points = 0;
+
 
     public static void main(String[] args) {
 
@@ -250,8 +252,7 @@ public class Main {
         option = chooseOption(2);
         switch (option) {
             case 1:
-                System.out.println("Pick Race");
-                System.exit(-1);
+                chooseRace();
                 break;
             case 2:
                 setAbilityScores();
@@ -439,8 +440,7 @@ public class Main {
         option = chooseOption(2);
         switch (option) {
             case 1:
-                System.out.println("Pick Race");
-                System.exit(-1);
+                chooseRace();
                 break;
             case 2:
                 setAbilityScores();
@@ -612,8 +612,7 @@ public class Main {
         option = chooseOption(2);
         switch (option) {
             case 1:
-                System.out.println("Pick Race");
-                System.exit(-1);
+                chooseRace();
                 break;
             case 2:
                 setAbilityScores();
@@ -860,8 +859,7 @@ public class Main {
         option = chooseOption(2);
         switch (option) {
             case 1:
-                System.out.println("Pick Race");
-                System.exit(-1);
+                chooseRace();
                 break;
             case 2:
                 setAbilityScores();
@@ -930,8 +928,7 @@ public class Main {
                 option = chooseOption(2);
                 switch (option) {
                     case 1:
-                        System.out.println("Pick Race");
-                        System.exit(-1);
+                        chooseRace();
                         break;
                     case 2:
                         setAbilityScores();
@@ -1602,8 +1599,7 @@ public class Main {
         int option = chooseOption(2);
         switch (option) {
             case 1:
-                System.out.println("Pick Race");
-                System.exit(-1);
+                chooseRace();
                 break;
             case 2:
                 setAbilityScores();
@@ -1677,4 +1673,177 @@ public class Main {
         }
     }
 
+    public static void chooseRace(){
+        delayedPrint("Races:");
+        delayedPrint("Please choose a race:");
+        delayedPrint("1. Dwarf");
+        delayedPrint("2. Elf");
+        delayedPrint("3. Gnome");
+        delayedPrint("4. Half-Elf");
+        delayedPrint("5. Half-Orc");
+        delayedPrint("6. Halfling");
+        delayedPrint("7. Human");
+        delayedPrint("8. Custom Race");
+        delayedPrint("Please enter which option you would like to use:");
+        int option = chooseOption(8);
+        switch (option) {
+            case 1:
+                raceDwarf();
+                break;
+            case 2:
+                raceElf();
+                break;
+            case 3:
+                raceGnome();
+                break;
+            case 4:
+                raceHalfElf();
+                break;
+            case 5:
+                raceHalfOrc();
+                break;
+            case 6:
+                raceHalfling();
+                break;
+            case 7:
+                raceHuman();
+                break;
+            case 8:
+                raceCustom();
+                break;
+        }
+    }
+
+    public static void raceDwarf(){
+        delayedPrint("Dwarf:");
+        delayedPrint("What would you like to know about Dwarves?");
+        delayedPrint("1.  Basic Description");
+        delayedPrint("2.  Physical Description");
+        delayedPrint("3.  Society");
+        delayedPrint("4.  Relations");
+        delayedPrint("5.  Alignment and Religion");
+        delayedPrint("6.  Adventurers");
+        delayedPrint("7.  Names");
+        delayedPrint("8.  Ability Score Changes");
+        delayedPrint("9.  Size");
+        delayedPrint("10. Speed");
+        delayedPrint("11. Vision");
+        delayedPrint("12. Racial Features");
+        delayedPrint("13. Proficiencies");
+        delayedPrint("14. Languages");
+        delayedPrint("15. Choose Dwarf as your race");
+        delayedPrint("16. Return to Race Screen");
+        int option = chooseOption(17);
+        switch (option){
+            case 1:
+                delayedPrint("Dwarves are a stoic but stern race, ensconced in cities carved from the hearts of mountains and fiercely determined to repel the depredations of savage races like orcs and goblins.");
+                delayedPrint("More than any other race, the dwarves have acquired a reputation as dour and humorless craftsmen of the earth.");
+                delayedPrint("It could be said that dwarven history shapes the dark disposition of many dwarves, for they reside in high mountains and dangerous realms below the earth, constantly at war with giants, goblins, and other such horrors.");
+                break;
+            case 2:
+                delayedPrint("Dwarves are short and stocky, standing about a foot shorter than most humans.");
+                delayedPrint(" They have wide, compact bodies and burly frames.");
+                delayedPrint("Dwarves of all genders pride themselves on the length of their hair, which they often braid into intricate patterns, some of which represent specific clans.");
+                delayedPrint("A long beard is a sign of masculinity and honor among the dwarves, and thus a clean-shaven male dwarf is considered weak, untrustworthy, or worse.");
+                delayedPrint("Dwarves typically reach physical adulthood around the age of 25, though their traditionalist culture places more value on completing coming of age ceremonies unique to each clan than reaching a certain age.");
+                delayedPrint("A typical dwarf can live to around 350 years old.");
+                break;
+            case 3:
+                delayedPrint("The ancient surface empire the dwarves once ruled fell long ago, overwhelmed by orc and goblinoid enemies.");
+                delayedPrint("Today’s dwarves today retain many of the qualities that propelled their people to greatness in ancient times: fierceness, gumption, and stubbornness in endeavors ranging from battle and craftsmanship to forging ties with family and friends.");
+                delayedPrint("While the distance between their mountain Sky Citadels can create vast cultural divides between various dwarf clans, most dwarven societies share a number of similarities.");
+                delayedPrint("Nearly all dwarven peoples share a passion for stonework, metalwork, and gem-cutting. Most are highly skilled at architecture and mining, and many share a hatred of giants, orcs, and goblinoids.");
+                delayedPrint("Few dwarves are seen without their clan dagger strapped to their belt.");
+                delayedPrint("This dagger is forged just before a dwarf’s birth and bears the gemstone of their clan.");
+                delayedPrint("A parent uses this dagger to cut the infant’s umbilical cord, making it the first weapon to taste their blood.");
+                break;
+            case 4:
+                delayedPrint("Dwarves and orcs have long dwelt in proximity, theirs a history of violence as old as both their races.");
+                delayedPrint("Dwarves generally distrust and shun half-orcs.");
+                delayedPrint("They find halflings, elves, and gnomes to be too frail, flighty, or \"pretty\" to be worthy of proper respect.");
+                delayedPrint("It is with humans that dwarves share the strongest link, for humans' industrious nature and hearty appetites come closest to matching those of the dwarven ideal.");
+                break;
+            case 5:
+                delayedPrint("Dwarves tend to value honor and closely follow the traditions of their clans and kingdoms.");
+                delayedPrint("They have a strong sense of friendship and justice, though they are often very particular about who they consider a friend.");
+                delayedPrint("They work hard and play harder— especially when strong ale is involved.");
+                delayedPrint("The typical dwarf is lawful good or lawful neutral and prefers to worship deities of those alignments.");
+                delayedPrint("Torag, god of dwarvenkind, is the dwarves’ primary deity, though worship of Torag’s family members is also common.");
+                break;
+            case 6:
+                delayedPrint("Although dwarven adventurers are rare compared to humans, they can be found in most regions of the world.");
+                delayedPrint("Dwarves often leave the confines of their redoubts to seek glory for their clans, to find wealth with which to enrich the fortress-homes of their birth, or to reclaim fallen dwarven citadels from racial enemies.");
+                delayedPrint("Dwarven warfare is often characterized by tunnel fighting and melee combat, and as such most dwarves tend toward classes such as fighters and barbarians.");
+                break;
+            case 7:
+                delayedPrint("Dwarves honor their children with names taken from ancestors or dwarven  heroes, and it’s quite rare to invent a new name or to borrow a name from another culture for a child.");
+                delayedPrint("When introducing themselves, dwarves tend to  list their family and clan, plus any number of other familial connections and honorifics.");
+                delayedPrint("Dwarven names usually contain hard consonants and are rarely more or fewer than two syllables.");
+                delayedPrint("Male Name Examples: Dolgrin, Grunyar, Harsk, Kasmuk, Morgrym, Rogar.");
+                delayedPrint("Female Name Examples: Agna, Bodill, Ingra, Kotri, Rusilka, Yangrit.");
+                break;
+            case 8:
+                delayedPrint("+2 Constitution, +2 Wisdom, -2 Charisma: Dwarves are both tough and wise, but also a bit gruff.");
+                break;
+            case 9:
+                delayedPrint("Medium: Dwarves are Medium creatures and have no bonuses or penalties due to their size.");
+                break;
+            case 10:
+                delayedPrint("Slow and Steady: Dwarves have a base speed of 20 feet, but their speed is never modified by armor or encumbrance.");
+                break;
+            case 11:
+                delayedPrint("Darkvision: Dwarves can see in the dark up to 60 feet.");
+                break;
+            case 12:
+                delayedPrint("Defensive Training: Dwarves get a +4 dodge bonus to AC against monsters of the giant subtype.");
+                delayedPrint("Greed: Dwarves receive a +2 racial bonus to Appraise skill checks made to determine the price of nonmagical goods that contain metals or gemstones.");
+                delayedPrint("Hatred: Dwarves receive a +1 bonus on attack rolls against humanoid creatures of the orc  and goblinoid subtype due to special training against these hated foes.");
+                delayedPrint("Hardy: Dwarves receive a +2 racial bonus on saving throws against poison, spells, and spell-like abilities.");
+                delayedPrint("Stability: Dwarves receive a +4 racial bonus to their Combat Maneuver Defense when resisting a bull rush or trip attempt while standing on the ground.");
+                delayedPrint("Stonecunning: Dwarves receive a +2 bonus on perception checks to potentially notice unusual stonework, such as traps and hidden doors located in stone walls or floors.");
+                delayedPrint("They receive a check to notice such features whenever they pass within 10 feet of them, whether or not they are actively looking.");
+                break;
+            case 13:
+                delayedPrint("Dwarves are Proficient with battleaxes, heavy picks, and warhammers, and treat any weapon with the name \"dwarven\" in its name as a martial weapon.");
+                break;
+            case 14:
+                delayedPrint("Dwarves begin play speaking Common and Dwarven.");
+                delayedPrint("Dwarves with a high intelligence scores can choose from the following: Giant, Gnome, Goblin, Orc, Terran, and Undercommon.");
+                break;
+            case 15:
+                System.out.println("You chose dwarf!");
+                System.exit(-1);
+            case 16:
+                chooseRace();
+        }
+        raceDwarf();
+    }
+
+    public static void raceElf(){
+
+    }
+
+    public static void raceGnome(){
+
+    }
+
+    public static void raceHalfElf(){
+
+    }
+
+    public static void raceHalfOrc(){
+
+    }
+
+    public static void raceHalfling(){
+
+    }
+
+    public static void raceHuman(){
+
+    }
+
+    public static void raceCustom(){
+
+    }
 }
