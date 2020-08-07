@@ -5,20 +5,15 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    public static int str_score = 0;
-    public static int dex_score = 0;
-    public static int con_score = 0;
-    public static int int_score = 0;
-    public static int wis_score = 0;
-    public static int cha_score = 0;
-
     public static int points = 0;
 
-
+    public static player character;
+    
     public static void main(String[] args) {
 
         delayedPrint("Welcome to Pathfinder Character Creator!");
         delayedPrint("Let's get started!");
+        character = new player();
         setAbilityScores();
     }
 
@@ -118,27 +113,27 @@ public class Main {
         int option = chooseOption(6);
         switch (option) {
             case 1:
-                Main.str_score = (int) scores.get(0);
+                character.str_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.str_score = (int) scores.get(1);
+                character.str_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
             case 3:
-                Main.str_score = (int) scores.get(2);
+                character.str_score = (int) scores.get(2);
                 scores.remove(2);
                 break;
             case 4:
-                Main.str_score = (int) scores.get(3);
+                character.str_score = (int) scores.get(3);
                 scores.remove(3);
                 break;
             case 5:
-                Main.str_score = (int) scores.get(4);
+                character.str_score = (int) scores.get(4);
                 scores.remove(4);
                 break;
             case 6:
-                Main.str_score = (int) scores.get(5);
+                character.str_score = (int) scores.get(5);
                 scores.remove(5);
                 break;
         }
@@ -153,23 +148,23 @@ public class Main {
         option = chooseOption(5);
         switch (option) {
             case 1:
-                Main.dex_score = (int) scores.get(0);
+                character.dex_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.dex_score = (int) scores.get(1);
+                character.dex_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
             case 3:
-                Main.dex_score = (int) scores.get(2);
+                character.dex_score = (int) scores.get(2);
                 scores.remove(2);
                 break;
             case 4:
-                Main.dex_score = (int) scores.get(3);
+                character.dex_score = (int) scores.get(3);
                 scores.remove(3);
                 break;
             case 5:
-                Main.dex_score = (int) scores.get(4);
+                character.dex_score = (int) scores.get(4);
                 scores.remove(4);
                 break;
         }
@@ -183,19 +178,19 @@ public class Main {
         option = chooseOption(4);
         switch (option) {
             case 1:
-                Main.con_score = (int) scores.get(0);
+                character.con_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.con_score = (int) scores.get(1);
+                character.con_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
             case 3:
-                Main.con_score = (int) scores.get(2);
+                character.con_score = (int) scores.get(2);
                 scores.remove(2);
                 break;
             case 4:
-                Main.con_score = (int) scores.get(3);
+                character.con_score = (int) scores.get(3);
                 scores.remove(3);
                 break;
         }
@@ -208,15 +203,15 @@ public class Main {
         option = chooseOption(3);
         switch (option) {
             case 1:
-                Main.int_score = (int) scores.get(0);
+                character.int_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.int_score = (int) scores.get(1);
+                character.int_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
             case 3:
-                Main.int_score = (int) scores.get(2);
+                character.int_score = (int) scores.get(2);
                 scores.remove(2);
                 break;
         }
@@ -228,23 +223,23 @@ public class Main {
         option = chooseOption(2);
         switch (option) {
             case 1:
-                Main.wis_score = (int) scores.get(0);
+                character.wis_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.wis_score = (int) scores.get(1);
+                character.wis_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
         }
-        Main.cha_score = (int) scores.get(0);
+        character.cha_score = (int) scores.get(0);
         scores.remove(0);
         delayedPrint("Your ability scores:");
-        delayedPrint("Strength: " + Main.str_score);
-        delayedPrint("Dexterity: " + Main.dex_score);
-        delayedPrint("Constitution: " + Main.con_score);
-        delayedPrint("Intelligence: " + Main.int_score);
-        delayedPrint("Wisdom: " + Main.wis_score);
-        delayedPrint("Charisma: " + Main.cha_score);
+        delayedPrint("Strength: " + character.str_score);
+        delayedPrint("Dexterity: " + character.dex_score);
+        delayedPrint("Constitution: " + character.con_score);
+        delayedPrint("Intelligence: " + character.int_score);
+        delayedPrint("Wisdom: " + character.wis_score);
+        delayedPrint("Charisma: " + character.cha_score);
         delayedPrint("Do you like your ability scores or would you like to re-roll your ability scores?");
         delayedPrint("1. Keep ability scores and move on to the next step");
         delayedPrint("2. Re-roll your ability scores");
@@ -306,27 +301,27 @@ public class Main {
         int option = chooseOption(6);
         switch (option) {
             case 1:
-                Main.str_score = (int) scores.get(0);
+                character.str_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.str_score = (int) scores.get(1);
+                character.str_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
             case 3:
-                Main.str_score = (int) scores.get(2);
+                character.str_score = (int) scores.get(2);
                 scores.remove(2);
                 break;
             case 4:
-                Main.str_score = (int) scores.get(3);
+                character.str_score = (int) scores.get(3);
                 scores.remove(3);
                 break;
             case 5:
-                Main.str_score = (int) scores.get(4);
+                character.str_score = (int) scores.get(4);
                 scores.remove(4);
                 break;
             case 6:
-                Main.str_score = (int) scores.get(5);
+                character.str_score = (int) scores.get(5);
                 scores.remove(5);
                 break;
         }
@@ -341,23 +336,23 @@ public class Main {
         option = chooseOption(5);
         switch (option) {
             case 1:
-                Main.dex_score = (int) scores.get(0);
+                character.dex_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.dex_score = (int) scores.get(1);
+                character.dex_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
             case 3:
-                Main.dex_score = (int) scores.get(2);
+                character.dex_score = (int) scores.get(2);
                 scores.remove(2);
                 break;
             case 4:
-                Main.dex_score = (int) scores.get(3);
+                character.dex_score = (int) scores.get(3);
                 scores.remove(3);
                 break;
             case 5:
-                Main.dex_score = (int) scores.get(4);
+                character.dex_score = (int) scores.get(4);
                 scores.remove(4);
                 break;
         }
@@ -371,19 +366,19 @@ public class Main {
         option = chooseOption(4);
         switch (option) {
             case 1:
-                Main.con_score = (int) scores.get(0);
+                character.con_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.con_score = (int) scores.get(1);
+                character.con_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
             case 3:
-                Main.con_score = (int) scores.get(2);
+                character.con_score = (int) scores.get(2);
                 scores.remove(2);
                 break;
             case 4:
-                Main.con_score = (int) scores.get(3);
+                character.con_score = (int) scores.get(3);
                 scores.remove(3);
                 break;
         }
@@ -396,15 +391,15 @@ public class Main {
         option = chooseOption(3);
         switch (option) {
             case 1:
-                Main.int_score = (int) scores.get(0);
+                character.int_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.int_score = (int) scores.get(1);
+                character.int_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
             case 3:
-                Main.int_score = (int) scores.get(2);
+                character.int_score = (int) scores.get(2);
                 scores.remove(2);
                 break;
         }
@@ -416,23 +411,23 @@ public class Main {
         option = chooseOption(2);
         switch (option) {
             case 1:
-                Main.wis_score = (int) scores.get(0);
+                character.wis_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.wis_score = (int) scores.get(1);
+                character.wis_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
         }
-        Main.cha_score = (int) scores.get(0);
+        character.cha_score = (int) scores.get(0);
         scores.remove(0);
         delayedPrint("Your ability scores:");
-        delayedPrint("Strength: " + Main.str_score);
-        delayedPrint("Dexterity: " + Main.dex_score);
-        delayedPrint("Constitution: " + Main.con_score);
-        delayedPrint("Intelligence: " + Main.int_score);
-        delayedPrint("Wisdom: " + Main.wis_score);
-        delayedPrint("Charisma: " + Main.cha_score);
+        delayedPrint("Strength: " + character.str_score);
+        delayedPrint("Dexterity: " + character.dex_score);
+        delayedPrint("Constitution: " + character.con_score);
+        delayedPrint("Intelligence: " + character.int_score);
+        delayedPrint("Wisdom: " + character.wis_score);
+        delayedPrint("Charisma: " + character.cha_score);
         delayedPrint("Do you like your ability scores or would you like to re-roll your ability scores?");
         delayedPrint("1. Keep ability scores and move on to the next step");
         delayedPrint("2. Re-roll your ability scores");
@@ -478,27 +473,27 @@ public class Main {
         int option = chooseOption(6);
         switch (option) {
             case 1:
-                Main.str_score = (int) scores.get(0);
+                character.str_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.str_score = (int) scores.get(1);
+                character.str_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
             case 3:
-                Main.str_score = (int) scores.get(2);
+                character.str_score = (int) scores.get(2);
                 scores.remove(2);
                 break;
             case 4:
-                Main.str_score = (int) scores.get(3);
+                character.str_score = (int) scores.get(3);
                 scores.remove(3);
                 break;
             case 5:
-                Main.str_score = (int) scores.get(4);
+                character.str_score = (int) scores.get(4);
                 scores.remove(4);
                 break;
             case 6:
-                Main.str_score = (int) scores.get(5);
+                character.str_score = (int) scores.get(5);
                 scores.remove(5);
                 break;
         }
@@ -513,23 +508,23 @@ public class Main {
         option = chooseOption(5);
         switch (option) {
             case 1:
-                Main.dex_score = (int) scores.get(0);
+                character.dex_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.dex_score = (int) scores.get(1);
+                character.dex_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
             case 3:
-                Main.dex_score = (int) scores.get(2);
+                character.dex_score = (int) scores.get(2);
                 scores.remove(2);
                 break;
             case 4:
-                Main.dex_score = (int) scores.get(3);
+                character.dex_score = (int) scores.get(3);
                 scores.remove(3);
                 break;
             case 5:
-                Main.dex_score = (int) scores.get(4);
+                character.dex_score = (int) scores.get(4);
                 scores.remove(4);
                 break;
         }
@@ -543,19 +538,19 @@ public class Main {
         option = chooseOption(4);
         switch (option) {
             case 1:
-                Main.con_score = (int) scores.get(0);
+                character.con_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.con_score = (int) scores.get(1);
+                character.con_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
             case 3:
-                Main.con_score = (int) scores.get(2);
+                character.con_score = (int) scores.get(2);
                 scores.remove(2);
                 break;
             case 4:
-                Main.con_score = (int) scores.get(3);
+                character.con_score = (int) scores.get(3);
                 scores.remove(3);
                 break;
         }
@@ -568,15 +563,15 @@ public class Main {
         option = chooseOption(3);
         switch (option) {
             case 1:
-                Main.int_score = (int) scores.get(0);
+                character.int_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.int_score = (int) scores.get(1);
+                character.int_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
             case 3:
-                Main.int_score = (int) scores.get(2);
+                character.int_score = (int) scores.get(2);
                 scores.remove(2);
                 break;
         }
@@ -588,23 +583,23 @@ public class Main {
         option = chooseOption(2);
         switch (option) {
             case 1:
-                Main.wis_score = (int) scores.get(0);
+                character.wis_score = (int) scores.get(0);
                 scores.remove(0);
                 break;
             case 2:
-                Main.wis_score = (int) scores.get(1);
+                character.wis_score = (int) scores.get(1);
                 scores.remove(1);
                 break;
         }
-        Main.cha_score = (int) scores.get(0);
+        character.cha_score = (int) scores.get(0);
         scores.remove(0);
         delayedPrint("Your ability scores:");
-        delayedPrint("Strength: " + Main.str_score);
-        delayedPrint("Dexterity: " + Main.dex_score);
-        delayedPrint("Constitution: " + Main.con_score);
-        delayedPrint("Intelligence: " + Main.int_score);
-        delayedPrint("Wisdom: " + Main.wis_score);
-        delayedPrint("Charisma: " + Main.cha_score);
+        delayedPrint("Strength: " + character.str_score);
+        delayedPrint("Dexterity: " + character.dex_score);
+        delayedPrint("Constitution: " + character.con_score);
+        delayedPrint("Intelligence: " + character.int_score);
+        delayedPrint("Wisdom: " + character.wis_score);
+        delayedPrint("Charisma: " + character.cha_score);
         delayedPrint("Do you like your ability scores or would you like to re-roll your ability scores?");
         delayedPrint("1. Keep ability scores and move on to the next step");
         delayedPrint("2. Re-roll your ability scores");
@@ -838,20 +833,20 @@ public class Main {
                 dice_pool -= 6;
                 break;
         }
-        Main.str_score = getScoreDicePoolMethod(str_dice);
-        Main.dex_score = getScoreDicePoolMethod(dex_dice);
-        Main.con_score = getScoreDicePoolMethod(con_dice);
-        Main.int_score = getScoreDicePoolMethod(int_dice);
-        Main.wis_score = getScoreDicePoolMethod(wis_dice);
-        Main.cha_score = getScoreDicePoolMethod(cha_dice);
+        character.str_score = getScoreDicePoolMethod(str_dice);
+        character.dex_score = getScoreDicePoolMethod(dex_dice);
+        character.con_score = getScoreDicePoolMethod(con_dice);
+        character.int_score = getScoreDicePoolMethod(int_dice);
+        character.wis_score = getScoreDicePoolMethod(wis_dice);
+        character.cha_score = getScoreDicePoolMethod(cha_dice);
 
         delayedPrint("Your ability scores:");
-        delayedPrint("Strength: " + Main.str_score);
-        delayedPrint("Dexterity: " + Main.dex_score);
-        delayedPrint("Constitution: " + Main.con_score);
-        delayedPrint("Intelligence: " + Main.int_score);
-        delayedPrint("Wisdom: " + Main.wis_score);
-        delayedPrint("Charisma: " + Main.cha_score);
+        delayedPrint("Strength: " + character.str_score);
+        delayedPrint("Dexterity: " + character.dex_score);
+        delayedPrint("Constitution: " + character.con_score);
+        delayedPrint("Intelligence: " + character.int_score);
+        delayedPrint("Wisdom: " + character.wis_score);
+        delayedPrint("Charisma: " + character.cha_score);
         delayedPrint("Do you like your ability scores or would you like to re-roll your ability scores?");
         delayedPrint("1. Keep ability scores and move on to the next step");
         delayedPrint("2. Re-roll your ability scores");
@@ -885,13 +880,13 @@ public class Main {
 
     public static void abilityScorePurchaseMethod() {
         delayedPrint("Which ability score would you like to adjust");
-        delayedPrint("You have " + Main.points + " points to spend");
-        delayedPrint("1. Strength: " + Main.str_score);
-        delayedPrint("2. Dexterity: " + Main.dex_score);
-        delayedPrint("3. Constitution: " + Main.con_score);
-        delayedPrint("4. Intelligence: " + Main.int_score);
-        delayedPrint("5. Wisdom: " + Main.wis_score);
-        delayedPrint("6. Charisma: " + Main.cha_score);
+        delayedPrint("You have " + points + " points to spend");
+        delayedPrint("1. Strength: " + character.str_score);
+        delayedPrint("2. Dexterity: " + character.dex_score);
+        delayedPrint("3. Constitution: " + character.con_score);
+        delayedPrint("4. Intelligence: " + character.int_score);
+        delayedPrint("5. Wisdom: " + character.wis_score);
+        delayedPrint("6. Charisma: " + character.cha_score);
         delayedPrint("7. Finish");
         int option = chooseOption(7);
         switch (option) {
@@ -915,12 +910,12 @@ public class Main {
                 break;
             case 7:
                 delayedPrint("Your ability scores:");
-                delayedPrint("Strength: " + Main.str_score);
-                delayedPrint("Dexterity: " + Main.dex_score);
-                delayedPrint("Constitution: " + Main.con_score);
-                delayedPrint("Intelligence: " + Main.int_score);
-                delayedPrint("Wisdom: " + Main.wis_score);
-                delayedPrint("Charisma: " + Main.cha_score);
+                delayedPrint("Strength: " + character.str_score);
+                delayedPrint("Dexterity: " + character.dex_score);
+                delayedPrint("Constitution: " + character.con_score);
+                delayedPrint("Intelligence: " + character.int_score);
+                delayedPrint("Wisdom: " + character.wis_score);
+                delayedPrint("Charisma: " + character.cha_score);
                 delayedPrint("Do you like your ability scores or would you like to re-roll your ability scores?");
                 delayedPrint("1. Keep ability scores and move on to the next step");
                 delayedPrint("2. Re-roll your ability scores");
@@ -939,12 +934,12 @@ public class Main {
     }
 
     public static void choosePointAmountPurchaseMethod() {
-        Main.str_score = 10;
-        Main.dex_score = 10;
-        Main.con_score = 10;
-        Main.int_score = 10;
-        Main.wis_score = 10;
-        Main.cha_score = 10;
+        character.str_score = 10;
+        character.dex_score = 10;
+        character.con_score = 10;
+        character.int_score = 10;
+        character.wis_score = 10;
+        character.cha_score = 10;
         delayedPrint("Please choose how many points you would like to have");
         delayedPrint("1. Low fantasy 10 Points");
         delayedPrint("2. Standard fantasy 15 Points");
@@ -954,19 +949,19 @@ public class Main {
         int option = chooseOption(4);
         switch (option) {
             case 1:
-                Main.points = 10;
+                points = 10;
                 abilityScorePurchaseMethod();
                 break;
             case 2:
-                Main.points = 15;
+                points = 15;
                 abilityScorePurchaseMethod();
                 break;
             case 3:
-                Main.points = 20;
+                points = 20;
                 abilityScorePurchaseMethod();
                 break;
             case 4:
-                Main.points = 25;
+                points = 25;
                 abilityScorePurchaseMethod();
                 break;
         }
@@ -974,8 +969,8 @@ public class Main {
 
     public static void changeStrengthPurchaseMethod() {
         delayedPrint("Would you like to increase, decrease, or keep your strength score?");
-        delayedPrint("Points remaining: " + Main.points);
-        delayedPrint("Your strength is: " + Main.str_score);
+        delayedPrint("Points remaining: " + points);
+        delayedPrint("Your strength is: " + character.str_score);
         delayedPrint("1. Increase");
         delayedPrint("2. Decrease");
         delayedPrint("3. Keep");
@@ -983,7 +978,7 @@ public class Main {
         int option = chooseOption(3);
         switch (option) {
             case 1:
-                switch (Main.str_score) {
+                switch (character.str_score) {
                     case 7:
                     case 13:
                     case 14:
@@ -993,8 +988,8 @@ public class Main {
                             changeStrengthPurchaseMethod();
                             break;
                         }
-                        Main.points -= 2;
-                        Main.str_score++;
+                        points -= 2;
+                        character.str_score++;
                         break;
                     case 8:
                     case 9:
@@ -1007,8 +1002,8 @@ public class Main {
                             changeStrengthPurchaseMethod();
                             break;
                         }
-                        Main.points--;
-                        Main.str_score++;
+                        points--;
+                        character.str_score++;
                         break;
                     case 15:
                     case 16:
@@ -1018,8 +1013,8 @@ public class Main {
                             changeStrengthPurchaseMethod();
                             break;
                         }
-                        Main.points -= 3;
-                        Main.str_score++;
+                        points -= 3;
+                        character.str_score++;
                         break;
                     case 17:
                         if (points - 4 < 0) {
@@ -1028,8 +1023,8 @@ public class Main {
                             changeStrengthPurchaseMethod();
                             break;
                         }
-                        Main.points -= 4;
-                        Main.str_score++;
+                        points -= 4;
+                        character.str_score++;
                         break;
                     case 18:
                         delayedPrint("You can't raise an ability score above 18");
@@ -1038,32 +1033,32 @@ public class Main {
                 changeStrengthPurchaseMethod();
                 break;
             case 2:
-                switch (Main.str_score) {
+                switch (character.str_score) {
                     case 7:
                         delayedPrint("You can't lower an ability below 7");
                         break;
                     case 8:
                     case 14:
                     case 15:
-                        Main.points += 2;
-                        Main.str_score--;
+                        points += 2;
+                        character.str_score--;
                         break;
                     case 9:
                     case 10:
                     case 11:
                     case 12:
                     case 13:
-                        Main.points++;
-                        Main.str_score--;
+                        points++;
+                        character.str_score--;
                         break;
                     case 16:
                     case 17:
-                        Main.points += 3;
-                        Main.str_score--;
+                        points += 3;
+                        character.str_score--;
                         break;
                     case 18:
-                        Main.points += 4;
-                        Main.str_score--;
+                        points += 4;
+                        character.str_score--;
                         break;
                 }
                 changeStrengthPurchaseMethod();
@@ -1075,8 +1070,8 @@ public class Main {
 
     public static void changeDexterityPurchaseMethod() {
         delayedPrint("Would you like to increase, decrease, or keep your dexterity score?");
-        delayedPrint("Points remaining: " + Main.points);
-        delayedPrint("Your dexterity is: " + Main.dex_score);
+        delayedPrint("Points remaining: " + points);
+        delayedPrint("Your dexterity is: " + character.dex_score);
         delayedPrint("1. Increase");
         delayedPrint("2. Decrease");
         delayedPrint("3. Keep");
@@ -1084,7 +1079,7 @@ public class Main {
         int option = chooseOption(3);
         switch (option) {
             case 1:
-                switch (Main.dex_score) {
+                switch (character.dex_score) {
                     case 7:
                     case 13:
                     case 14:
@@ -1094,8 +1089,8 @@ public class Main {
                             changeDexterityPurchaseMethod();
                             break;
                         }
-                        Main.points -= 2;
-                        Main.dex_score++;
+                        points -= 2;
+                        character.dex_score++;
                         break;
                     case 8:
                     case 9:
@@ -1108,8 +1103,8 @@ public class Main {
                             changeDexterityPurchaseMethod();
                             break;
                         }
-                        Main.points--;
-                        Main.dex_score++;
+                        points--;
+                        character.dex_score++;
                         break;
                     case 15:
                     case 16:
@@ -1119,8 +1114,8 @@ public class Main {
                             changeDexterityPurchaseMethod();
                             break;
                         }
-                        Main.points -= 3;
-                        Main.dex_score++;
+                        points -= 3;
+                        character.dex_score++;
                         break;
                     case 17:
                         if (points - 4 < 0) {
@@ -1129,8 +1124,8 @@ public class Main {
                             changeDexterityPurchaseMethod();
                             break;
                         }
-                        Main.points -= 4;
-                        Main.dex_score++;
+                        points -= 4;
+                        character.dex_score++;
                         break;
                     case 18:
                         delayedPrint("You can't raise an ability score above 18");
@@ -1139,32 +1134,32 @@ public class Main {
                 changeDexterityPurchaseMethod();
                 break;
             case 2:
-                switch (Main.dex_score) {
+                switch (character.dex_score) {
                     case 7:
                         delayedPrint("You can't lower an ability below 7");
                         break;
                     case 8:
                     case 14:
                     case 15:
-                        Main.points += 2;
-                        Main.dex_score--;
+                        points += 2;
+                        character.dex_score--;
                         break;
                     case 9:
                     case 10:
                     case 11:
                     case 12:
                     case 13:
-                        Main.points++;
-                        Main.dex_score--;
+                        points++;
+                        character.dex_score--;
                         break;
                     case 16:
                     case 17:
-                        Main.points += 3;
-                        Main.dex_score--;
+                        points += 3;
+                        character.dex_score--;
                         break;
                     case 18:
-                        Main.points += 4;
-                        Main.dex_score--;
+                        points += 4;
+                        character.dex_score--;
                         break;
                 }
                 changeDexterityPurchaseMethod();
@@ -1176,8 +1171,8 @@ public class Main {
 
     public static void changeConstitutionPurchaseMethod() {
         delayedPrint("Would you like to increase, decrease, or keep your constitution score?");
-        delayedPrint("Points remaining: " + Main.points);
-        delayedPrint("Your constitution is: " + Main.con_score);
+        delayedPrint("Points remaining: " + points);
+        delayedPrint("Your constitution is: " + character.con_score);
         delayedPrint("1. Increase");
         delayedPrint("2. Decrease");
         delayedPrint("3. Keep");
@@ -1185,7 +1180,7 @@ public class Main {
         int option = chooseOption(3);
         switch (option) {
             case 1:
-                switch (Main.con_score) {
+                switch (character.con_score) {
                     case 7:
                     case 13:
                     case 14:
@@ -1195,8 +1190,8 @@ public class Main {
                             changeConstitutionPurchaseMethod();
                             break;
                         }
-                        Main.points -= 2;
-                        Main.con_score++;
+                        points -= 2;
+                        character.con_score++;
                         break;
                     case 8:
                     case 9:
@@ -1209,8 +1204,8 @@ public class Main {
                             changeConstitutionPurchaseMethod();
                             break;
                         }
-                        Main.points--;
-                        Main.con_score++;
+                        points--;
+                        character.con_score++;
                         break;
                     case 15:
                     case 16:
@@ -1220,8 +1215,8 @@ public class Main {
                             changeConstitutionPurchaseMethod();
                             break;
                         }
-                        Main.points -= 3;
-                        Main.con_score++;
+                        points -= 3;
+                        character.con_score++;
                         break;
                     case 17:
                         if (points - 4 < 0) {
@@ -1230,8 +1225,8 @@ public class Main {
                             changeConstitutionPurchaseMethod();
                             break;
                         }
-                        Main.points -= 4;
-                        Main.con_score++;
+                        points -= 4;
+                        character.con_score++;
                         break;
                     case 18:
                         delayedPrint("You can't raise an ability score above 18");
@@ -1240,32 +1235,32 @@ public class Main {
                 changeConstitutionPurchaseMethod();
                 break;
             case 2:
-                switch (Main.con_score) {
+                switch (character.con_score) {
                     case 7:
                         delayedPrint("You can't lower an ability below 7");
                         break;
                     case 8:
                     case 14:
                     case 15:
-                        Main.points += 2;
-                        Main.con_score--;
+                        points += 2;
+                        character.con_score--;
                         break;
                     case 9:
                     case 10:
                     case 11:
                     case 12:
                     case 13:
-                        Main.points++;
-                        Main.con_score--;
+                        points++;
+                        character.con_score--;
                         break;
                     case 16:
                     case 17:
-                        Main.points += 3;
-                        Main.con_score--;
+                        points += 3;
+                        character.con_score--;
                         break;
                     case 18:
-                        Main.points += 4;
-                        Main.con_score--;
+                        points += 4;
+                        character.con_score--;
                         break;
                 }
                 changeConstitutionPurchaseMethod();
@@ -1277,8 +1272,8 @@ public class Main {
 
     public static void changeIntelligencePurchaseMethod() {
         delayedPrint("Would you like to increase, decrease, or keep your intelligence score?");
-        delayedPrint("Points remaining: " + Main.points);
-        delayedPrint("Your intelligence is: " + Main.int_score);
+        delayedPrint("Points remaining: " + points);
+        delayedPrint("Your intelligence is: " + character.int_score);
         delayedPrint("1. Increase");
         delayedPrint("2. Decrease");
         delayedPrint("3. Keep");
@@ -1286,7 +1281,7 @@ public class Main {
         int option = chooseOption(3);
         switch (option) {
             case 1:
-                switch (Main.int_score) {
+                switch (character.int_score) {
                     case 7:
                     case 13:
                     case 14:
@@ -1296,8 +1291,8 @@ public class Main {
                             changeIntelligencePurchaseMethod();
                             break;
                         }
-                        Main.points -= 2;
-                        Main.int_score++;
+                        points -= 2;
+                        character.int_score++;
                         break;
                     case 8:
                     case 9:
@@ -1310,8 +1305,8 @@ public class Main {
                             changeIntelligencePurchaseMethod();
                             break;
                         }
-                        Main.points--;
-                        Main.int_score++;
+                        points--;
+                        character.int_score++;
                         break;
                     case 15:
                     case 16:
@@ -1321,8 +1316,8 @@ public class Main {
                             changeIntelligencePurchaseMethod();
                             break;
                         }
-                        Main.points -= 3;
-                        Main.int_score++;
+                        points -= 3;
+                        character.int_score++;
                         break;
                     case 17:
                         if (points - 4 < 0) {
@@ -1331,8 +1326,8 @@ public class Main {
                             changeIntelligencePurchaseMethod();
                             break;
                         }
-                        Main.points -= 4;
-                        Main.int_score++;
+                        points -= 4;
+                        character.int_score++;
                         break;
                     case 18:
                         delayedPrint("You can't raise an ability score above 18");
@@ -1341,32 +1336,32 @@ public class Main {
                 changeIntelligencePurchaseMethod();
                 break;
             case 2:
-                switch (Main.int_score) {
+                switch (character.int_score) {
                     case 7:
                         delayedPrint("You can't lower an ability below 7");
                         break;
                     case 8:
                     case 14:
                     case 15:
-                        Main.points += 2;
-                        Main.int_score--;
+                        points += 2;
+                        character.int_score--;
                         break;
                     case 9:
                     case 10:
                     case 11:
                     case 12:
                     case 13:
-                        Main.points++;
-                        Main.int_score--;
+                        points++;
+                        character.int_score--;
                         break;
                     case 16:
                     case 17:
-                        Main.points += 3;
-                        Main.int_score--;
+                        points += 3;
+                        character.int_score--;
                         break;
                     case 18:
-                        Main.points += 4;
-                        Main.int_score--;
+                        points += 4;
+                        character.int_score--;
                         break;
                 }
                 changeIntelligencePurchaseMethod();
@@ -1378,8 +1373,8 @@ public class Main {
 
     public static void changeWisdomPurchaseMethod() {
         delayedPrint("Would you like to increase, decrease, or keep your wisdom score?");
-        delayedPrint("Points remaining: " + Main.points);
-        delayedPrint("Your wisdom is: " + Main.wis_score);
+        delayedPrint("Points remaining: " + points);
+        delayedPrint("Your wisdom is: " + character.wis_score);
         delayedPrint("1. Increase");
         delayedPrint("2. Decrease");
         delayedPrint("3. Keep");
@@ -1387,7 +1382,7 @@ public class Main {
         int option = chooseOption(3);
         switch (option) {
             case 1:
-                switch (Main.wis_score) {
+                switch (character.wis_score) {
                     case 7:
                     case 13:
                     case 14:
@@ -1397,8 +1392,8 @@ public class Main {
                             changeWisdomPurchaseMethod();
                             break;
                         }
-                        Main.points -= 2;
-                        Main.wis_score++;
+                        points -= 2;
+                        character.wis_score++;
                         break;
                     case 8:
                     case 9:
@@ -1411,8 +1406,8 @@ public class Main {
                             changeWisdomPurchaseMethod();
                             break;
                         }
-                        Main.points--;
-                        Main.wis_score++;
+                        points--;
+                        character.wis_score++;
                         break;
                     case 15:
                     case 16:
@@ -1422,8 +1417,8 @@ public class Main {
                             changeWisdomPurchaseMethod();
                             break;
                         }
-                        Main.points -= 3;
-                        Main.wis_score++;
+                        points -= 3;
+                        character.wis_score++;
                         break;
                     case 17:
                         if (points - 4 < 0) {
@@ -1432,8 +1427,8 @@ public class Main {
                             changeWisdomPurchaseMethod();
                             break;
                         }
-                        Main.points -= 4;
-                        Main.wis_score++;
+                        points -= 4;
+                        character.wis_score++;
                         break;
                     case 18:
                         delayedPrint("You can't raise an ability score above 18");
@@ -1442,32 +1437,32 @@ public class Main {
                 changeWisdomPurchaseMethod();
                 break;
             case 2:
-                switch (Main.wis_score) {
+                switch (character.wis_score) {
                     case 7:
                         delayedPrint("You can't lower an ability below 7");
                         break;
                     case 8:
                     case 14:
                     case 15:
-                        Main.points += 2;
-                        Main.wis_score--;
+                        points += 2;
+                        character.wis_score--;
                         break;
                     case 9:
                     case 10:
                     case 11:
                     case 12:
                     case 13:
-                        Main.points++;
-                        Main.wis_score--;
+                        points++;
+                        character.wis_score--;
                         break;
                     case 16:
                     case 17:
-                        Main.points += 3;
-                        Main.wis_score--;
+                        points += 3;
+                        character.wis_score--;
                         break;
                     case 18:
-                        Main.points += 4;
-                        Main.wis_score--;
+                        points += 4;
+                        character.wis_score--;
                         break;
                 }
                 changeWisdomPurchaseMethod();
@@ -1479,8 +1474,8 @@ public class Main {
 
     public static void changeCharismaPurchaseMethod() {
         delayedPrint("Would you like to increase, decrease, or keep your charisma score?");
-        delayedPrint("Points remaining: " + Main.points);
-        delayedPrint("Your charisma is: " + Main.cha_score);
+        delayedPrint("Points remaining: " + points);
+        delayedPrint("Your charisma is: " + character.cha_score);
         delayedPrint("1. Increase");
         delayedPrint("2. Decrease");
         delayedPrint("3. Keep");
@@ -1488,7 +1483,7 @@ public class Main {
         int option = chooseOption(3);
         switch (option) {
             case 1:
-                switch (Main.cha_score) {
+                switch (character.cha_score) {
                     case 7:
                     case 13:
                     case 14:
@@ -1498,8 +1493,8 @@ public class Main {
                             changeCharismaPurchaseMethod();
                             break;
                         }
-                        Main.points -= 2;
-                        Main.cha_score++;
+                        points -= 2;
+                        character.cha_score++;
                         break;
                     case 8:
                     case 9:
@@ -1512,8 +1507,8 @@ public class Main {
                             changeCharismaPurchaseMethod();
                             break;
                         }
-                        Main.points--;
-                        Main.cha_score++;
+                        points--;
+                        character.cha_score++;
                         break;
                     case 15:
                     case 16:
@@ -1523,8 +1518,8 @@ public class Main {
                             changeCharismaPurchaseMethod();
                             break;
                         }
-                        Main.points -= 3;
-                        Main.cha_score++;
+                        points -= 3;
+                        character.cha_score++;
                         break;
                     case 17:
                         if (points - 4 < 0) {
@@ -1533,8 +1528,8 @@ public class Main {
                             changeCharismaPurchaseMethod();
                             break;
                         }
-                        Main.points -= 4;
-                        Main.cha_score++;
+                        points -= 4;
+                        character.cha_score++;
                         break;
                     case 18:
                         delayedPrint("You can't raise an ability score above 18");
@@ -1543,32 +1538,32 @@ public class Main {
                 changeCharismaPurchaseMethod();
                 break;
             case 2:
-                switch (Main.cha_score) {
+                switch (character.cha_score) {
                     case 7:
                         delayedPrint("You can't lower an ability below 7");
                         break;
                     case 8:
                     case 14:
                     case 15:
-                        Main.points += 2;
-                        Main.cha_score--;
+                        points += 2;
+                        character.cha_score--;
                         break;
                     case 9:
                     case 10:
                     case 11:
                     case 12:
                     case 13:
-                        Main.points++;
-                        Main.cha_score--;
+                        points++;
+                        character.cha_score--;
                         break;
                     case 16:
                     case 17:
-                        Main.points += 3;
-                        Main.cha_score--;
+                        points += 3;
+                        character.cha_score--;
                         break;
                     case 18:
-                        Main.points += 4;
-                        Main.cha_score--;
+                        points += 4;
+                        character.cha_score--;
                         break;
                 }
                 changeCharismaPurchaseMethod();
@@ -1586,12 +1581,12 @@ public class Main {
         setWisdomManualInput();
         setCharismaManualInput();
         delayedPrint("Your ability scores:");
-        delayedPrint("Strength: " + Main.str_score);
-        delayedPrint("Dexterity: " + Main.dex_score);
-        delayedPrint("Constitution: " + Main.con_score);
-        delayedPrint("Intelligence: " + Main.int_score);
-        delayedPrint("Wisdom: " + Main.wis_score);
-        delayedPrint("Charisma: " + Main.cha_score);
+        delayedPrint("Strength: " + character.str_score);
+        delayedPrint("Dexterity: " + character.dex_score);
+        delayedPrint("Constitution: " + character.con_score);
+        delayedPrint("Intelligence: " + character.int_score);
+        delayedPrint("Wisdom: " + character.wis_score);
+        delayedPrint("Charisma: " + character.cha_score);
         delayedPrint("Do you like your ability scores or would you like to re-roll your ability scores?");
         delayedPrint("1. Keep ability scores and move on to the next step");
         delayedPrint("2. Re-roll your ability scores");
@@ -1611,7 +1606,7 @@ public class Main {
         delayedPrint("Please enter what you would like your strength to be:");
         try {
             Scanner scan = new Scanner(System.in);
-            Main.str_score = scan.nextInt();
+            character.str_score = scan.nextInt();
         } catch (InputMismatchException e) {
             delayedPrint("Please enter a number");
             setStrengthManualInput();
@@ -1622,7 +1617,7 @@ public class Main {
         delayedPrint("Please enter what you would like your dexterity to be:");
         try {
             Scanner scan = new Scanner(System.in);
-            Main.dex_score = scan.nextInt();
+            character.dex_score = scan.nextInt();
         } catch (InputMismatchException e) {
             delayedPrint("Please enter a number");
             setDexterityManualInput();
@@ -1633,7 +1628,7 @@ public class Main {
         delayedPrint("Please enter what you would like your constitution to be:");
         try {
             Scanner scan = new Scanner(System.in);
-            Main.con_score = scan.nextInt();
+            character.con_score = scan.nextInt();
         } catch (InputMismatchException e) {
             delayedPrint("Please enter a number");
             setConstitutionManualInput();
@@ -1644,7 +1639,7 @@ public class Main {
         delayedPrint("Please enter what you would like your intelligence to be:");
         try {
             Scanner scan = new Scanner(System.in);
-            Main.int_score = scan.nextInt();
+            character.int_score = scan.nextInt();
         } catch (InputMismatchException e) {
             delayedPrint("Please enter a number");
             setIntelligenceManualInput();
@@ -1655,7 +1650,7 @@ public class Main {
         delayedPrint("Please enter what you would like your wisdom to be:");
         try {
             Scanner scan = new Scanner(System.in);
-            Main.wis_score = scan.nextInt();
+            character.wis_score = scan.nextInt();
         } catch (InputMismatchException e) {
             delayedPrint("Please enter a number");
             setWisdomManualInput();
@@ -1666,7 +1661,7 @@ public class Main {
         delayedPrint("Please enter what you would like your charisma to be:");
         try {
             Scanner scan = new Scanner(System.in);
-            Main.cha_score = scan.nextInt();
+            character.cha_score = scan.nextInt();
         } catch (InputMismatchException e) {
             delayedPrint("Please enter a number");
             setCharismaManualInput();
