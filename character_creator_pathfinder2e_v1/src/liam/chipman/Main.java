@@ -2028,7 +2028,98 @@ public class Main {
     }
 
     public static void raceHalfElf(){
+        delayedPrint("Half-Elf:");
+        delayedPrint("What would you like to know about Half-Elfs?");
+        delayedPrint("1.  Basic Description");
+        delayedPrint("2.  Physical Description");
+        delayedPrint("3.  Society");
+        delayedPrint("4.  Relations");
+        delayedPrint("5.  Alignment and Religion");
+        delayedPrint("6.  Adventurers");
+        delayedPrint("7.  Names");
+        delayedPrint("8.  Ability Score Changes");
+        delayedPrint("9.  Size");
+        delayedPrint("10. Speed");
+        delayedPrint("11. Vision");
+        delayedPrint("12. Racial Features");
+        delayedPrint("13. Proficiencies");
+        delayedPrint("14. Languages");
+        delayedPrint("15. Choose Half-Elf as your race");
+        delayedPrint("16. Return to Race Screen");
+        int option = chooseOption(17);
+        switch (option){
+            case 1:
+                delayedPrint("Elves have long drawn the covetous gazes of other races.");
+                delayedPrint("Their generous life spans, magical affinity, and inherent grace each contribute to the admiration or bitter envy of their neighbors.");
+                delayedPrint("Of all their traits, however, none so entrance their human associates as their beauty. Since the two races first came into contact with each other, the humans have held up elves as models of physical perfection, seeing in the fair folk idealized versions of themselves.");
+                delayedPrint("For their part, many elves find humans attractive despite their comparatively barbaric ways, drawn to the passion and impetuosity with which members of the younger race play out their brief lives.");
+                delayedPrint("Sometimes this mutual infatuation leads to romantic relationships.");
+                delayedPrint("Though usually short-lived, even by human standards, these trysts commonly lead to the birth of halfelves, a race descended of two cultures yet inheritor of neither.");
+                delayedPrint("Half-elves can breed with one another, but even these “pureblood” half-elves tend to be viewed as bastards by humans and elves alike.");
+                break;
+            case 2:
+                delayedPrint("Half-elves stand taller than humans but shorter than elves.");
+                delayedPrint("They inherit the lean build and comely features of their elven lineage, but their skin color is dictated by their human side.");
+                delayedPrint("While half-elves retain the pointed ears of elves, theirs are more rounded and less pronounced.");
+                delayedPrint("A half-elf's human-like eyes tend to range a spectrum of exotic colors running from amber or violet to emerald green and deep blue.");
+                break;
+            case 3:
+                delayedPrint("The lack of a unified homeland and culture forces half-elves to remain versatile, able to conform to nearly any environment.");
+                delayedPrint("While often attractive to both races for the same reasons as their parents, half-elves rarely fit in with either humans or elves, as both races see too much evidence of the other in them.");
+                delayedPrint("This lack of acceptance weighs heavily on many half-elves, yet others are bolstered by their unique status, seeing in their lack of a formalized culture the ultimate freedom.");
+                delayedPrint("As a result, half-elves are incredibly adaptable, capable of adjusting their mindsets and talents to whatever societies they find themselves in.");
+                break;
+            case 4:
+                delayedPrint("A half-elf understands loneliness, and knows that character is often less a product of race than of life experience.");
+                delayedPrint("As such, half-elves are often open to friendships and alliances with other races, and less likely to rely on first impressions when forming opinions of new acquaintances.");
+                break;
+            case 5:
+                delayedPrint("Half-elves' isolation strongly influences their characters and philosophies.");
+                delayedPrint("Cruelty does not come naturally to them, nor does blending in and bending to societal convention—as a result, most half-elves are chaotic good.");
+                delayedPrint("Half-elves' lack of a unified culture makes them less likely to turn to religion, but those who do generally follow the common faiths of their homeland.");
+                break;
+            case 6:
+                delayedPrint("Half-elves tend to be itinerants, wandering the lands in search of a place they might finally call home.");
+                delayedPrint("The desire to prove oneself to the community and establish a personal identity—or even a legacy—drives many half-elf adventurers to lives of bravery.");
+                break;
+            case 7:
+                delayedPrint("Male Name Examples: Calathes, Encinal, Kyras, Narciso, Quiray, Satinder, Seltyiel, Zirul.");
+                delayedPrint("Female Name Examples: Cathran, Elsbeth, Iandoli, Kieyanna, Lialda, Maddela, Reda, Tamarie.");
+                break;
+            case 8:
+                delayedPrint("+2 to One Ability Score: Half-elf characters get a +2 bonus to one ability score of their choice at creation to represent their varied nature.");
+                break;
+            case 9:
+                delayedPrint("Medium: Half-elves are Medium creatures and have no bonuses or penalties due to their size");
+                break;
+            case 10:
+                delayedPrint("Normal Speed: Half-elves have a base speed of 30 feet");
+                break;
+            case 11:
+                delayedPrint("Low-Light Vision: Half-elves can see twice as far as humans in conditions of dim light");
+                break;
+            case 12:
+                delayedPrint("Adaptability: Half-elves receive Skill Focus as a bonus feat at 1st level.");
+                delayedPrint("Elf Blood: Half-elves count as both elves and humans for any effect related to race.");
+                delayedPrint("Elven Immunities: Half-elves are immune to magic sleep effects and get a +2 racial saving throw bonus against enchantment spells and effects.");
+                delayedPrint("Keen Senses: Gnomes receive a +2 racial bonus on Perception skill checks.");
+                delayedPrint("Multitalented: Half-elves choose two favored classes at first level and gain +1 hit point or +1 skill point whenever they take a level in either one of those classes.");
 
+                break;
+            case 13:
+                delayedPrint("Half-Elves don't get any proficiencies.");
+                break;
+            case 14:
+                delayedPrint("Half-elves begin play speaking Common and Elven.");
+                delayedPrint("Half-elves with high Intelligence scores can choose any languages they want (except secret languages, such as Druidic).");
+                break;
+            case 15:
+                System.out.println("You chose Half-Elf!");
+                System.exit(-1);
+            case 16:
+                chooseRace();
+        }
+        raceHalfElf();
     }
 
     public static void raceHalfOrc(){
