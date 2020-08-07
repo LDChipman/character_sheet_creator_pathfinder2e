@@ -2210,7 +2210,104 @@ public class Main {
     }
 
     public static void raceHalfling(){
-
+        delayedPrint("Halfling:");
+        delayedPrint("What would you like to know about Halflings?");
+        delayedPrint("1.  Basic Description");
+        delayedPrint("2.  Physical Description");
+        delayedPrint("3.  Society");
+        delayedPrint("4.  Relations");
+        delayedPrint("5.  Alignment and Religion");
+        delayedPrint("6.  Adventurers");
+        delayedPrint("7.  Names");
+        delayedPrint("8.  Ability Score Changes");
+        delayedPrint("9.  Size");
+        delayedPrint("10. Speed");
+        delayedPrint("11. Vision");
+        delayedPrint("12. Racial Features");
+        delayedPrint("13. Proficiencies");
+        delayedPrint("14. Languages");
+        delayedPrint("15. Choose Halfling as your race");
+        delayedPrint("16. Return to Race Screen");
+        int option = chooseOption(17);
+        switch (option){
+            case 1:
+                delayedPrint("Optimistic and cheerful by nature, blessed with uncanny luck and driven by a powerful wanderlust, halflings make up for their short stature with an abundance of bravado and curiosity.");
+                delayedPrint("At once excitable and easy-going, halflings like to keep an even temper and a steady eye on opportunity, and are not as prone as some of the more volatile races to violent or emotional outbursts.");
+                delayedPrint("Even in the jaws of catastrophe, a halfling almost never loses his sense of humor.");
+                delayedPrint("Halflings are inveterate opportunists.");
+                delayedPrint("Unable to physically defend themselves from the rigors of the world, they know when to bend with the wind and when to hide away.");
+                delayedPrint("Yet a halfling's curiosity often overwhelms his good sense, leading to poor decisions and narrow escapes.");
+                delayedPrint("Though their curiosity drives them to travel and seek new places and experiences, halflings possess a strong sense of house and home, often spending above their means to enhance the comforts of home life.");
+                break;
+            case 2:
+                delayedPrint("Halflings rise to a humble height of 3 feet.");
+                delayedPrint("They prefer to walk barefoot, leading to the bottoms of their feet being roughly calloused.");
+                delayedPrint("Tufts of thick, curly hair warm the tops of their broad, tanned feet.");
+                delayedPrint("Their skin tends toward a rich almond color and their hair toward light shades of brown.");
+                delayedPrint("A halfling's ears are pointed, but proportionately not much larger than those of a human.");
+                break;
+            case 3:
+                delayedPrint("Halflings claim no cultural homeland and control no settlements larger than rural assemblies of free towns.");
+                delayedPrint("Far more often, they dwell at the knees of their human cousins in human cities, eking out livings as they can from the scraps of larger societies.");
+                delayedPrint("Many halflings lead perfectly fulfilling lives in the shadow of their larger neighbors, while some prefer more nomadic lives on the road, traveling the world and experiencing all it has to offer.");
+                break;
+            case 4:
+                delayedPrint("A typical halfling prides himself on his ability to go unnoticed by other races—it is this trait that allows so many halflings to excel at thievery and trickery.");
+                delayedPrint("Most halflings, knowing full well the stereotyped view other races take of them as a result, go out of their way to be forthcoming and friendly to the bigger races when they're not trying to go unnoticed.");
+                delayedPrint("They get along fairly well with gnomes, although most halflings regard these eccentric creatures with a hefty dose of caution.");
+                delayedPrint("Halflings coexist well with humans as a general rule, but since some of the more aggressive human societies value halflings as slaves, halflings try not to grow too complacent when dealing with them.");
+                delayedPrint("Halflings respect elves and dwarves, but these races generally live in remote regions far from the comforts of civilization that halflings enjoy, thus limiting opportunities for interaction.");
+                delayedPrint("Only half-orcs are generally shunned by halflings, for their great size and violent natures are a bit too intimidating for most halflings to cope with.");
+                break;
+            case 5:
+                delayedPrint("Halflings are loyal to their friends and families, but since they dwell in a world dominated by races twice as large as themselves, they've come to grips with the fact that sometimes they'll need to scrap and scrounge for survival.");
+                delayedPrint("Most halflings are neutral as a result.");
+                delayedPrint("Halflings favor gods that encourage small, tight-knit communities, be they for good (like Erastil) or evil (like Norgorber).");
+                break;
+            case 6:
+                delayedPrint("Their inherent luck coupled with their insatiable wanderlust makes halflings ideal for lives of adventure.");
+                delayedPrint("Other such vagabonds tend to put up with the curious race in hopes that some of their mystical luck will rub off.");
+                break;
+            case 7:
+                delayedPrint("Halfling names are usually two to three syllables, with a gentle sound that avoids hard consonants.");
+                delayedPrint("Preferring their names to sound humble, halflings see overly long or complex names as a sign of arrogance.");
+                delayedPrint("This goes only for their own people, however—halflings have names that suit them, and they understand that elves and humans might have longer names to suit their own aesthetics.");
+                delayedPrint("Humans in particular have a tendency to refer to halflings by nicknames, with “Lucky” being common to the point of absurdity.");
+                delayedPrint("Male Name Examples: Antal, Boram, Evan, Jamir, Kaleb, Lem, Miro, Sumak.");
+                delayedPrint("Female Name Examples: Anafa, Bellis, Etune, Filiu, Lissa, Marra, Rillka, Sistra, Yamyra.");
+                break;
+            case 8:
+                delayedPrint("+2 Dexterity, +2 Charisma, –2 Strength: Halflings are nimble and strong-willed, but their small stature makes them weaker than other races.");
+                break;
+            case 9:
+                delayedPrint("Small: Halflings are Small creatures and gain a +1 size bonus to their AC, a +1 size bonus on attack rolls, a –1 penalty to their Combat Maneuver Bonus and Combat Maneuver Defense, and a +4 size bonus on Stealth checks.");
+                break;
+            case 10:
+                delayedPrint("Slow Speed: Halflings have a base speed of 20 feet.");
+                break;
+            case 11:
+                delayedPrint("Halflings have no changes to vision");
+                break;
+            case 12:
+                delayedPrint("Fearless: Halflings receive a +2 racial bonus on all saving throws against fear. This bonus stacks with the bonus granted by halfling luck.");
+                delayedPrint("Halfling Luck: Halflings receive a +1 racial bonus on all saving throws.");
+                delayedPrint("Keen Senses: Halflings receive a +2 racial bonus on Perception skill checks.");
+                delayedPrint("Sure-Footed: Halflings receive a +2 racial bonus on Acrobatics and Climb skill checks.");
+                break;
+            case 13:
+                delayedPrint("Halflings are proficient with slings and treat any weapon with the word \"halfling\" in its name as a martial weapon.\n");
+                break;
+            case 14:
+                delayedPrint("Halflings begin play speaking Common and Halfling.");
+                delayedPrint("Halflings with high Intelligence scores can choose from the following: Dwarven, Elven, Gnome, and Goblin");
+                break;
+            case 15:
+                System.out.println("You chose Halfling!");
+                System.exit(-1);
+            case 16:
+                chooseRace();
+        }
+        raceHalfling();
     }
 
     public static void raceHuman(){
