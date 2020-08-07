@@ -1799,7 +1799,7 @@ public class Main {
                 delayedPrint("They receive a check to notice such features whenever they pass within 10 feet of them, whether or not they are actively looking.");
                 break;
             case 13:
-                delayedPrint("Dwarves are Proficient with battleaxes, heavy picks, and warhammers, and treat any weapon with the name \"dwarven\" in its name as a martial weapon.");
+                delayedPrint("Dwarves are proficient with battleaxes, heavy picks, and warhammers, and treat any weapon with the name \"dwarven\" in its name as a martial weapon.");
                 break;
             case 14:
                 delayedPrint("Dwarves begin play speaking Common and Dwarven.");
@@ -1815,11 +1815,216 @@ public class Main {
     }
 
     public static void raceElf(){
-
+        delayedPrint("Elf:");
+        delayedPrint("What would you like to know about Elves?");
+        delayedPrint("1.  Basic Description");
+        delayedPrint("2.  Physical Description");
+        delayedPrint("3.  Society");
+        delayedPrint("4.  Relations");
+        delayedPrint("5.  Alignment and Religion");
+        delayedPrint("6.  Adventurers");
+        delayedPrint("7.  Names");
+        delayedPrint("8.  Ability Score Changes");
+        delayedPrint("9.  Size");
+        delayedPrint("10. Speed");
+        delayedPrint("11. Vision");
+        delayedPrint("12. Racial Features");
+        delayedPrint("13. Proficiencies");
+        delayedPrint("14. Languages");
+        delayedPrint("15. Choose Elf as your race");
+        delayedPrint("16. Return to Race Screen");
+        int option = chooseOption(17);
+        switch (option){
+            case 1:
+                delayedPrint("The long-lived elves are children of the natural world, similar in many superficial ways to fey creatures, yet different as well.");
+                delayedPrint("Elves value their privacy and traditions, and while they are often slow to make friends, at both the personal and national levels, once an outsider is accepted as a comrade, such alliances can last for generations.");
+                delayedPrint("Elves have a curious attachment to their surroundings, perhaps a result of their incredibly long lifespans or some deeper, more mystical reason.");
+                delayedPrint("Elves who dwell in a region for long find themselves physically adapting to match their surroundings, most noticeably taking on coloration reflecting the local environment.");
+                delayedPrint("Those elves that spend lives among the short-lived races, on the other hand, often develop a skewed perception of mortality and become morose, the result of watching wave after wave of companions age and die before their eyes.");
+                break;
+            case 2:
+                delayedPrint("While generally taller than humans, elves possess a fragile grace, accentuated by long features and sharply pointed ears.");
+                delayedPrint("Their eyes are wide and almond-shaped, featuring large and vibrant-colored pupils that make up the entire visible portion of the eye.");
+                delayedPrint("These pupils give them an alien look and allow them to see sharply even in very little light.");
+                delayedPrint("Elves gradually adapt to their environment and their companions, and they often take on physical traits reflecting their surroundings.");
+                delayedPrint("An elf who has dwelled in primeval forests for centuries, for example, might exhibit verdant hair and gnarled fingers, while one who’s lived in a desert might have golden pupils and skin.");
+                delayedPrint("Elven fashion, like the elves themselves, tends to reflect their surroundings.");
+                delayedPrint("Elves living in the forests and other wilderness locales wear clothing that plays off the terrain and flora of their homes, while those who live in cities tend to wear the latest fashions.");
+                delayedPrint("Elves reach physical adulthood around the age of 20, though they aren’t considered to be fully emotionally mature by other elves until closer to the passing of their first century, once they’ve experienced more, held several occupations, and outlived a generation of shorter-lived people.");
+                delayedPrint("A typical elf can live to around 600 years old.");
+                break;
+            case 3:
+                delayedPrint("Elven culture is deep, rich, and on the decline.");
+                delayedPrint("Their society peaked millennia ago, long before they fled the world to escape a great calamity.");
+                delayedPrint("They’ve since returned, but rebuilding is no easy task.");
+                delayedPrint("Their inborn patience and intellectual curiosity make elves excellent sages, philosophers, and wizards, and their societies are built upon their inherent sense of wonder and knowledge.");
+                delayedPrint("Elven architecture displays their deep appreciation of beauty, and elven cities are wondrous works of art.");
+                delayedPrint("Elves hold deeply seated ideals of individualism, allowing each elf to explore multiple occupations before alighting on a particular pursuit or passion that suits her best.");
+                delayedPrint("Elves bear notorious grudges against rivals, which the elves call ilduliel, but these antagonistic relationships can sometimes blossom into friendships over time.");
+                break;
+            case 4:
+                delayedPrint("Elves are prone to dismissing other races, writing them off as rash and impulsive, yet they are excellent judges of character.");
+                delayedPrint("An elf might not want a dwarf neighbor, but would be the first to acknowledge that dwarf's skill at smithing.");
+                delayedPrint("They regard gnomes as strange (and sometimes dangerous) curiosities, and halflings with a measure of pity, for these small folk seem to the elves to be adrift, without a traditional home.");
+                delayedPrint("Elves are fascinated with humans, as evidenced by the number of half-elves in the world, even if they usually disown such offspring.");
+                delayedPrint("They regard half-orcs with distrust and suspicion.");
+                break;
+            case 5:
+                delayedPrint("Elves are often emotional and capricious, yet they hold high ideals close to their hearts.");
+                delayedPrint("As such, many are chaotic good.");
+                delayedPrint("They prefer deities who share their love of all things mystic and artistic.");
+                delayedPrint("Desna and Shelyn are particular favorites, the former for her sense of wonder and the latter for her appreciation of artistry.");
+                delayedPrint("Calistria is the most notorious of elven deities, as she represents many of the elven ideals taken to the extreme.");
+                break;
+            case 6:
+                delayedPrint("Many elves embark on adventures out of a desire to explore the world, leaving their secluded forest realms to reclaim forgotten elven magic or search out lost kingdoms established millennia abo by their forefathers.");
+                delayedPrint("For those raised among humans, the ephemeral and unfettered life of an adventurer holds natural appeal.");
+                delayedPrint("Elves generally eschew melee because of their frailty, preferring instead to pursue classes such as wizards and rangers.");
+                break;
+            case 7:
+                delayedPrint("An elf keeps their personal name secret among their family, while giving a nickname when meeting other people.");
+                delayedPrint("This nickname can change over time, due to events in the elf’s life or even on a whim.");
+                delayedPrint("A single elf might be known by many names by associates of different ages and regions.");
+                delayedPrint("Elven names consist of multiple syllables and are meant to flow lyrically—at least in the Elven tongue.");
+                delayedPrint("They so commonly end in “-el” or “-ara” that other cultures sometimes avoid names ending in these syllables to avoid sounding too elven.");
+                delayedPrint("Male Name Examples: Caladrel, Heldalel, Lanliss, Meirdrarel, Seldlon, Talathel, Variel, Zordlon.");
+                delayedPrint("Female Name Examples: Amrunelara, Dardlara, Faunra, Jathal, Merisiel, Oparal, Soumral, Tessara, Yalandlara.");
+                break;
+            case 8:
+                delayedPrint("+2 Dexterity, +2 Intelligence, -2 Constitution: Elves are nimble, both body and mind, but their form is frail.");
+                break;
+            case 9:
+                delayedPrint("Medium: Elves are Medium creatures and have no bonuses or penalties due to their size.");
+                break;
+            case 10:
+                delayedPrint("Normal Speed: Elves have a base speed of 30 feet");
+                break;
+            case 11:
+                delayedPrint("Low-Light Vision: Elves can see twice as far as humans in conditions of dim-light.");
+                break;
+            case 12:
+                delayedPrint("Elven Immunities: Elves are immune to magic sleep effects and get a +2 racial saving throw bonus against enchantment spells and effects.");
+                delayedPrint("Elven Magic: Elves receive a +2 racial bonus on caster level checks made to overcome spell resistance.");
+                delayedPrint("In addition, elves receive a +2 racial bonus on Spellcraft skill checks made to identify the properties of magic items.");
+                delayedPrint("Keen Senses: Elves receive a +2 racial bonus on Perception skill checks.");
+                break;
+            case 13:
+                delayedPrint("Elves are proficient with longbows (including composite longbows), longswords, rapiers, and shortbows (including composite shortbows), and treat any weapon with the name \"elven\" in its name as a martial weapon.");
+                break;
+            case 14:
+                delayedPrint("Elves begin play speaking Common and Elven.");
+                delayedPrint("Elves with a high intelligence scores can choose from the following: Celestial, Draconic, Gnoll, Goblin, Orc, and Sylvan.");
+                break;
+            case 15:
+                System.out.println("You chose elf!");
+                System.exit(-1);
+            case 16:
+                chooseRace();
+        }
+        raceElf();
     }
 
     public static void raceGnome(){
-
+        delayedPrint("Gnome:");
+        delayedPrint("What would you like to know about Gnomes?");
+        delayedPrint("1.  Basic Description");
+        delayedPrint("2.  Physical Description");
+        delayedPrint("3.  Society");
+        delayedPrint("4.  Relations");
+        delayedPrint("5.  Alignment and Religion");
+        delayedPrint("6.  Adventurers");
+        delayedPrint("7.  Names");
+        delayedPrint("8.  Ability Score Changes");
+        delayedPrint("9.  Size");
+        delayedPrint("10. Speed");
+        delayedPrint("11. Vision");
+        delayedPrint("12. Racial Features");
+        delayedPrint("13. Proficiencies");
+        delayedPrint("14. Languages");
+        delayedPrint("15. Choose Gnome as your race");
+        delayedPrint("16. Return to Race Screen");
+        int option = chooseOption(17);
+        switch (option){
+            case 1:
+                delayedPrint("Gnomes trace their lineage back to the mysterious realm of the fey, a place where colors are brighter, the wildlands wilder, and emotions more primal.");
+                delayedPrint("Unknown forces drove the ancient gnomes from that realm long ago, forcing them to seek refuge in this world; despite this, the gnomes have never completely abandoned their fey roots or adapted to mortal culture.");
+                delayedPrint("As a result, gnomes are widely regarded by the other races as alien and strange.");
+                break;
+            case 2:
+                delayedPrint("Gnomes are one of the smallest of the common races, generally standing just over 3 feet in height.");
+                delayedPrint("Their hair tends toward vibrant colors such as the fiery orange of autumn leaves, the verdant green of forests at  springtime, or the deep reds and purples of wildflowers in  bloom.");
+                delayedPrint("Similarly, their flesh tones range from earthy browns to floral pinks, frequently with little regard for heredity.");
+                delayedPrint("Gnomes possess highly mutable facial characteristics, and  many have overly large mouths and eyes, an effect which can  be both disturbing and stunning, depending on the individual.");
+                break;
+            case 3:
+                delayedPrint("Unlike most races, gnomes do not generally organize themselves within classic societal structures.");
+                delayedPrint("Whimsical creatures at heart, they typically travel alone or  with temporary companions, ever seeking new and more  exciting experiences.");
+                delayedPrint("They rarely form enduring relationships among themselves or with members of other races, instead pursuing crafts, professions, or collections with  a passion that borders on zealotry.");
+                delayedPrint("Male gnomes have a strange fondness for unusual hats and headgear, while females often proudly wear elaborate and eccentric hairstyles.");
+                break;
+            case 4:
+                delayedPrint("Gnomes have difficulty interacting with the other races, on both emotional and physical levels.");
+                delayedPrint("Gnome humor is hard to translate and often comes across as malicious or senseless to other races, while gnomes in turn tend to think of the taller races as dull and lumbering giants.");
+                delayedPrint("They get along well with halflings and humans, but are overly fond of playing jokes on dwarves and half-orcs, whom most gnomes feel need to lighten up.");
+                delayedPrint("They respect elves, but often grow frustrated with the comparatively slow pace at which members of the long-lived race make decisions.");
+                delayedPrint("To the gnomes, action is always better than inaction, and many gnomes carry several highly involved projects with them at all times to keep themselves entertained during rest periods.");
+                break;
+            case 5:
+                delayedPrint("Although gnomes are impulsive tricksters, with sometimes inscrutable motives and equally confusing methods, their hearts are generally in the right place.");
+                delayedPrint("They are prone to powerful fits of emotion, and find themselves most at peace within the natural world.");
+                delayedPrint("Gnomes are usually neutral good.");
+                delayedPrint("Gnomes most commonly worship deities that value individuality and nature, such as Cayden Cailean, Desna, Gozreh, and Shelyn.");
+                break;
+            case 6:
+                delayedPrint("Gnomes' propensity for wanderlust makes them natural adventurers.");
+                delayedPrint("They often become wanderers to experience new aspects of life, for nothing is as novel as the uncounted dangers facing adventurers.");
+                delayedPrint("Gnomes make up for their weakness with a proclivity for sorcery or bardic music.");
+                break;
+            case 7:
+                delayedPrint("Gnome names can get quite complex and polysyllabic.");
+                delayedPrint("They have little interest in familial names, and most children receive their names purely on a parent’s whim.");
+                delayedPrint("Gnomes rarely concern themselves with how easy their names are to pronounce, and they often go by shorter nicknames.");
+                delayedPrint("Some even collect and chronicle these nicknames. Among gnomes, the shorter the name, the more feminine it’s considered to be.");
+                delayedPrint("Male Name Examples: Abroshtor, Bastargre, Halungalom, Krolmnite, Poshment, Zarzuket, Zatqualmie.");
+                delayedPrint("Female Name Examples: Besh, Fijit, Lini, Nejo, Majet, Pai, Queck, Trig.");
+                break;
+            case 8:
+                delayedPrint("+2 Constitution, +2 Charisma, –2 Strength: Gnomes are physically weak but surprisingly hardy, and their attitude makes them naturally agreeable");
+                break;
+            case 9:
+                delayedPrint("Small: Gnomes are Small creatures and gain a +1 size bonus to their AC, a +1 size bonus on attack rolls, a –1 penalty to their Combat Maneuver Bonus and Combat Maneuver Defense, and a +4 size bonus on Stealth checks.");
+                break;
+            case 10:
+                delayedPrint("Slow Speed: Gnomes have a base speed of 20 feet");
+                break;
+            case 11:
+                delayedPrint("Low-Light Vision: Gnomes can see twice as far as humans in conditions of dim light.");
+                break;
+            case 12:
+                delayedPrint("Defensive Training: Gnomes get a +4 dodge bonus to AC against monsters of the giant type.");
+                delayedPrint("Gnome Magic: Gnomes add +1 to the DC of any saving throws against illusion spells that they cast.");
+                delayedPrint("Gnomes with a Charisma of 11 or higher also gain the following spell-like abilities: 1/day—dancing lights, ghost sound, prestidigitation, and speak with animals.");
+                delayedPrint("The caster level for these effects is equal to the gnome's level.");
+                delayedPrint("The DC for these spells is equal to 10 + the spell's level + the gnome's Charisma modifier.");
+                delayedPrint("Hatred: Gnomes receive a +1 bonus on attack rolls against humanoid creatures of the reptilian and goblinoid subtypes due to special training against these hated foes.");
+                delayedPrint("Illusion Resistance: Gnomes get a +2 racial saving throw bonus against illusion spells or effects.");
+                delayedPrint("Keen Senses: Gnomes receive a +2 racial bonus on Perception skill checks.");
+                delayedPrint("Obsessive: Gnomes receive a +2 racial bonus on a Craft or Profession skill of their choice.");
+                break;
+            case 13:
+                delayedPrint("Gnomes treat any weapon with the word \"gnome\" in its name as a martial weapon.");
+                break;
+            case 14:
+                delayedPrint("Gnomes begin play speaking Common, Gnome, and Sylvan.");
+                delayedPrint("Gnomes with high Intelligence scores can choose from the following: Draconic, Dwarven, Elven, Giant, Goblin, and Orc.");
+                break;
+            case 15:
+                System.out.println("You chose gnome!");
+                System.exit(-1);
+            case 16:
+                chooseRace();
+        }
+        raceGnome();
     }
 
     public static void raceHalfElf(){
