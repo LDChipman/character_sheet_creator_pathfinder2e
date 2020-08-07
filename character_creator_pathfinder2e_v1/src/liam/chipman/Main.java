@@ -1704,7 +1704,7 @@ public class Main {
                 raceHuman();
                 break;
             case 8:
-                raceCustom();
+                setRaceCustom();
                 break;
         }
     }
@@ -2311,10 +2311,96 @@ public class Main {
     }
 
     public static void raceHuman(){
-
+        delayedPrint("Human:");
+        delayedPrint("What would you like to know about Humans?");
+        delayedPrint("1.  Basic Description");
+        delayedPrint("2.  Physical Description");
+        delayedPrint("3.  Society");
+        delayedPrint("4.  Relations");
+        delayedPrint("5.  Alignment and Religion");
+        delayedPrint("6.  Adventurers");
+        delayedPrint("7.  Names");
+        delayedPrint("8.  Ability Score Changes");
+        delayedPrint("9.  Size");
+        delayedPrint("10. Speed");
+        delayedPrint("11. Vision");
+        delayedPrint("12. Racial Features");
+        delayedPrint("13. Proficiencies");
+        delayedPrint("14. Languages");
+        delayedPrint("15. Choose Human as your race");
+        delayedPrint("16. Return to Race Screen");
+        int option = chooseOption(17);
+        switch (option){
+            case 1:
+                delayedPrint("Humans possess exceptional drive and a great capacity to endure and expand, and as such are currently the dominant race in the world.");
+                delayedPrint("Their empires and nations are vast, sprawling things, and the citizens of these societies carve names for themselves with the strength of their sword arms and the power of their spells.");
+                delayedPrint("Humanity is best characterized by its tumultuousness and diversity, and human cultures run the gamut from savage but honorable tribes to decadent, devil-worshiping noble families in the most cosmopolitan cities.");
+                delayedPrint("Human curiosity and ambition often triumph over their predilection for a sedentary lifestyle, and many leave their homes to explore the innumerable forgotten corners of the world or lead mighty armies to conquer their neighbors, simply because they can.");
+                break;
+            case 2:
+                delayedPrint("The physical characteristics of humans are as varied as the world's climes.");
+                delayedPrint("From the darkskinned tribesmen of the southern continents to the pale and barbaric raiders of the northern lands, humans possess a wide variety of skin colors, body types, and facial features.");
+                delayedPrint("Generally speaking, humans' skin color assumes a darker hue the closer to the equator they live.");
+                break;
+            case 3:
+                delayedPrint("Human society comprises a multitude of governments, attitudes, and lifestyles.");
+                delayedPrint("Though the oldest human cultures trace their histories thousands of years into the past, when compared to the societies of common races like elves and dwarves, human society seems to be in a state of constant flux as empires fragment and new kingdoms subsume the old.");
+                delayedPrint("In general, humans are known for their flexibility, ingenuity, and ambition.");
+                break;
+            case 4:
+                delayedPrint("Humans are fecund, and their drive and numbers often spur them into contact with other races during bouts of territorial expansion and colonization.");
+                delayedPrint("In many cases, this leads to violence and war, yet humans are also swift to forgive and forge alliances with races who do not try to match or exceed them in violence.");
+                delayedPrint("Proud, sometimes to the point of arrogance, humans might look upon dwarves as miserly drunkards, elves as flighty fops, halflings as craven thieves, gnomes as twisted maniacs, and half-elves and halforcs as embarrassments—but the race's diversity among its own members also makes humans quite adept at accepting others for what they are.");
+                break;
+            case 5:
+                delayedPrint("Humanity is perhaps the most heterogeneous of all the common races, with a capacity for great evil and boundless good.");
+                delayedPrint("Some assemble into vast barbaric hordes, while others build sprawling cities that cover miles.");
+                delayedPrint("Taken as a whole, most humans are neutral, yet they generally tend to congregate in nations and civilizations with specific alignments.");
+                delayedPrint("Humans also have the widest range in gods and religion, lacking other races' ties to tradition and eager to turn to anyone offering them glory or protection.");
+                break;
+            case 6:
+                delayedPrint("Ambition alone drives countless humans, and for many, adventuring serves as a means to an end, whether it be wealth, acclaim, social status, or arcane knowledge.");
+                delayedPrint("A few pursue adventuring careers simply for the thrill of danger.");
+                delayedPrint("Humans hail from myriad regions and backgrounds, and as such can fill any role within an adventuring party.");
+                break;
+            case 7:
+                delayedPrint("Unlike other races, who generally cleave to specific traditions and shared histories, humanity's diversity has resulted in a near-infinite set of names.");
+                delayedPrint("The humans of a northern barbarian tribe have much different names than those hailing from a subtropical nation of sailors and tradesmen.");
+                delayedPrint("Throughout most of the world humans speak Common, yet their names are as varied as their beliefs and appearances.");
+                break;
+            case 8:
+                delayedPrint("+2 to One Ability Score: Human characters get a +2 bonus to one ability score of their choice at creation to represent their varied nature.");
+                break;
+            case 9:
+                delayedPrint("Medium: Humans are Medium creatures and have no bonuses or penalties due to their size.");
+                break;
+            case 10:
+                delayedPrint("Normal Speed: Humans have a base speed of 30 feet.");
+                break;
+            case 11:
+                delayedPrint("Humans have no changes to vision");
+                break;
+            case 12:
+                delayedPrint("Bonus Feat: Humans select one extra feat at 1st level.");
+                delayedPrint("Skilled: Humans gain an additional skill rank at first level and one additional rank whenever they gain a level.");
+                break;
+            case 13:
+                delayedPrint("Humans don't get any proficiencies.");
+                break;
+            case 14:
+                delayedPrint("Humans begin play speaking Common");
+                delayedPrint("Humans with high Intelligence scores can choose any languages they want (except secret languages, such as Druidic).");
+                break;
+            case 15:
+                System.out.println("You chose Human!");
+                System.exit(-1);
+            case 16:
+                chooseRace();
+        }
+        raceHuman();
     }
 
-    public static void raceCustom(){
+    public static void setRaceCustom(){
 
     }
 }
