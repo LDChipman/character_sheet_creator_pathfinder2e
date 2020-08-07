@@ -2123,7 +2123,90 @@ public class Main {
     }
 
     public static void raceHalfOrc(){
-
+        delayedPrint("Half-Orc:");
+        delayedPrint("What would you like to know about Half-Orcs?");
+        delayedPrint("1.  Basic Description");
+        delayedPrint("2.  Physical Description");
+        delayedPrint("3.  Society");
+        delayedPrint("4.  Relations");
+        delayedPrint("5.  Alignment and Religion");
+        delayedPrint("6.  Adventurers");
+        delayedPrint("7.  Names");
+        delayedPrint("8.  Ability Score Changes");
+        delayedPrint("9.  Size");
+        delayedPrint("10. Speed");
+        delayedPrint("11. Vision");
+        delayedPrint("12. Racial Features");
+        delayedPrint("13. Proficiencies");
+        delayedPrint("14. Languages");
+        delayedPrint("15. Choose Half-Orc as your race");
+        delayedPrint("16. Return to Race Screen");
+        int option = chooseOption(17);
+        switch (option){
+            case 1:
+                delayedPrint("Half-orcs are monstrosities, their tragic births the result of perversion and violence—or at least, that's how other races see them.");
+                delayedPrint("It's true that half-orcs are rarely the result of loving unions, and as such are usually forced to grow up hard and fast, constantly fighting for protection or to make names for themselves.");
+                delayedPrint("Feared, distrusted, and spat upon, half-orcs still consistently manage to surprise their detractors with great deeds and unexpected wisdom—though sometimes it's easier just to crack a few skulls.");
+                break;
+            case 2:
+                delayedPrint("Both genders of half-orc stand between 6 and 7 feet tall, with powerful builds and greenish or grayish skin.");
+                delayedPrint("Their canines often grow long enough to protrude from their mouths, and these “tusks,” combined with heavy brows and slightly pointed ears, give them their notoriously bestial appearance.");
+                delayedPrint("While half-orcs may be impressive, few ever describe them as beautiful.");
+                break;
+            case 3:
+                delayedPrint("Unlike half-elves, where at least part of society's discrimination is born out of jealousy or attraction, half-orcs get the worst of both worlds: physically weaker than their orc kin, they also tend to be feared or attacked outright by the legions of humans who don't bother making the distinction between full orcs and halfbloods.");
+                delayedPrint("Still, while not exactly accepted, half-orcs in civilized societies tend to be valued for their martial prowess, and orc leaders have actually been known to spawn them intentionally, as the halfbreeds regularly make up for their lack of physical strength with increased cunning and aggression, making them natural chieftains and strategic advisors.");
+                break;
+            case 4:
+                delayedPrint("A lifetime of persecution leaves the average halforc wary and quick to anger, yet those who break through his savage exterior might find a well-hidden core of empathy.");
+                delayedPrint("Elves and dwarves tend to be the least accepting of half-orcs, seeing in them too great a resemblance to their racial enemies, but other races aren't much more understanding.");
+                delayedPrint("Human societies with few orc problems tend to be the most accommodating, and there half-orcs make natural mercenaries and enforcers.");
+                break;
+            case 5:
+                delayedPrint("Forced to live either among brutish orcs or as lonely outcasts in civilized lands, most half-orcs are bitter, violent, and reclusive.");
+                delayedPrint("Evil comes easily to them, but they are not evil by nature—rather, most half-orcs are chaotic neutral, having been taught by long experience that there's no point doing anything but that which directly benefits themselves.");
+                delayedPrint("When they bother to worship the gods, they tend to favor deities who promote warfare or individual strength, such as Gorum, Cayden Cailean, Lamashtu, and Rovagug.");
+                break;
+            case 6:
+                delayedPrint("Staunchly independent, many half-orcs take to lives of adventure out of necessity, seeking to escape their painful pasts or improve their lot through force of arms.");
+                delayedPrint("Others, more optimistic or desperate for acceptance, take up the mantle of crusaders in order to prove their worth to the world.");
+                break;
+            case 7:
+                delayedPrint("Male Name Examples: Ausk, Davor, Hakak, Kizziar, Makoa, Nesteruk, Tsadok.");
+                delayedPrint("Female Name Examples: Canan, Drogheda, Goruza, Mazon, Shirish, Tevaga, Zeljka.");
+                break;
+            case 8:
+                delayedPrint("+2 to One Ability Score: Half-orc characters get a +2 bonus to one ability score of their choice at creation to represent their varied nature.");
+                break;
+            case 9:
+                delayedPrint("Medium: Half-orcs are Medium creatures and have no bonuses or penalties due to their size");
+                break;
+            case 10:
+                delayedPrint("Normal Speed: Half-orcs have a base speed of 30 feet");
+                break;
+            case 11:
+                delayedPrint("Darkvision: Half-orcs can see in the dark up to 60 feet.");
+                break;
+            case 12:
+                delayedPrint("Intimidating: Half-orcs receive a +2 racial bonus on Intimidate skill checks due to their fearsome nature.");
+                delayedPrint("Orc Blood: Half-orcs count as both humans and orcs for any effect related to race.");
+                delayedPrint("Orc Ferocity: Once per day, when a half-orc is brought below 0 hit points but not killed, he can fight on for one more round as if disabled.");
+                delayedPrint("At the end of his next turn, unless brought to above 0 hit points, he immediately falls unconscious and begins dying.");
+                break;
+            case 13:
+                delayedPrint("Half-orcs are proficient with greataxes and falchions and treat any weapon with the word \"orc\" in its name as a martial weapon");
+                break;
+            case 14:
+                delayedPrint("Half-orcs begin play speaking Common and Orc.");
+                delayedPrint("Half-orcs with high Intelligence scores can choose from the following: Abyssal, Draconic, Giant, Gnoll, and Goblin.");
+                break;
+            case 15:
+                System.out.println("You chose Half-Orc!");
+                System.exit(-1);
+            case 16:
+                chooseRace();
+        }
+        raceHalfOrc();
     }
 
     public static void raceHalfling(){
