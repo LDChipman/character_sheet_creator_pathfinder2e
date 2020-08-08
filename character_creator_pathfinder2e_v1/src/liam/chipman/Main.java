@@ -84,8 +84,9 @@ public class Main {
 
     public static void delayedPrint(String text) {
         try {
+            TimeUnit.MILLISECONDS.sleep(125);
             System.out.println(text);
-            TimeUnit.MILLISECONDS.sleep(500);
+            TimeUnit.MILLISECONDS.sleep(125);
         } catch (InterruptedException e) {
             System.err.format("IOException: %s%n", e);
         }
@@ -1807,6 +1808,7 @@ public class Main {
                 break;
             case 15:
                 System.out.println("You chose dwarf!");
+                dwarf chosen_race = new dwarf(character);
                 System.exit(-1);
             case 16:
                 chooseRace();
@@ -1917,6 +1919,7 @@ public class Main {
                 break;
             case 15:
                 System.out.println("You chose elf!");
+                elf chosen_race = new elf(character);
                 System.exit(-1);
             case 16:
                 chooseRace();
