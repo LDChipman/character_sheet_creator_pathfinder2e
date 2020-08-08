@@ -3,6 +3,8 @@ package liam.chipman;
 class elf extends race{
 
     public elf(player player){
+        player.race = "Elf";
+        player.level = 1;
         player.dex_score += 2;
         player.int_score += 2;
         player.con_score -= 2;
@@ -19,6 +21,7 @@ class elf extends race{
         player.proficiencies.add("you treat any weapon with the name \"elven\" in its name as a martial weapon.");
         player.languages.add("Common");
         player.languages.add("Elven");
+        addLanguage(new String[]{"Celestial", "Draconic", "Gnoll", "Goblin", "Orc", "Sylvan"}, player);
     }
 
 }

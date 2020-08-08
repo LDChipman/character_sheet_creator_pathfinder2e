@@ -3,6 +3,8 @@ package liam.chipman;
 class gnome extends race{
 
     public gnome(player player){
+        player.race = "Gnome";
+        player.level = 1;
         player.con_score += 2;
         player.cha_score += 2;
         player.str_score -= 2;
@@ -22,6 +24,7 @@ class gnome extends race{
         player.languages.add("Common");
         player.languages.add("Gnome");
         player.languages.add("Sylvan");
+        addLanguage(new String[]{"Draconic", "Dwarven", "Elven", "Giant", "Goblin", "Orc"}, player);
     }
 
 }

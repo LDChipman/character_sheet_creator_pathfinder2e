@@ -3,6 +3,8 @@ package liam.chipman;
 class half_orc extends race{
 
     public half_orc(player player){
+        player.race = "Half Orc";
+        player.level = 1;
         Main.delayedPrint("As a half-orc you get +2 to one ability score");
         Main.delayedPrint("1. Strength");
         Main.delayedPrint("2. Dexterity");
@@ -43,6 +45,7 @@ class half_orc extends race{
         player.proficiencies.add("you treat any weapon with the name \"orc\" in its name as a martial weapon.");
         player.languages.add("Common");
         player.languages.add("Orc");
+        addLanguage(new String[]{"Abyssal", "Draconic", "Giant", "Gnoll", "Goblin"}, player);
     }
 
 }

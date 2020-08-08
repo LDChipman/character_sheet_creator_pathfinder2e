@@ -3,6 +3,8 @@ package liam.chipman;
 class half_elf extends race{
 
     public half_elf(player player){
+        player.race = "Half Elf";
+        player.level = 1;
         Main.delayedPrint("As a half-elf you get +2 to one ability score");
         Main.delayedPrint("1. Strength");
         Main.delayedPrint("2. Dexterity");
@@ -42,6 +44,7 @@ class half_elf extends race{
         player.traits_and_features.add(addRacialTrait("Multitalented", "You choose two favored classes at first level", "You choose two favored classes at first level and gain +1 hit point or +1 skill point whenever you take a level in either one of those classes."));
         player.languages.add("Common");
         player.languages.add("Elven");
+        addLanguage(new String[]{"Abyssal", "Aklo", "Aquan", "Auran", "Celestial", "Draconic", "Dwarven", "Giant", "Gnome", "Gnoll", "Goblin", "Halfling", "Ignan", "Infernal", "Orc", "Sylvan", "Terran", "Undercommon"}, player);
     }
 
 }

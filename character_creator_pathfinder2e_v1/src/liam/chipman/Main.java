@@ -61,8 +61,7 @@ public class Main {
             return option;
         } catch (InputMismatchException e) {
             delayedPrint("That wasn't one of the given numbers please try again.");
-            int option = chooseOption(options);
-            return option;
+            return chooseOption(options);
         }
     }
 
@@ -811,27 +810,21 @@ public class Main {
                 break;
             case 1:
                 cha_dice = 1;
-                dice_pool -= 1;
                 break;
             case 2:
                 cha_dice = 2;
-                dice_pool -= 2;
                 break;
             case 3:
                 cha_dice = 3;
-                dice_pool -= 3;
                 break;
             case 4:
                 cha_dice = 4;
-                dice_pool -= 4;
                 break;
             case 5:
                 cha_dice = 5;
-                dice_pool -= 5;
                 break;
             case 6:
                 cha_dice = 6;
-                dice_pool -= 6;
                 break;
         }
         character.str_score = getScoreDicePoolMethod(str_dice);
@@ -1807,9 +1800,8 @@ public class Main {
                 delayedPrint("Dwarves with a high intelligence scores can choose from the following: Giant, Gnome, Goblin, Orc, Terran, and Undercommon.");
                 break;
             case 15:
-                System.out.println("You chose dwarf!");
-                dwarf chosen_race = new dwarf(character);
-                System.exit(-1);
+                new dwarf(character);
+                chooseClass();
             case 16:
                 chooseRace();
         }
@@ -1918,9 +1910,8 @@ public class Main {
                 delayedPrint("Elves with a high intelligence scores can choose from the following: Celestial, Draconic, Gnoll, Goblin, Orc, and Sylvan.");
                 break;
             case 15:
-                System.out.println("You chose elf!");
-                elf chosen_race = new elf(character);
-                System.exit(-1);
+                new elf(character);
+                chooseClass();
             case 16:
                 chooseRace();
         }
@@ -2022,8 +2013,8 @@ public class Main {
                 delayedPrint("Gnomes with high Intelligence scores can choose from the following: Draconic, Dwarven, Elven, Giant, Goblin, and Orc.");
                 break;
             case 15:
-                System.out.println("You chose gnome!");
-                System.exit(-1);
+                new gnome(character);
+                chooseClass();
             case 16:
                 chooseRace();
         }
@@ -2117,8 +2108,8 @@ public class Main {
                 delayedPrint("Half-elves with high Intelligence scores can choose any languages they want (except secret languages, such as Druidic).");
                 break;
             case 15:
-                System.out.println("You chose Half-Elf!");
-                System.exit(-1);
+                new half_elf(character);
+                chooseClass();
             case 16:
                 chooseRace();
         }
@@ -2204,8 +2195,8 @@ public class Main {
                 delayedPrint("Half-orcs with high Intelligence scores can choose from the following: Abyssal, Draconic, Giant, Gnoll, and Goblin.");
                 break;
             case 15:
-                System.out.println("You chose Half-Orc!");
-                System.exit(-1);
+                new half_orc(character);
+                chooseClass();
             case 16:
                 chooseRace();
         }
@@ -2305,8 +2296,8 @@ public class Main {
                 delayedPrint("Halflings with high Intelligence scores can choose from the following: Dwarven, Elven, Gnome, and Goblin");
                 break;
             case 15:
-                System.out.println("You chose Halfling!");
-                System.exit(-1);
+                new halfling(character);
+                chooseClass();
             case 16:
                 chooseRace();
         }
@@ -2395,8 +2386,8 @@ public class Main {
                 delayedPrint("Humans with high Intelligence scores can choose any languages they want (except secret languages, such as Druidic).");
                 break;
             case 15:
-                System.out.println("You chose Human!");
-                System.exit(-1);
+                new human(character);
+                chooseClass();
             case 16:
                 chooseRace();
         }
@@ -2404,6 +2395,13 @@ public class Main {
     }
 
     public static void setRaceCustom(){
+        new custom_race(character);
+        chooseClass();
+    }
 
+    public static void chooseClass(){
+        character.printEverything();
+        System.out.println("PICK A FUCKING CLASS YOU WHORE");
+        System.exit(-1);
     }
 }
