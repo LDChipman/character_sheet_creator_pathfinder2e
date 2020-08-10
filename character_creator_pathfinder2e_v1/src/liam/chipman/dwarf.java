@@ -4,7 +4,7 @@ class dwarf extends race{
 
     public dwarf(player player){
         player.race = "Dwarf";
-        player.level = 1;
+        player.total_level = 1;
         player.con_score += 2;
         player.wis_score += 2;
         player.cha_score -= 2;

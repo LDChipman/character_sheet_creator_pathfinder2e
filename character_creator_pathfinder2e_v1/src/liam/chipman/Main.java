@@ -8,7 +8,7 @@ public class Main {
     public static int points = 0;
 
     public static player character;
-    
+
     public static void main(String[] args) {
 
         delayedPrint("Welcome to Pathfinder Character Creator!");
@@ -1662,7 +1662,7 @@ public class Main {
         }
     }
 
-    public static void chooseRace(){
+    public static void chooseRace() {
         delayedPrint("Races:");
         delayedPrint("Please choose a race:");
         delayedPrint("1. Dwarf");
@@ -1703,7 +1703,7 @@ public class Main {
         }
     }
 
-    public static void raceDwarf(){
+    public static void raceDwarf() {
         delayedPrint("Dwarf:");
         delayedPrint("What would you like to know about Dwarves?");
         delayedPrint("1.  Basic Description");
@@ -1722,8 +1722,9 @@ public class Main {
         delayedPrint("14. Languages");
         delayedPrint("15. Choose Dwarf as your race");
         delayedPrint("16. Return to Race Screen");
-        int option = chooseOption(17);
-        switch (option){
+        delayedPrint("Please enter which option you'd like to choose");
+        int option = chooseOption(16);
+        switch (option) {
             case 1:
                 delayedPrint("Dwarves are a stoic but stern race, ensconced in cities carved from the hearts of mountains and fiercely determined to repel the depredations of savage races like orcs and goblins.");
                 delayedPrint("More than any other race, the dwarves have acquired a reputation as dour and humorless craftsmen of the earth.");
@@ -1808,7 +1809,7 @@ public class Main {
         raceDwarf();
     }
 
-    public static void raceElf(){
+    public static void raceElf() {
         delayedPrint("Elf:");
         delayedPrint("What would you like to know about Elves?");
         delayedPrint("1.  Basic Description");
@@ -1827,8 +1828,9 @@ public class Main {
         delayedPrint("14. Languages");
         delayedPrint("15. Choose Elf as your race");
         delayedPrint("16. Return to Race Screen");
-        int option = chooseOption(17);
-        switch (option){
+        delayedPrint("Please enter which option you'd like to choose:");
+        int option = chooseOption(16);
+        switch (option) {
             case 1:
                 delayedPrint("The long-lived elves are children of the natural world, similar in many superficial ways to fey creatures, yet different as well.");
                 delayedPrint("Elves value their privacy and traditions, and while they are often slow to make friends, at both the personal and national levels, once an outsider is accepted as a comrade, such alliances can last for generations.");
@@ -1918,7 +1920,7 @@ public class Main {
         raceElf();
     }
 
-    public static void raceGnome(){
+    public static void raceGnome() {
         delayedPrint("Gnome:");
         delayedPrint("What would you like to know about Gnomes?");
         delayedPrint("1.  Basic Description");
@@ -1937,8 +1939,9 @@ public class Main {
         delayedPrint("14. Languages");
         delayedPrint("15. Choose Gnome as your race");
         delayedPrint("16. Return to Race Screen");
-        int option = chooseOption(17);
-        switch (option){
+        delayedPrint("Please enter which option you'd like to choose:");
+        int option = chooseOption(16);
+        switch (option) {
             case 1:
                 delayedPrint("Gnomes trace their lineage back to the mysterious realm of the fey, a place where colors are brighter, the wildlands wilder, and emotions more primal.");
                 delayedPrint("Unknown forces drove the ancient gnomes from that realm long ago, forcing them to seek refuge in this world; despite this, the gnomes have never completely abandoned their fey roots or adapted to mortal culture.");
@@ -2021,7 +2024,7 @@ public class Main {
         raceGnome();
     }
 
-    public static void raceHalfElf(){
+    public static void raceHalfElf() {
         delayedPrint("Half-Elf:");
         delayedPrint("What would you like to know about Half-Elfs?");
         delayedPrint("1.  Basic Description");
@@ -2040,8 +2043,9 @@ public class Main {
         delayedPrint("14. Languages");
         delayedPrint("15. Choose Half-Elf as your race");
         delayedPrint("16. Return to Race Screen");
-        int option = chooseOption(17);
-        switch (option){
+        delayedPrint("Please enter which option you'd like to choose:");
+        int option = chooseOption(16);
+        switch (option) {
             case 1:
                 delayedPrint("Elves have long drawn the covetous gazes of other races.");
                 delayedPrint("Their generous life spans, magical affinity, and inherent grace each contribute to the admiration or bitter envy of their neighbors.");
@@ -2116,7 +2120,7 @@ public class Main {
         raceHalfElf();
     }
 
-    public static void raceHalfOrc(){
+    public static void raceHalfOrc() {
         delayedPrint("Half-Orc:");
         delayedPrint("What would you like to know about Half-Orcs?");
         delayedPrint("1.  Basic Description");
@@ -2135,8 +2139,9 @@ public class Main {
         delayedPrint("14. Languages");
         delayedPrint("15. Choose Half-Orc as your race");
         delayedPrint("16. Return to Race Screen");
-        int option = chooseOption(17);
-        switch (option){
+        delayedPrint("Please enter which option you'd like to choose:");
+        int option = chooseOption(16);
+        switch (option) {
             case 1:
                 delayedPrint("Half-orcs are monstrosities, their tragic births the result of perversion and violence—or at least, that's how other races see them.");
                 delayedPrint("It's true that half-orcs are rarely the result of loving unions, and as such are usually forced to grow up hard and fast, constantly fighting for protection or to make names for themselves.");
@@ -2203,7 +2208,7 @@ public class Main {
         raceHalfOrc();
     }
 
-    public static void raceHalfling(){
+    public static void raceHalfling() {
         delayedPrint("Halfling:");
         delayedPrint("What would you like to know about Halflings?");
         delayedPrint("1.  Basic Description");
@@ -2222,8 +2227,9 @@ public class Main {
         delayedPrint("14. Languages");
         delayedPrint("15. Choose Halfling as your race");
         delayedPrint("16. Return to Race Screen");
-        int option = chooseOption(17);
-        switch (option){
+        delayedPrint("Please enter which option you'd like to choose:");
+        int option = chooseOption(16);
+        switch (option) {
             case 1:
                 delayedPrint("Optimistic and cheerful by nature, blessed with uncanny luck and driven by a powerful wanderlust, halflings make up for their short stature with an abundance of bravado and curiosity.");
                 delayedPrint("At once excitable and easy-going, halflings like to keep an even temper and a steady eye on opportunity, and are not as prone as some of the more volatile races to violent or emotional outbursts.");
@@ -2304,7 +2310,7 @@ public class Main {
         raceHalfling();
     }
 
-    public static void raceHuman(){
+    public static void raceHuman() {
         delayedPrint("Human:");
         delayedPrint("What would you like to know about Humans?");
         delayedPrint("1.  Basic Description");
@@ -2323,8 +2329,9 @@ public class Main {
         delayedPrint("14. Languages");
         delayedPrint("15. Choose Human as your race");
         delayedPrint("16. Return to Race Screen");
-        int option = chooseOption(17);
-        switch (option){
+        delayedPrint("Please enter which option you'd like to choose:");
+        int option = chooseOption(16);
+        switch (option) {
             case 1:
                 delayedPrint("Humans possess exceptional drive and a great capacity to endure and expand, and as such are currently the dominant race in the world.");
                 delayedPrint("Their empires and nations are vast, sprawling things, and the citizens of these societies carve names for themselves with the strength of their sword arms and the power of their spells.");
@@ -2394,14 +2401,289 @@ public class Main {
         raceHuman();
     }
 
-    public static void setRaceCustom(){
+    public static void setRaceCustom() {
         new custom_race(character);
         chooseClass();
     }
 
-    public static void chooseClass(){
-        character.printEverything();
-        System.out.println("PICK A FUCKING CLASS YOU WHORE");
+    public static void chooseClass() {
+        System.out.println(character);
+        delayedPrint("Classes:");
+        delayedPrint("Please choose a class:");
+        delayedPrint("1.  Barbarian");
+        delayedPrint("2.  Bard");
+        delayedPrint("3.  Cleric");
+        delayedPrint("4.  Druid");
+        delayedPrint("5.  Fighter");
+        delayedPrint("6.  Monk");
+        delayedPrint("7.  Paladin");
+        delayedPrint("8.  Ranger");
+        delayedPrint("9.  Rogue");
+        delayedPrint("10. Sorcerer");
+        delayedPrint("11. Wizard");
+        delayedPrint("12. Custom Class");
+        delayedPrint("Please enter which option you would like to use:");
+        int option = chooseOption(12);
+        switch (option) {
+            case 1:
+                classBarbarian();
+                break;
+            case 2:
+                classBard();
+                break;
+            case 3:
+                classCleric();
+                break;
+            case 4:
+                classDruid();
+                break;
+            case 5:
+                classFighter();
+                break;
+            case 6:
+                classMonk();
+                break;
+            case 7:
+                classPaladin();
+                break;
+            case 8:
+                classRanger();
+                break;
+            case 9:
+                classRogue();
+                break;
+            case 10:
+                classSorcerer();
+                break;
+            case 11:
+                classWizard();
+                break;
+            case 12:
+                setClassCustom();
+                break;
+        }
         System.exit(-1);
     }
+
+    private static void classBarbarian() {
+
+        delayedPrint("Barbarian:");
+        delayedPrint("What would you like to know about Barbarians?");
+        delayedPrint("1.  Basic Description");
+        delayedPrint("2.  Role");
+        delayedPrint("3.  Alignment");
+        delayedPrint("4.  Hit Die");
+        delayedPrint("5.  Class Skills");
+        delayedPrint("6.  Weapon and Armor Proficiencies");
+        delayedPrint("7.  Class Features");
+        delayedPrint("8.  Base attack bonus and save bonus by level");
+        delayedPrint("9.  Choose Barbarian as your class");
+        delayedPrint("10. Return to Class Screen");
+        int option = chooseOption(10);
+        switch (option) {
+            case 1:
+                delayedPrint("For some, there is only rage. In the ways of their people, in the fury of their passion, in the howl of battle, conflict is all these brutal souls know.");
+                delayedPrint("Savages, hired muscle, masters of vicious martial techniques, they are not soldiers or professional warriors—they are the battle possessed, creatures of slaughter and spirits of war.");
+                delayedPrint("Known as barbarians, these warmongers know little of training, preparation, or the rules of warfare; for them, only the moment exists, with the foes that stand before them and the knowledge that the next moment might hold their death.");
+                delayedPrint("They possess a sixth sense in regard to danger and the endurance to weather all that might entail.");
+                delayedPrint("These brutal warriors might rise from all walks of life, both civilized and savage, though whole societies embracing such philosophies roam the wild places of the world.");
+                delayedPrint("Within barbarians storms the primal spirit of battle, and woe to those who face their rage.");
+                break;
+            case 2:
+                delayedPrint("Barbarians excel in combat, possessing the martial prowess and fortitude to take on foes seemingly far superior to themselves.");
+                delayedPrint("With rage granting them boldness and daring beyond that of most other warriors, barbarians charge furiously into battle and ruin all who would stand in their way.");
+                break;
+            case 3:
+                delayedPrint("Any non-lawful");
+                break;
+            case 4:
+                delayedPrint("12 sided die");
+                break;
+            case 5:
+                delayedPrint("The barbarian's class skills are Acrobatics (Dex), Climb (Str), Craft (Int), Handle Animal (Cha), Intimidate (Cha), Knowledge (nature) (Int), Perception (Wis), Ride (Dex), Survival (Wis), and Swim (Str)");
+                delayedPrint("4 + Your Intelligence Modifier");
+                break;
+            case 6:
+                delayedPrint("A barbarian is proficient with all simple and martial weapons, light armor, medium armor, and shields (except tower shields).");
+                break;
+            case 7:
+                delayedPrint("Class Features:");
+                delayedPrint("1.  Fast Movement");
+                delayedPrint("2.  Rage");
+                delayedPrint("3.  Rage Powers");
+                delayedPrint("4.  Uncanny Dodge");
+                delayedPrint("5.  Trap Sense");
+                delayedPrint("6.  Improved Uncanny Dodge");
+                delayedPrint("7.  Damage Reduction");
+                delayedPrint("8.  Greater Rage");
+                delayedPrint("9.  Indomitable Will");
+                delayedPrint("10. Tireless Rage");
+                delayedPrint("11. Mighty Rage");
+                delayedPrint("12. Return to Barbarian");
+                option = chooseOption(12);
+                switch (option){
+                    case 1:
+                        delayedPrint("A barbarian's land speed is faster than the norm for her race by +10 feet.");
+                        delayedPrint("This benefit applies only when she is wearing no armor, light armor, or medium armor, and not carrying a heavy load.");
+                        delayedPrint("Apply this bonus before modifying the barbarian's speed because of any load carried or armor worn.");
+                        delayedPrint("This bonus stacks with any other bonuses to the barbarian's land speed.");
+                        break;
+                    case 2:
+                        delayedPrint("A barbarian can call upon inner reserves of strength and ferocity, granting her additional combat prowess.");
+                        delayedPrint("Starting at 1st level, a barbarian can rage for a number of rounds per day equal to 4 + her Constitution modifier.");
+                        delayedPrint("At each level after 1st, she can rage for 2 additional rounds.");
+                        delayedPrint("Temporary increases to Constitution, such as those gained from rage and spells like bear's endurance, do not increase the total number of rounds that a barbarian can rage per day.");
+                        delayedPrint("A barbarian can enter rage as a free action.");
+                        delayedPrint("The total number of rounds of rage per day is renewed after resting for 8 hours, although these hours do not need to be consecutive.");
+                        delayedPrint("While in rage, a barbarian gains a +4 morale bonus to her Strength and Constitution, as well as a +2 morale bonus on Will saves.");
+                        delayedPrint("In addition, she takes a –2 penalty to Armor Class.");
+                        delayedPrint("The increase to Constitution grants the barbarian 2 hit points per Hit Dice, but these disappear when the rage ends and are not lost first like temporary hit points.");
+                        delayedPrint("While in rage, a barbarian cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability that requires patience or concentration.");
+                        delayedPrint("A barbarian can end her rage as a free action and is fatigued after rage for a number of rounds equal to 2 times the number of rounds spent in the rage.");
+                        delayedPrint("A barbarian cannot enter a new rage while fatigued or exhausted but can otherwise enter rage multiple times during a single encounter or combat.");
+                        delayedPrint("If a barbarian falls unconscious, her rage immediately ends, placing her in peril of death.");
+                        break;
+                    case 3:
+                        boolean break_out_of_the_loop = true;
+                        while (!break_out_of_the_loop){
+                            delayedPrint("As a barbarian gains levels, she learns to use her rage in new ways.");
+                            delayedPrint("Starting at 2nd level, a barbarian gains a rage power.");
+                            delayedPrint("She gains another rage power for every two levels of barbarian attained after 2nd level.");
+                            delayedPrint("A barbarian gains the benefits of rage powers only while raging, and some of these powers require the barbarian to take an action first.");
+                            delayedPrint("Unless otherwise noted, a barbarian cannot select an individual power more than once.");
+                            delayedPrint("Rage Powers:");
+                            delayedPrint("1.  Animal Fury");
+                            delayedPrint("2.  Clear Mind");
+                            delayedPrint("3.  Fearless Rage");
+                            delayedPrint("4.  Guarded Stance");
+                            delayedPrint("5.  Increased Damage Reduction");
+                            delayedPrint("6.  Internal Fortitude");
+                            delayedPrint("7.  Intimidating Glare");
+                            delayedPrint("8.  Knockback");
+                            delayedPrint("9.  Low-Light Vision");
+                            delayedPrint("10. Mighty Swing");
+                            delayedPrint("11. Moment of Clarity");
+                            delayedPrint("12. Night Vision");
+                            delayedPrint("13. No Escape");
+                            delayedPrint("14. Powerful Blow");
+                            delayedPrint("15. Quick Reflexes");
+                            delayedPrint("16. Raging Climber");
+                            delayedPrint("17. Raging Leaper");
+                            delayedPrint("18. Raging Swimmer");
+                            delayedPrint("19. Renewed Vigor");
+                            delayedPrint("20. Rolling Dodge");
+                            delayedPrint("21. Roused Anger");
+                            delayedPrint("22. Scent");
+                            delayedPrint("23. Strength Surge");
+                            delayedPrint("24. Superstition");
+                            delayedPrint("25. Surprise Accuracy");
+                            delayedPrint("26. Swift Foot");
+                            delayedPrint("27. Terrifying Howl");
+                            delayedPrint("28. Unexpected Strike");
+                            delayedPrint("29. Return to Class Features");
+                            option = chooseOption(29);
+                            switch (option){
+                                case 1:
+                                    delayedPrint("While raging, the barbarian gains a bite attack.");
+                                    delayedPrint("If used as part of a full attack action, the bite attack is made at the barbarian's full base attack bonus –5. If the bite hits, it deals 1d4 points of damage (assuming the barbarian is Medium; 1d3 points of damage if Small) plus half the barbarian's Strength modifier.");
+                                    delayedPrint("A barbarian can make a bite attack as part of the action to maintain or break free from a grapple.");
+                                    delayedPrint("This attack is resolved before the grapple check is made. If the bite attack hits, any grapple checks made by the barbarian against the target this round are at a +2 bonus.");
+                                    break;
+                                case 2:
+                                    delayedPrint("A barbarian may reroll a failed Will save.");
+                                    delayedPrint("This power is used as an immediate action after the first save is attempted, but before the results are revealed by the GM.");
+                                    delayedPrint("The barbarian must take the second result, even if it is worse.");
+                                    delayedPrint("A barbarian must be at least 8th level before selecting this power.");
+                                    delayedPrint("This power can only be used once per rage.");
+                                    break;
+                                case 3:
+                                    delayedPrint("While raging, the barbarian is immune to the shaken and frightened conditions.");
+                                    delayedPrint("A barbarian must beat least 12th level before selecting this rage power.");
+                                    break;
+                                case 4:
+                                    delayedPrint("The barbarian gains a +1 dodge bonus to her Armor Class against melee attacks for a number of rounds equal to the barbarian's current Constitution modifier (minimum 1).");
+                                    delayedPrint("This bonus increases by +1 for every 6 levels the barbarian has attained.");
+                                    delayedPrint("Activating this ability is a move action that does not provoke an attack of opportunity.");
+                                    break;
+                                case 5:
+                                    delayedPrint("The barbarian's damage reduction increases by 1/—.");
+                                    delayedPrint("This increase is always active while the barbarian is raging.");
+                                    delayedPrint("A barbarian can select this rage power up to three times. Its effects stack.");
+                                    delayedPrint("A barbarian must be at least 8th level before selecting this rage power.");
+                                    break;
+                                case 6:
+                                    delayedPrint("While raging, the barbarian is immune to the sickened and nauseated conditions.");
+                                    delayedPrint("A barbarian must be at least 8th level before selecting this rage power.");
+                                    break;
+                                case 7:
+                                    delayedPrint("The barbarian can make an Intimidate check against one adjacent foe as a move action.");
+                                    delayedPrint("If the barbarian successfully demoralizes her opponent, the foe is shaken for 1d4 rounds + 1 round for every 5 points by which the barbarian's check exceeds the DC.");
+                                    break;
+                                case 8:
+                                    delayedPrint("Once per round, the barbarian can make a bull rush attempt against one target in place of a melee attack.");
+                                    delayedPrint("If successful, the target takes damage equal to the barbarian's Strength modifier and is moved back as normal.");
+                                    delayedPrint("The barbarian does not need to move with the target if successful.");
+                                    delayedPrint("This does not provoke an attack of opportunity.");
+                                    break;
+                                case 9:
+                                    delayedPrint("The barbarian's senses sharpen and she gains low-light vision while raging.");
+                                    break;
+                            }
+                        }
+                        break;
+                }
+                break;
+            case 8:
+                delayedPrint("Although dwarven adventurers are rare compared to humans, they can be found in most regions of the world.");
+                delayedPrint("Dwarves often leave the confines of their redoubts to seek glory for their clans, to find wealth with which to enrich the fortress-homes of their birth, or to reclaim fallen dwarven citadels from racial enemies.");
+                delayedPrint("Dwarven warfare is often characterized by tunnel fighting and melee combat, and as such most dwarves tend toward classes such as fighters and barbarians.");
+                break;
+            case 9:
+                delayedPrint("Although dwarven adventurers are rare compared to humans, they can be found in most regions of the world.");
+                delayedPrint("Dwarves often leave the confines of their redoubts to seek glory for their clans, to find wealth with which to enrich the fortress-homes of their birth, or to reclaim fallen dwarven citadels from racial enemies.");
+                delayedPrint("Dwarven warfare is often characterized by tunnel fighting and melee combat, and as such most dwarves tend toward classes such as fighters and barbarians.");
+                break;
+            case 10:
+                delayedPrint("Although dwarven adventurers are rare compared to humans, they can be found in most regions of the world.");
+                delayedPrint("Dwarves often leave the confines of their redoubts to seek glory for their clans, to find wealth with which to enrich the fortress-homes of their birth, or to reclaim fallen dwarven citadels from racial enemies.");
+                delayedPrint("Dwarven warfare is often characterized by tunnel fighting and melee combat, and as such most dwarves tend toward classes such as fighters and barbarians.");
+                break;
+        }
+        raceDwarf();
+
+    }
+
+    private static void classBard() {
+    }
+
+    private static void classCleric() {
+    }
+
+    private static void classDruid() {
+    }
+
+    private static void classFighter() {
+    }
+
+    private static void classMonk() {
+    }
+
+    private static void classPaladin() {
+    }
+
+    private static void classRanger() {
+    }
+
+    private static void classRogue() {
+    }
+
+    private static void classSorcerer() {
+    }
+
+    private static void classWizard() {
+    }
+
+    private static void setClassCustom() {
+    }
+
 }

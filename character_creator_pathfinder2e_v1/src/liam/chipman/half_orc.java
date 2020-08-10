@@ -4,7 +4,7 @@ class half_orc extends race{
 
     public half_orc(player player){
         player.race = "Half Orc";
-        player.level = 1;
+        player.total_level = 1;
         Main.delayedPrint("As a half-orc you get +2 to one ability score");
         Main.delayedPrint("1. Strength");
         Main.delayedPrint("2. Dexterity");

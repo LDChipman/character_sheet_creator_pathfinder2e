@@ -4,7 +4,7 @@ class halfling extends race{
 
     public halfling(player player){
         player.race = "Halfling";
-        player.level = 1;
+        player.total_level = 1;
         player.dex_score += 2;
         player.cha_score += 2;
         player.str_score -= 2;

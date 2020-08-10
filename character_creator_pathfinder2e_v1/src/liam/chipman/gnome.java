@@ -4,7 +4,7 @@ class gnome extends race{
 
     public gnome(player player){
         player.race = "Gnome";
-        player.level = 1;
+        player.total_level = 1;
         player.con_score += 2;
         player.cha_score += 2;
         player.str_score -= 2;
@@ -14,7 +14,7 @@ class gnome extends race{
         player.traits_and_features.add(addRacialTrait("Defensive Training", "+4 bonus to AC vs. giants", "You get a +4 dodge bonus to AC against monsters of the giant subtype."));
         player.traits_and_features.add(addRacialTrait("Gnome Magic", "+1 to DC saving throws for illusion spells you cast", "You add +1 to the DC of any saving throws against illusion spells that you cast."));
         if (player.cha_score >= 11){
-            player.traits_and_features.add(addRacialTrait("Gnome Magic Abilities", "dancing lights, ghost sound, prestidigitation, and speak with animals", "1/day—dancing lights, ghost sound, prestidigitation, and speak with animals. Caster level: " + player.level + ". DC: 10 + the spell level + " + player.calcAbilityScoreModifier(player.cha_score)));
+            player.traits_and_features.add(addRacialTrait("Gnome Magic Abilities", "dancing lights, ghost sound, prestidigitation, and speak with animals", "1/day—dancing lights, ghost sound, prestidigitation, and speak with animals. Caster level: " + player.total_level + ". DC: 10 + the spell level + " + player.calcAbilityScoreModifier(player.cha_score)));
         }
         player.traits_and_features.add(addRacialTrait("Hatred", "+1 to hit vs. reptilian and goblinoids", "You receive a +1 bonus on attack rolls against humanoid creatures of the reptilian and goblinoid subtype due to special training against these hated foes."));
         player.traits_and_features.add(addRacialTrait("Illusion Resistance", "+2 on saving throws vs. illusion", "You get a +2 racial saving throw bonus against illusion spells or effects."));

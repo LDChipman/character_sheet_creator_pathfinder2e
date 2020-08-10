@@ -4,7 +4,7 @@ class half_elf extends race{
 
     public half_elf(player player){
         player.race = "Half Elf";
-        player.level = 1;
+        player.total_level = 1;
         Main.delayedPrint("As a half-elf you get +2 to one ability score");
         Main.delayedPrint("1. Strength");
         Main.delayedPrint("2. Dexterity");

@@ -130,7 +130,7 @@ class custom_race extends race{
     }
 
     public custom_race(player player){
-        player.level = 1;
+        player.total_level = 1;
         player.size = "Medium";
         player.speed = 30;
         player.vision = "You have no changes to vision";

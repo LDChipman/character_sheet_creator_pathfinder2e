@@ -5,7 +5,7 @@ import java.util.List;
 
 class player{
 
-    int level;
+    int total_level;
 
     //ability scores
     int str_score;
@@ -28,7 +28,7 @@ class player{
 
     List languages;
 
-    List traits_and_features;
+    List<trait_or_feature> traits_and_features;
 
     int calcAbilityScoreModifier(int ability_score){
         if (ability_score % 2 == 1) {
@@ -37,31 +37,38 @@ class player{
         return (ability_score - 10) / 2;
     }
 
-    void printEverything(){
-        System.out.println("Level: " + this.level);
-        System.out.println("Strength: " + this.str_score);
-        System.out.println("Dexterity: " + this.dex_score);
-        System.out.println("Constitution: " + this.con_score);
-        System.out.println("Intelligence: " + this.int_score);
-        System.out.println("Wisdom: " + this.wis_score);
-        System.out.println("Charisma: " + this.cha_score);
-        System.out.println("Race: " + this.race);
-        System.out.println("Size: " + this.size);
-        System.out.println("Speed: " + this.speed);
-        System.out.println("Vision: " + this.vision);
-        System.out.println("Proficiencies: " + this.proficiencies);
-        System.out.println("Languages: " + this.languages);
-        System.out.println("Traits and Features:");
-//        trait_or_feature test = new traits_and_features.get(1);
-        for (int i = 0; i < this.traits_and_features.size(); i++){
-            System.out.println("Name: " + this.traits_and_features.get(i));
+    public String toString(){
+
+        StringBuilder info = new StringBuilder();
+        info.append("Total Level: ").append(this.total_level).append("\n");
+        info.append("Strength: ").append(this.str_score).append("\n");
+        info.append("Dexterity: ").append(this.dex_score).append("\n");
+        info.append("Constitution: ").append(this.con_score).append("\n");
+        info.append("Intelligence: ").append(this.int_score).append("\n");
+        info.append("Wisdom: ").append(this.wis_score).append("\n");
+        info.append("Charisma: ").append(this.cha_score).append("\n");
+        info.append("Race: ").append(this.race).append("\n");
+        info.append("Size: ").append(this.size).append("\n");
+        info.append("Speed: ").append(this.speed).append("\n");
+        info.append("Vision: ").append(this.vision).append("\n");
+        info.append("Proficiencies: ").append(this.proficiencies).append("\n");
+        info.append("Languages: ").append(this.languages).append("\n");
+        info.append("Traits and Features:" + "\n");
+        for (trait_or_feature traits_and_feature : this.traits_and_features) {
+            info.append("\n");
+            info.append("Name: ").append(traits_and_feature.name).append("\n");
+            info.append("Type: ").append(traits_and_feature.type).append("\n");
+            info.append("Short Description: ").append(traits_and_feature.short_desc).append("\n");
+            info.append("Description: ").append(traits_and_feature.desc).append("\n");
+            info.append("\n");
         }
+        return info.toString();
     }
 
     public player() {
         proficiencies = new ArrayList();
         languages = new ArrayList();
-        traits_and_features = new ArrayList();
+        traits_and_features = new ArrayList<trait_or_feature>();
     }
 
 }

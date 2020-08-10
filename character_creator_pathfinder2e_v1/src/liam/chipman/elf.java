@@ -4,7 +4,7 @@ class elf extends race{
 
     public elf(player player){
         player.race = "Elf";
-        player.level = 1;
+        player.total_level = 1;
         player.dex_score += 2;
         player.int_score += 2;
         player.con_score -= 2;
