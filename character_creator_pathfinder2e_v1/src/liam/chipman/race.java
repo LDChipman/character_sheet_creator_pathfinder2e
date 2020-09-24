@@ -8,7 +8,7 @@ class race {
     }
 
     void addLanguage(String[] languages, player player){
-        int amount_of_extra_langs = player.calcAbilityScoreModifier(player.int_score);
+        int amount_of_extra_langs = player.calcAbilityScoreModifier(player.getInt_score());
         while (amount_of_extra_langs > 0) {
             int languages_known = 0;
             for (String language : languages) {
@@ -30,7 +30,7 @@ class race {
                 Main.delayedPrint("You already know that language.");
             }
             else {
-                player.languages.add(languages[option - 1]);
+                player.addLanguage(languages[option - 1]);
                 languages[option - 1] += " (Already Known)";
                 amount_of_extra_langs--;
             }

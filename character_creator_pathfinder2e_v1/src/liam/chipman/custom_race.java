@@ -34,7 +34,7 @@ class custom_race extends race{
                         Main.delayedPrint("Please enter how much you'd like your strength to change:");
                         try {
                             Scanner scan = new Scanner(System.in);
-                            player.str_score += scan.nextInt();
+                            player.setStr_score(player.getStr_score() + scan.nextInt());
                         } catch (InputMismatchException e) {
                             Main.delayedPrint("That isn't a number");
                         }
@@ -43,7 +43,7 @@ class custom_race extends race{
                         Main.delayedPrint("Please enter how much you'd like your dexterity to change:");
                         try {
                             Scanner scan = new Scanner(System.in);
-                            player.dex_score += scan.nextInt();
+                            player.setDex_score(player.getDex_score() + scan.nextInt());
                         } catch (InputMismatchException e) {
                             Main.delayedPrint("That isn't a number");
                         }
@@ -52,7 +52,7 @@ class custom_race extends race{
                         Main.delayedPrint("Please enter how much you'd like your constitution to change:");
                         try {
                             Scanner scan = new Scanner(System.in);
-                            player.con_score += scan.nextInt();
+                            player.setCon_score(player.getCon_score() + scan.nextInt());
                         } catch (InputMismatchException e) {
                             Main.delayedPrint("That isn't a number");
                         }
@@ -61,7 +61,7 @@ class custom_race extends race{
                         Main.delayedPrint("Please enter how much you'd like your intelligence to change:");
                         try {
                             Scanner scan = new Scanner(System.in);
-                            player.int_score += scan.nextInt();
+                            player.setInt_score(player.getInt_score() + scan.nextInt());
                         } catch (InputMismatchException e) {
                             Main.delayedPrint("That isn't a number");
                         }
@@ -70,7 +70,7 @@ class custom_race extends race{
                         Main.delayedPrint("Please enter how much you'd like your wisdom to change:");
                         try {
                             Scanner scan = new Scanner(System.in);
-                            player.wis_score += scan.nextInt();
+                            player.setWis_score(player.getWis_score() + scan.nextInt());
                         } catch (InputMismatchException e) {
                             Main.delayedPrint("That isn't a number");
                         }
@@ -79,7 +79,7 @@ class custom_race extends race{
                         Main.delayedPrint("Please enter how much you'd like your charisma to change:");
                         try {
                             Scanner scan = new Scanner(System.in);
-                            player.cha_score += scan.nextInt();
+                            player.setCha_score(player.getCha_score() + scan.nextInt());
                         } catch (InputMismatchException e) {
                             Main.delayedPrint("That isn't a number");
                         }
@@ -89,17 +89,17 @@ class custom_race extends race{
             case 2:
                 Main.delayedPrint("Please enter the size you want to be:");
                 Scanner scan = new Scanner(System.in);
-                player.size += scan.next();
+                player.setSize(scan.next());
                 break;
             case 3:
                 Main.delayedPrint("Please enter the base speed you want to have:");
                 scan = new Scanner(System.in);
-                player.speed += scan.nextInt();
+                player.setSpeed(scan.nextInt());
                 break;
             case 4:
                 Main.delayedPrint("Please enter the vision change you want to have:");
                 scan = new Scanner(System.in);
-                player.size += scan.next();
+                player.setVision(scan.next());
                 break;
             case 5:
                 Main.delayedPrint("Please enter the name of your racial trait:");
@@ -111,17 +111,17 @@ class custom_race extends race{
                 Main.delayedPrint("Please enter a full description of your racial trait:");
                 scan = new Scanner(System.in);
                 String desc = scan.next();
-                player.traits_and_features.add(addRacialTrait(name, short_desc, desc));
+                player.addTrait_or_feature(addRacialTrait(name, short_desc, desc));
                 break;
             case 6:
                 Main.delayedPrint("Please enter the name of the weapon your race is proficient with:");
                 scan = new Scanner(System.in);
-                player.proficiencies.add(scan.next());
+                player.addProficiency(scan.next());
                 break;
             case 7:
                 Main.delayedPrint("Please enter the language you would like to know");
                 scan = new Scanner(System.in);
-                player.languages.add(scan.next());
+                player.addLanguage(scan.next());
                 break;
             case 8:
                 return;
@@ -130,13 +130,13 @@ class custom_race extends race{
     }
 
     public custom_race(player player){
-        player.total_level = 1;
-        player.size = "Medium";
-        player.speed = 30;
-        player.vision = "You have no changes to vision";
+        player.setTotal_level(1);
+        player.setSize("Medium");
+        player.setSpeed(30);
+        player.setVision("You have no changes to vision");
         Main.delayedPrint("Please name your custom race:");
         Scanner scan = new Scanner(System.in);
-        player.race = scan.next();
+        player.setRace(scan.next());
         addToRace(player);
     }
 

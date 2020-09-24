@@ -111,32 +111,8 @@ public class Main {
         delayedPrint("6. " + scores.get(5));
         delayedPrint("Please enter which option you would like to use:");
         int option = chooseOption(6);
-        switch (option) {
-            case 1:
-                character.str_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.str_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-            case 3:
-                character.str_score = (int) scores.get(2);
-                scores.remove(2);
-                break;
-            case 4:
-                character.str_score = (int) scores.get(3);
-                scores.remove(3);
-                break;
-            case 5:
-                character.str_score = (int) scores.get(4);
-                scores.remove(4);
-                break;
-            case 6:
-                character.str_score = (int) scores.get(5);
-                scores.remove(5);
-                break;
-        }
+        character.setStr_score((int) scores.get(option-1));
+        scores.remove(option-1);
 
         delayedPrint("Which one would you like to put in dexterity?");
         delayedPrint("1. " + scores.get(0));
@@ -146,28 +122,8 @@ public class Main {
         delayedPrint("5. " + scores.get(4));
         delayedPrint("Please enter which option you would like to use:");
         option = chooseOption(5);
-        switch (option) {
-            case 1:
-                character.dex_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.dex_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-            case 3:
-                character.dex_score = (int) scores.get(2);
-                scores.remove(2);
-                break;
-            case 4:
-                character.dex_score = (int) scores.get(3);
-                scores.remove(3);
-                break;
-            case 5:
-                character.dex_score = (int) scores.get(4);
-                scores.remove(4);
-                break;
-        }
+        character.setDex_score((int) scores.get(option-1));
+        scores.remove(option-1);
 
         delayedPrint("Which one would you like to put in constitution?");
         delayedPrint("1. " + scores.get(0));
@@ -176,24 +132,8 @@ public class Main {
         delayedPrint("4. " + scores.get(3));
         delayedPrint("Please enter which option you would like to use:");
         option = chooseOption(4);
-        switch (option) {
-            case 1:
-                character.con_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.con_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-            case 3:
-                character.con_score = (int) scores.get(2);
-                scores.remove(2);
-                break;
-            case 4:
-                character.con_score = (int) scores.get(3);
-                scores.remove(3);
-                break;
-        }
+        character.setCon_score((int) scores.get(option-1));
+        scores.remove(option-1);
 
         delayedPrint("Which one would you like to put in Intelligence?");
         delayedPrint("1. " + scores.get(0));
@@ -201,45 +141,26 @@ public class Main {
         delayedPrint("3. " + scores.get(2));
         delayedPrint("Please enter which option you would like to use:");
         option = chooseOption(3);
-        switch (option) {
-            case 1:
-                character.int_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.int_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-            case 3:
-                character.int_score = (int) scores.get(2);
-                scores.remove(2);
-                break;
-        }
+        character.setInt_score((int) scores.get(option-1));
+        scores.remove(option-1);
 
         delayedPrint("Which one would you like to put in Wisdom?");
         delayedPrint("1. " + scores.get(0));
         delayedPrint("2. " + scores.get(1));
         delayedPrint("Please enter which option you would like to use:");
         option = chooseOption(2);
-        switch (option) {
-            case 1:
-                character.wis_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.wis_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-        }
-        character.cha_score = (int) scores.get(0);
+        character.setWis_score((int) scores.get(option-1));
+        scores.remove(option-1);
+                
+        character.setCha_score((int) scores.get(0));
         scores.remove(0);
         delayedPrint("Your ability scores:");
-        delayedPrint("Strength: " + character.str_score);
-        delayedPrint("Dexterity: " + character.dex_score);
-        delayedPrint("Constitution: " + character.con_score);
-        delayedPrint("Intelligence: " + character.int_score);
-        delayedPrint("Wisdom: " + character.wis_score);
-        delayedPrint("Charisma: " + character.cha_score);
+        delayedPrint("Strength: " + character.getStr_score());
+        delayedPrint("Dexterity: " + character.getDex_score());
+        delayedPrint("Constitution: " + character.getCon_score());
+        delayedPrint("Intelligence: " + character.getInt_score());
+        delayedPrint("Wisdom: " + character.getWis_score());
+        delayedPrint("Charisma: " + character.getCha_score());
         delayedPrint("Do you like your ability scores or would you like to re-roll your ability scores?");
         delayedPrint("1. Keep ability scores and move on to the next step");
         delayedPrint("2. Re-roll your ability scores");
@@ -299,32 +220,8 @@ public class Main {
         delayedPrint("6. " + scores.get(5));
         delayedPrint("Please enter which option you would like to use:");
         int option = chooseOption(6);
-        switch (option) {
-            case 1:
-                character.str_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.str_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-            case 3:
-                character.str_score = (int) scores.get(2);
-                scores.remove(2);
-                break;
-            case 4:
-                character.str_score = (int) scores.get(3);
-                scores.remove(3);
-                break;
-            case 5:
-                character.str_score = (int) scores.get(4);
-                scores.remove(4);
-                break;
-            case 6:
-                character.str_score = (int) scores.get(5);
-                scores.remove(5);
-                break;
-        }
+        character.setStr_score((int) scores.get(option-1));
+        scores.remove(option-1);
 
         delayedPrint("Which one would you like to put in dexterity?");
         delayedPrint("1. " + scores.get(0));
@@ -334,28 +231,8 @@ public class Main {
         delayedPrint("5. " + scores.get(4));
         delayedPrint("Please enter which option you would like to use:");
         option = chooseOption(5);
-        switch (option) {
-            case 1:
-                character.dex_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.dex_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-            case 3:
-                character.dex_score = (int) scores.get(2);
-                scores.remove(2);
-                break;
-            case 4:
-                character.dex_score = (int) scores.get(3);
-                scores.remove(3);
-                break;
-            case 5:
-                character.dex_score = (int) scores.get(4);
-                scores.remove(4);
-                break;
-        }
+        character.setDex_score((int) scores.get(option-1));
+        scores.remove(option-1);
 
         delayedPrint("Which one would you like to put in constitution?");
         delayedPrint("1. " + scores.get(0));
@@ -364,24 +241,8 @@ public class Main {
         delayedPrint("4. " + scores.get(3));
         delayedPrint("Please enter which option you would like to use:");
         option = chooseOption(4);
-        switch (option) {
-            case 1:
-                character.con_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.con_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-            case 3:
-                character.con_score = (int) scores.get(2);
-                scores.remove(2);
-                break;
-            case 4:
-                character.con_score = (int) scores.get(3);
-                scores.remove(3);
-                break;
-        }
+        character.setCon_score((int) scores.get(option-1));
+        scores.remove(option-1);
 
         delayedPrint("Which one would you like to put in Intelligence?");
         delayedPrint("1. " + scores.get(0));
@@ -389,45 +250,26 @@ public class Main {
         delayedPrint("3. " + scores.get(2));
         delayedPrint("Please enter which option you would like to use:");
         option = chooseOption(3);
-        switch (option) {
-            case 1:
-                character.int_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.int_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-            case 3:
-                character.int_score = (int) scores.get(2);
-                scores.remove(2);
-                break;
-        }
+        character.setInt_score((int) scores.get(option-1));
+        scores.remove(option-1);
 
         delayedPrint("Which one would you like to put in Wisdom?");
         delayedPrint("1. " + scores.get(0));
         delayedPrint("2. " + scores.get(1));
         delayedPrint("Please enter which option you would like to use:");
         option = chooseOption(2);
-        switch (option) {
-            case 1:
-                character.wis_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.wis_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-        }
-        character.cha_score = (int) scores.get(0);
+        character.setWis_score((int) scores.get(option-1));
+        scores.remove(option-1);
+        
+        character.setCha_score((int) scores.get(0));
         scores.remove(0);
         delayedPrint("Your ability scores:");
-        delayedPrint("Strength: " + character.str_score);
-        delayedPrint("Dexterity: " + character.dex_score);
-        delayedPrint("Constitution: " + character.con_score);
-        delayedPrint("Intelligence: " + character.int_score);
-        delayedPrint("Wisdom: " + character.wis_score);
-        delayedPrint("Charisma: " + character.cha_score);
+        delayedPrint("Strength: " + character.getStr_score());
+        delayedPrint("Dexterity: " + character.getDex_score());
+        delayedPrint("Constitution: " + character.getCon_score());
+        delayedPrint("Intelligence: " + character.getInt_score());
+        delayedPrint("Wisdom: " + character.getWis_score());
+        delayedPrint("Charisma: " + character.getCha_score());
         delayedPrint("Do you like your ability scores or would you like to re-roll your ability scores?");
         delayedPrint("1. Keep ability scores and move on to the next step");
         delayedPrint("2. Re-roll your ability scores");
@@ -471,32 +313,8 @@ public class Main {
         delayedPrint("6. " + scores.get(5));
         delayedPrint("Please enter which option you would like to use:");
         int option = chooseOption(6);
-        switch (option) {
-            case 1:
-                character.str_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.str_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-            case 3:
-                character.str_score = (int) scores.get(2);
-                scores.remove(2);
-                break;
-            case 4:
-                character.str_score = (int) scores.get(3);
-                scores.remove(3);
-                break;
-            case 5:
-                character.str_score = (int) scores.get(4);
-                scores.remove(4);
-                break;
-            case 6:
-                character.str_score = (int) scores.get(5);
-                scores.remove(5);
-                break;
-        }
+        character.setStr_score((int) scores.get(option-1));
+        scores.remove(option-1);
 
         delayedPrint("Which one would you like to put in dexterity?");
         delayedPrint("1. " + scores.get(0));
@@ -506,28 +324,8 @@ public class Main {
         delayedPrint("5. " + scores.get(4));
         delayedPrint("Please enter which option you would like to use:");
         option = chooseOption(5);
-        switch (option) {
-            case 1:
-                character.dex_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.dex_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-            case 3:
-                character.dex_score = (int) scores.get(2);
-                scores.remove(2);
-                break;
-            case 4:
-                character.dex_score = (int) scores.get(3);
-                scores.remove(3);
-                break;
-            case 5:
-                character.dex_score = (int) scores.get(4);
-                scores.remove(4);
-                break;
-        }
+        character.setDex_score((int) scores.get(option-1));
+        scores.remove(option-1);
 
         delayedPrint("Which one would you like to put in constitution?");
         delayedPrint("1. " + scores.get(0));
@@ -536,24 +334,8 @@ public class Main {
         delayedPrint("4. " + scores.get(3));
         delayedPrint("Please enter which option you would like to use:");
         option = chooseOption(4);
-        switch (option) {
-            case 1:
-                character.con_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.con_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-            case 3:
-                character.con_score = (int) scores.get(2);
-                scores.remove(2);
-                break;
-            case 4:
-                character.con_score = (int) scores.get(3);
-                scores.remove(3);
-                break;
-        }
+        character.setCon_score((int) scores.get(option-1));
+        scores.remove(option-1);
 
         delayedPrint("Which one would you like to put in Intelligence?");
         delayedPrint("1. " + scores.get(0));
@@ -561,45 +343,26 @@ public class Main {
         delayedPrint("3. " + scores.get(2));
         delayedPrint("Please enter which option you would like to use:");
         option = chooseOption(3);
-        switch (option) {
-            case 1:
-                character.int_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.int_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-            case 3:
-                character.int_score = (int) scores.get(2);
-                scores.remove(2);
-                break;
-        }
+        character.setInt_score((int) scores.get(option-1));
+        scores.remove(option-1);
 
         delayedPrint("Which one would you like to put in Wisdom?");
         delayedPrint("1. " + scores.get(0));
         delayedPrint("2. " + scores.get(1));
         delayedPrint("Please enter which option you would like to use:");
         option = chooseOption(2);
-        switch (option) {
-            case 1:
-                character.wis_score = (int) scores.get(0);
-                scores.remove(0);
-                break;
-            case 2:
-                character.wis_score = (int) scores.get(1);
-                scores.remove(1);
-                break;
-        }
-        character.cha_score = (int) scores.get(0);
+        character.setWis_score((int) scores.get(option-1));
+        scores.remove(option-1);
+                
+        character.setCha_score((int) scores.get(0));
         scores.remove(0);
         delayedPrint("Your ability scores:");
-        delayedPrint("Strength: " + character.str_score);
-        delayedPrint("Dexterity: " + character.dex_score);
-        delayedPrint("Constitution: " + character.con_score);
-        delayedPrint("Intelligence: " + character.int_score);
-        delayedPrint("Wisdom: " + character.wis_score);
-        delayedPrint("Charisma: " + character.cha_score);
+        delayedPrint("Strength: " + character.getStr_score());
+        delayedPrint("Dexterity: " + character.getDex_score());
+        delayedPrint("Constitution: " + character.getCon_score());
+        delayedPrint("Intelligence: " + character.getInt_score());
+        delayedPrint("Wisdom: " + character.getWis_score());
+        delayedPrint("Charisma: " + character.getCha_score());
         delayedPrint("Do you like your ability scores or would you like to re-roll your ability scores?");
         delayedPrint("1. Keep ability scores and move on to the next step");
         delayedPrint("2. Re-roll your ability scores");
@@ -827,20 +590,20 @@ public class Main {
                 cha_dice = 6;
                 break;
         }
-        character.str_score = getScoreDicePoolMethod(str_dice);
-        character.dex_score = getScoreDicePoolMethod(dex_dice);
-        character.con_score = getScoreDicePoolMethod(con_dice);
-        character.int_score = getScoreDicePoolMethod(int_dice);
-        character.wis_score = getScoreDicePoolMethod(wis_dice);
-        character.cha_score = getScoreDicePoolMethod(cha_dice);
+        character.setStr_score(getScoreDicePoolMethod(str_dice));
+        character.setDex_score(getScoreDicePoolMethod(dex_dice));
+        character.setCon_score(getScoreDicePoolMethod(con_dice));
+        character.setInt_score(getScoreDicePoolMethod(int_dice));
+        character.setWis_score(getScoreDicePoolMethod(wis_dice));
+        character.setCha_score(getScoreDicePoolMethod(cha_dice));
 
         delayedPrint("Your ability scores:");
-        delayedPrint("Strength: " + character.str_score);
-        delayedPrint("Dexterity: " + character.dex_score);
-        delayedPrint("Constitution: " + character.con_score);
-        delayedPrint("Intelligence: " + character.int_score);
-        delayedPrint("Wisdom: " + character.wis_score);
-        delayedPrint("Charisma: " + character.cha_score);
+        delayedPrint("Strength: " + character.getStr_score());
+        delayedPrint("Dexterity: " + character.getDex_score());
+        delayedPrint("Constitution: " + character.getCon_score());
+        delayedPrint("Intelligence: " + character.getInt_score());
+        delayedPrint("Wisdom: " + character.getWis_score());
+        delayedPrint("Charisma: " + character.getCha_score());
         delayedPrint("Do you like your ability scores or would you like to re-roll your ability scores?");
         delayedPrint("1. Keep ability scores and move on to the next step");
         delayedPrint("2. Re-roll your ability scores");
@@ -875,12 +638,12 @@ public class Main {
     public static void abilityScorePurchaseMethod() {
         delayedPrint("Which ability score would you like to adjust");
         delayedPrint("You have " + points + " points to spend");
-        delayedPrint("1. Strength: " + character.str_score);
-        delayedPrint("2. Dexterity: " + character.dex_score);
-        delayedPrint("3. Constitution: " + character.con_score);
-        delayedPrint("4. Intelligence: " + character.int_score);
-        delayedPrint("5. Wisdom: " + character.wis_score);
-        delayedPrint("6. Charisma: " + character.cha_score);
+        delayedPrint("1. Strength: " + character.getStr_score());
+        delayedPrint("2. Dexterity: " + character.getDex_score());
+        delayedPrint("3. Constitution: " + character.getCon_score());
+        delayedPrint("4. Intelligence: " + character.getInt_score());
+        delayedPrint("5. Wisdom: " + character.getWis_score());
+        delayedPrint("6. Charisma: " + character.getCha_score());
         delayedPrint("7. Finish");
         int option = chooseOption(7);
         switch (option) {
@@ -904,12 +667,12 @@ public class Main {
                 break;
             case 7:
                 delayedPrint("Your ability scores:");
-                delayedPrint("Strength: " + character.str_score);
-                delayedPrint("Dexterity: " + character.dex_score);
-                delayedPrint("Constitution: " + character.con_score);
-                delayedPrint("Intelligence: " + character.int_score);
-                delayedPrint("Wisdom: " + character.wis_score);
-                delayedPrint("Charisma: " + character.cha_score);
+                delayedPrint("Strength: " + character.getStr_score());
+                delayedPrint("Dexterity: " + character.getDex_score());
+                delayedPrint("Constitution: " + character.getCon_score());
+                delayedPrint("Intelligence: " + character.getInt_score());
+                delayedPrint("Wisdom: " + character.getWis_score());
+                delayedPrint("Charisma: " + character.getCha_score());
                 delayedPrint("Do you like your ability scores or would you like to re-roll your ability scores?");
                 delayedPrint("1. Keep ability scores and move on to the next step");
                 delayedPrint("2. Re-roll your ability scores");
@@ -928,12 +691,12 @@ public class Main {
     }
 
     public static void choosePointAmountPurchaseMethod() {
-        character.str_score = 10;
-        character.dex_score = 10;
-        character.con_score = 10;
-        character.int_score = 10;
-        character.wis_score = 10;
-        character.cha_score = 10;
+        character.setStr_score(10);
+        character.setDex_score(10);
+        character.setCon_score(10);
+        character.setInt_score(10);
+        character.setWis_score(10);
+        character.setCha_score(10);
         delayedPrint("Please choose how many points you would like to have");
         delayedPrint("1. Low fantasy 10 Points");
         delayedPrint("2. Standard fantasy 15 Points");
@@ -964,7 +727,7 @@ public class Main {
     public static void changeStrengthPurchaseMethod() {
         delayedPrint("Would you like to increase, decrease, or keep your strength score?");
         delayedPrint("Points remaining: " + points);
-        delayedPrint("Your strength is: " + character.str_score);
+        delayedPrint("Your strength is: " + character.getStr_score());
         delayedPrint("1. Increase");
         delayedPrint("2. Decrease");
         delayedPrint("3. Keep");
@@ -972,7 +735,7 @@ public class Main {
         int option = chooseOption(3);
         switch (option) {
             case 1:
-                switch (character.str_score) {
+                switch (character.getStr_score()) {
                     case 7:
                     case 13:
                     case 14:
@@ -983,7 +746,7 @@ public class Main {
                             break;
                         }
                         points -= 2;
-                        character.str_score++;
+                        character.setStr_score(character.getStr_score() + 1);
                         break;
                     case 8:
                     case 9:
@@ -997,7 +760,7 @@ public class Main {
                             break;
                         }
                         points--;
-                        character.str_score++;
+                        character.setStr_score(character.getStr_score() + 1);
                         break;
                     case 15:
                     case 16:
@@ -1008,7 +771,7 @@ public class Main {
                             break;
                         }
                         points -= 3;
-                        character.str_score++;
+                        character.setStr_score(character.getStr_score() + 1);
                         break;
                     case 17:
                         if (points - 4 < 0) {
@@ -1018,7 +781,7 @@ public class Main {
                             break;
                         }
                         points -= 4;
-                        character.str_score++;
+                        character.setStr_score(character.getStr_score() + 1);
                         break;
                     case 18:
                         delayedPrint("You can't raise an ability score above 18");
@@ -1027,7 +790,7 @@ public class Main {
                 changeStrengthPurchaseMethod();
                 break;
             case 2:
-                switch (character.str_score) {
+                switch (character.getStr_score()) {
                     case 7:
                         delayedPrint("You can't lower an ability below 7");
                         break;
@@ -1035,7 +798,7 @@ public class Main {
                     case 14:
                     case 15:
                         points += 2;
-                        character.str_score--;
+                        character.setStr_score(character.getStr_score() - 1);
                         break;
                     case 9:
                     case 10:
@@ -1043,16 +806,16 @@ public class Main {
                     case 12:
                     case 13:
                         points++;
-                        character.str_score--;
+                        character.setStr_score(character.getStr_score() - 1);
                         break;
                     case 16:
                     case 17:
                         points += 3;
-                        character.str_score--;
+                        character.setStr_score(character.getStr_score() - 1);
                         break;
                     case 18:
                         points += 4;
-                        character.str_score--;
+                        character.setStr_score(character.getStr_score() - 1);
                         break;
                 }
                 changeStrengthPurchaseMethod();
@@ -1065,7 +828,7 @@ public class Main {
     public static void changeDexterityPurchaseMethod() {
         delayedPrint("Would you like to increase, decrease, or keep your dexterity score?");
         delayedPrint("Points remaining: " + points);
-        delayedPrint("Your dexterity is: " + character.dex_score);
+        delayedPrint("Your dexterity is: " + character.getDex_score());
         delayedPrint("1. Increase");
         delayedPrint("2. Decrease");
         delayedPrint("3. Keep");
@@ -1073,7 +836,7 @@ public class Main {
         int option = chooseOption(3);
         switch (option) {
             case 1:
-                switch (character.dex_score) {
+                switch (character.getDex_score()) {
                     case 7:
                     case 13:
                     case 14:
@@ -1084,7 +847,7 @@ public class Main {
                             break;
                         }
                         points -= 2;
-                        character.dex_score++;
+                        character.setDex_score(character.getDex_score() + 1);
                         break;
                     case 8:
                     case 9:
@@ -1098,7 +861,7 @@ public class Main {
                             break;
                         }
                         points--;
-                        character.dex_score++;
+                        character.setDex_score(character.getDex_score() + 1);
                         break;
                     case 15:
                     case 16:
@@ -1109,7 +872,7 @@ public class Main {
                             break;
                         }
                         points -= 3;
-                        character.dex_score++;
+                        character.setDex_score(character.getDex_score() + 1);
                         break;
                     case 17:
                         if (points - 4 < 0) {
@@ -1119,7 +882,7 @@ public class Main {
                             break;
                         }
                         points -= 4;
-                        character.dex_score++;
+                        character.setDex_score(character.getDex_score() + 1);
                         break;
                     case 18:
                         delayedPrint("You can't raise an ability score above 18");
@@ -1128,7 +891,7 @@ public class Main {
                 changeDexterityPurchaseMethod();
                 break;
             case 2:
-                switch (character.dex_score) {
+                switch (character.getDex_score()) {
                     case 7:
                         delayedPrint("You can't lower an ability below 7");
                         break;
@@ -1136,7 +899,7 @@ public class Main {
                     case 14:
                     case 15:
                         points += 2;
-                        character.dex_score--;
+                        character.setDex_score(character.getDex_score() - 1);
                         break;
                     case 9:
                     case 10:
@@ -1144,16 +907,16 @@ public class Main {
                     case 12:
                     case 13:
                         points++;
-                        character.dex_score--;
+                        character.setDex_score(character.getDex_score() - 1);
                         break;
                     case 16:
                     case 17:
                         points += 3;
-                        character.dex_score--;
+                        character.setDex_score(character.getDex_score() - 1);
                         break;
                     case 18:
                         points += 4;
-                        character.dex_score--;
+                        character.setDex_score(character.getDex_score() - 1);
                         break;
                 }
                 changeDexterityPurchaseMethod();
@@ -1166,7 +929,7 @@ public class Main {
     public static void changeConstitutionPurchaseMethod() {
         delayedPrint("Would you like to increase, decrease, or keep your constitution score?");
         delayedPrint("Points remaining: " + points);
-        delayedPrint("Your constitution is: " + character.con_score);
+        delayedPrint("Your constitution is: " + character.getCon_score());
         delayedPrint("1. Increase");
         delayedPrint("2. Decrease");
         delayedPrint("3. Keep");
@@ -1174,7 +937,7 @@ public class Main {
         int option = chooseOption(3);
         switch (option) {
             case 1:
-                switch (character.con_score) {
+                switch (character.getCon_score()) {
                     case 7:
                     case 13:
                     case 14:
@@ -1185,7 +948,7 @@ public class Main {
                             break;
                         }
                         points -= 2;
-                        character.con_score++;
+                        character.setCon_score(character.getCon_score() + 1);
                         break;
                     case 8:
                     case 9:
@@ -1199,7 +962,7 @@ public class Main {
                             break;
                         }
                         points--;
-                        character.con_score++;
+                        character.setCon_score(character.getCon_score() + 1);
                         break;
                     case 15:
                     case 16:
@@ -1210,7 +973,7 @@ public class Main {
                             break;
                         }
                         points -= 3;
-                        character.con_score++;
+                        character.setCon_score(character.getCon_score() + 1);
                         break;
                     case 17:
                         if (points - 4 < 0) {
@@ -1220,7 +983,7 @@ public class Main {
                             break;
                         }
                         points -= 4;
-                        character.con_score++;
+                        character.setCon_score(character.getCon_score() + 1);
                         break;
                     case 18:
                         delayedPrint("You can't raise an ability score above 18");
@@ -1229,7 +992,7 @@ public class Main {
                 changeConstitutionPurchaseMethod();
                 break;
             case 2:
-                switch (character.con_score) {
+                switch (character.getCon_score()) {
                     case 7:
                         delayedPrint("You can't lower an ability below 7");
                         break;
@@ -1237,7 +1000,7 @@ public class Main {
                     case 14:
                     case 15:
                         points += 2;
-                        character.con_score--;
+                        character.setCon_score(character.getCon_score() - 1);
                         break;
                     case 9:
                     case 10:
@@ -1245,16 +1008,16 @@ public class Main {
                     case 12:
                     case 13:
                         points++;
-                        character.con_score--;
+                        character.setCon_score(character.getCon_score() - 1);
                         break;
                     case 16:
                     case 17:
                         points += 3;
-                        character.con_score--;
+                        character.setCon_score(character.getCon_score() - 1);
                         break;
                     case 18:
                         points += 4;
-                        character.con_score--;
+                        character.setCon_score(character.getCon_score() - 1);
                         break;
                 }
                 changeConstitutionPurchaseMethod();
@@ -1267,7 +1030,7 @@ public class Main {
     public static void changeIntelligencePurchaseMethod() {
         delayedPrint("Would you like to increase, decrease, or keep your intelligence score?");
         delayedPrint("Points remaining: " + points);
-        delayedPrint("Your intelligence is: " + character.int_score);
+        delayedPrint("Your intelligence is: " + character.getInt_score());
         delayedPrint("1. Increase");
         delayedPrint("2. Decrease");
         delayedPrint("3. Keep");
@@ -1275,7 +1038,7 @@ public class Main {
         int option = chooseOption(3);
         switch (option) {
             case 1:
-                switch (character.int_score) {
+                switch (character.getInt_score()) {
                     case 7:
                     case 13:
                     case 14:
@@ -1286,7 +1049,7 @@ public class Main {
                             break;
                         }
                         points -= 2;
-                        character.int_score++;
+                        character.setInt_score(character.getInt_score() + 1);
                         break;
                     case 8:
                     case 9:
@@ -1300,7 +1063,7 @@ public class Main {
                             break;
                         }
                         points--;
-                        character.int_score++;
+                        character.setInt_score(character.getInt_score() + 1);
                         break;
                     case 15:
                     case 16:
@@ -1311,7 +1074,7 @@ public class Main {
                             break;
                         }
                         points -= 3;
-                        character.int_score++;
+                        character.setInt_score(character.getInt_score() + 1);
                         break;
                     case 17:
                         if (points - 4 < 0) {
@@ -1321,7 +1084,7 @@ public class Main {
                             break;
                         }
                         points -= 4;
-                        character.int_score++;
+                        character.setInt_score(character.getInt_score() + 1);
                         break;
                     case 18:
                         delayedPrint("You can't raise an ability score above 18");
@@ -1330,7 +1093,7 @@ public class Main {
                 changeIntelligencePurchaseMethod();
                 break;
             case 2:
-                switch (character.int_score) {
+                switch (character.getInt_score()) {
                     case 7:
                         delayedPrint("You can't lower an ability below 7");
                         break;
@@ -1338,7 +1101,7 @@ public class Main {
                     case 14:
                     case 15:
                         points += 2;
-                        character.int_score--;
+                        character.setInt_score(character.getInt_score() - 1);
                         break;
                     case 9:
                     case 10:
@@ -1346,16 +1109,16 @@ public class Main {
                     case 12:
                     case 13:
                         points++;
-                        character.int_score--;
+                        character.setInt_score(character.getInt_score() - 1);
                         break;
                     case 16:
                     case 17:
                         points += 3;
-                        character.int_score--;
+                        character.setInt_score(character.getInt_score() - 1);
                         break;
                     case 18:
                         points += 4;
-                        character.int_score--;
+                        character.setInt_score(character.getInt_score() - 1);
                         break;
                 }
                 changeIntelligencePurchaseMethod();
@@ -1368,7 +1131,7 @@ public class Main {
     public static void changeWisdomPurchaseMethod() {
         delayedPrint("Would you like to increase, decrease, or keep your wisdom score?");
         delayedPrint("Points remaining: " + points);
-        delayedPrint("Your wisdom is: " + character.wis_score);
+        delayedPrint("Your wisdom is: " + character.getWis_score());
         delayedPrint("1. Increase");
         delayedPrint("2. Decrease");
         delayedPrint("3. Keep");
@@ -1376,7 +1139,7 @@ public class Main {
         int option = chooseOption(3);
         switch (option) {
             case 1:
-                switch (character.wis_score) {
+                switch (character.getWis_score()) {
                     case 7:
                     case 13:
                     case 14:
@@ -1387,7 +1150,7 @@ public class Main {
                             break;
                         }
                         points -= 2;
-                        character.wis_score++;
+                        character.setWis_score(character.getWis_score() + 1);
                         break;
                     case 8:
                     case 9:
@@ -1401,7 +1164,7 @@ public class Main {
                             break;
                         }
                         points--;
-                        character.wis_score++;
+                        character.setWis_score(character.getWis_score() + 1);
                         break;
                     case 15:
                     case 16:
@@ -1412,7 +1175,7 @@ public class Main {
                             break;
                         }
                         points -= 3;
-                        character.wis_score++;
+                        character.setWis_score(character.getWis_score() + 1);
                         break;
                     case 17:
                         if (points - 4 < 0) {
@@ -1422,7 +1185,7 @@ public class Main {
                             break;
                         }
                         points -= 4;
-                        character.wis_score++;
+                        character.setWis_score(character.getWis_score() + 1);
                         break;
                     case 18:
                         delayedPrint("You can't raise an ability score above 18");
@@ -1431,7 +1194,7 @@ public class Main {
                 changeWisdomPurchaseMethod();
                 break;
             case 2:
-                switch (character.wis_score) {
+                switch (character.getWis_score()) {
                     case 7:
                         delayedPrint("You can't lower an ability below 7");
                         break;
@@ -1439,7 +1202,7 @@ public class Main {
                     case 14:
                     case 15:
                         points += 2;
-                        character.wis_score--;
+                        character.setWis_score(character.getWis_score() - 1);
                         break;
                     case 9:
                     case 10:
@@ -1447,16 +1210,16 @@ public class Main {
                     case 12:
                     case 13:
                         points++;
-                        character.wis_score--;
+                        character.setWis_score(character.getWis_score() - 1);
                         break;
                     case 16:
                     case 17:
                         points += 3;
-                        character.wis_score--;
+                        character.setWis_score(character.getWis_score() - 1);
                         break;
                     case 18:
                         points += 4;
-                        character.wis_score--;
+                        character.setWis_score(character.getWis_score() - 1);
                         break;
                 }
                 changeWisdomPurchaseMethod();
@@ -1469,7 +1232,7 @@ public class Main {
     public static void changeCharismaPurchaseMethod() {
         delayedPrint("Would you like to increase, decrease, or keep your charisma score?");
         delayedPrint("Points remaining: " + points);
-        delayedPrint("Your charisma is: " + character.cha_score);
+        delayedPrint("Your charisma is: " + character.getCha_score());
         delayedPrint("1. Increase");
         delayedPrint("2. Decrease");
         delayedPrint("3. Keep");
@@ -1477,7 +1240,7 @@ public class Main {
         int option = chooseOption(3);
         switch (option) {
             case 1:
-                switch (character.cha_score) {
+                switch (character.getCha_score()) {
                     case 7:
                     case 13:
                     case 14:
@@ -1488,7 +1251,7 @@ public class Main {
                             break;
                         }
                         points -= 2;
-                        character.cha_score++;
+                        character.setCha_score(character.getCha_score() + 1);
                         break;
                     case 8:
                     case 9:
@@ -1502,7 +1265,7 @@ public class Main {
                             break;
                         }
                         points--;
-                        character.cha_score++;
+                        character.setCha_score(character.getCha_score() + 1);
                         break;
                     case 15:
                     case 16:
@@ -1513,7 +1276,7 @@ public class Main {
                             break;
                         }
                         points -= 3;
-                        character.cha_score++;
+                        character.setCha_score(character.getCha_score() + 1);
                         break;
                     case 17:
                         if (points - 4 < 0) {
@@ -1523,7 +1286,7 @@ public class Main {
                             break;
                         }
                         points -= 4;
-                        character.cha_score++;
+                        character.setCha_score(character.getCha_score() + 1);
                         break;
                     case 18:
                         delayedPrint("You can't raise an ability score above 18");
@@ -1532,7 +1295,7 @@ public class Main {
                 changeCharismaPurchaseMethod();
                 break;
             case 2:
-                switch (character.cha_score) {
+                switch (character.getCha_score()) {
                     case 7:
                         delayedPrint("You can't lower an ability below 7");
                         break;
@@ -1540,7 +1303,7 @@ public class Main {
                     case 14:
                     case 15:
                         points += 2;
-                        character.cha_score--;
+                        character.setCha_score(character.getCha_score() - 1);
                         break;
                     case 9:
                     case 10:
@@ -1548,16 +1311,16 @@ public class Main {
                     case 12:
                     case 13:
                         points++;
-                        character.cha_score--;
+                        character.setCha_score(character.getCha_score() - 1);
                         break;
                     case 16:
                     case 17:
                         points += 3;
-                        character.cha_score--;
+                        character.setCha_score(character.getCha_score() - 1);
                         break;
                     case 18:
                         points += 4;
-                        character.cha_score--;
+                        character.setCha_score(character.getCha_score() - 1);
                         break;
                 }
                 changeCharismaPurchaseMethod();
@@ -1575,12 +1338,12 @@ public class Main {
         setWisdomManualInput();
         setCharismaManualInput();
         delayedPrint("Your ability scores:");
-        delayedPrint("Strength: " + character.str_score);
-        delayedPrint("Dexterity: " + character.dex_score);
-        delayedPrint("Constitution: " + character.con_score);
-        delayedPrint("Intelligence: " + character.int_score);
-        delayedPrint("Wisdom: " + character.wis_score);
-        delayedPrint("Charisma: " + character.cha_score);
+        delayedPrint("Strength: " + character.getStr_score());
+        delayedPrint("Dexterity: " + character.getDex_score());
+        delayedPrint("Constitution: " + character.getCon_score());
+        delayedPrint("Intelligence: " + character.getInt_score());
+        delayedPrint("Wisdom: " + character.getWis_score());
+        delayedPrint("Charisma: " + character.getCha_score());
         delayedPrint("Do you like your ability scores or would you like to re-roll your ability scores?");
         delayedPrint("1. Keep ability scores and move on to the next step");
         delayedPrint("2. Re-roll your ability scores");
@@ -1600,7 +1363,7 @@ public class Main {
         delayedPrint("Please enter what you would like your strength to be:");
         try {
             Scanner scan = new Scanner(System.in);
-            character.str_score = scan.nextInt();
+            character.setStr_score(scan.nextInt());
         } catch (InputMismatchException e) {
             delayedPrint("Please enter a number");
             setStrengthManualInput();
@@ -1611,7 +1374,7 @@ public class Main {
         delayedPrint("Please enter what you would like your dexterity to be:");
         try {
             Scanner scan = new Scanner(System.in);
-            character.dex_score = scan.nextInt();
+            character.setDex_score(scan.nextInt());
         } catch (InputMismatchException e) {
             delayedPrint("Please enter a number");
             setDexterityManualInput();
@@ -1622,7 +1385,7 @@ public class Main {
         delayedPrint("Please enter what you would like your constitution to be:");
         try {
             Scanner scan = new Scanner(System.in);
-            character.con_score = scan.nextInt();
+            character.setCon_score(scan.nextInt());
         } catch (InputMismatchException e) {
             delayedPrint("Please enter a number");
             setConstitutionManualInput();
@@ -1633,7 +1396,7 @@ public class Main {
         delayedPrint("Please enter what you would like your intelligence to be:");
         try {
             Scanner scan = new Scanner(System.in);
-            character.int_score = scan.nextInt();
+            character.setInt_score(scan.nextInt());
         } catch (InputMismatchException e) {
             delayedPrint("Please enter a number");
             setIntelligenceManualInput();
@@ -1644,7 +1407,7 @@ public class Main {
         delayedPrint("Please enter what you would like your wisdom to be:");
         try {
             Scanner scan = new Scanner(System.in);
-            character.wis_score = scan.nextInt();
+            character.setWis_score(scan.nextInt());
         } catch (InputMismatchException e) {
             delayedPrint("Please enter a number");
             setWisdomManualInput();
@@ -1655,7 +1418,7 @@ public class Main {
         delayedPrint("Please enter what you would like your charisma to be:");
         try {
             Scanner scan = new Scanner(System.in);
-            character.cha_score = scan.nextInt();
+            character.setCha_score(scan.nextInt());
         } catch (InputMismatchException e) {
             delayedPrint("Please enter a number");
             setCharismaManualInput();
@@ -2407,7 +2170,6 @@ public class Main {
     }
 
     public static void chooseClass() {
-        System.out.println(character);
         delayedPrint("Classes:");
         delayedPrint("Please choose a class:");
         delayedPrint("1.  Barbarian");
@@ -2469,17 +2231,10 @@ public class Main {
 
         delayedPrint("Barbarian:");
         delayedPrint("What would you like to know about Barbarians?");
-        delayedPrint("1.  Basic Description");
-        delayedPrint("2.  Role");
-        delayedPrint("3.  Alignment");
-        delayedPrint("4.  Hit Die");
-        delayedPrint("5.  Class Skills");
-        delayedPrint("6.  Weapon and Armor Proficiencies");
-        delayedPrint("7.  Class Features");
-        delayedPrint("8.  Base attack bonus and save bonus by level");
-        delayedPrint("9.  Choose Barbarian as your class");
-        delayedPrint("10. Return to Class Screen");
-        int option = chooseOption(10);
+        delayedPrint("1. Basic Description");
+        delayedPrint("2. Choose Barbarian as your class");
+        delayedPrint("3. Return to Class Screen");
+        int option = chooseOption(3);
         switch (option) {
             case 1:
                 delayedPrint("For some, there is only rage. In the ways of their people, in the fury of their passion, in the howl of battle, conflict is all these brutal souls know.");
@@ -2490,311 +2245,14 @@ public class Main {
                 delayedPrint("Within barbarians storms the primal spirit of battle, and woe to those who face their rage.");
                 break;
             case 2:
-                delayedPrint("Barbarians excel in combat, possessing the martial prowess and fortitude to take on foes seemingly far superior to themselves.");
-                delayedPrint("With rage granting them boldness and daring beyond that of most other warriors, barbarians charge furiously into battle and ruin all who would stand in their way.");
+                delayedPrint("You Chose Barbarian");
+                character.setDnd_class("Barbarian");
+                character.resetSkills();
+                dnd_class dnd_class = new dnd_class();
+                dnd_class.addRanks(character);
+                System.out.println(character);
                 break;
             case 3:
-                delayedPrint("Any non-lawful");
-                break;
-            case 4:
-                delayedPrint("12 sided die");
-                break;
-            case 5:
-                delayedPrint("The barbarian's class skills are Acrobatics (Dex), Climb (Str), Craft (Int), Handle Animal (Cha), Intimidate (Cha), Knowledge (nature) (Int), Perception (Wis), Ride (Dex), Survival (Wis), and Swim (Str)");
-                delayedPrint("Skill Ranks: 4 + Your Intelligence Modifier");
-                break;
-            case 6:
-                delayedPrint("A barbarian is proficient with all simple and martial weapons, light armor, medium armor, and shields (except tower shields).");
-                break;
-            case 7:
-                delayedPrint("Class Features:");
-                delayedPrint("1.  Fast Movement");
-                delayedPrint("2.  Rage");
-                delayedPrint("3.  Rage Powers");
-                delayedPrint("4.  Uncanny Dodge");
-                delayedPrint("5.  Trap Sense");
-                delayedPrint("6.  Improved Uncanny Dodge");
-                delayedPrint("7.  Damage Reduction");
-                delayedPrint("8.  Greater Rage");
-                delayedPrint("9.  Indomitable Will");
-                delayedPrint("10. Tireless Rage");
-                delayedPrint("11. Mighty Rage");
-                delayedPrint("12. Return to Barbarian");
-                option = chooseOption(12);
-                switch (option){
-                    case 1:
-                        delayedPrint("A barbarian's land speed is faster than the norm for her race by +10 feet.");
-                        delayedPrint("This benefit applies only when she is wearing no armor, light armor, or medium armor, and not carrying a heavy load.");
-                        delayedPrint("Apply this bonus before modifying the barbarian's speed because of any load carried or armor worn.");
-                        delayedPrint("This bonus stacks with any other bonuses to the barbarian's land speed.");
-                        break;
-                    case 2:
-                        delayedPrint("A barbarian can call upon inner reserves of strength and ferocity, granting her additional combat prowess.");
-                        delayedPrint("Starting at 1st level, a barbarian can rage for a number of rounds per day equal to 4 + her Constitution modifier.");
-                        delayedPrint("At each level after 1st, she can rage for 2 additional rounds.");
-                        delayedPrint("Temporary increases to Constitution, such as those gained from rage and spells like bear's endurance, do not increase the total number of rounds that a barbarian can rage per day.");
-                        delayedPrint("A barbarian can enter rage as a free action.");
-                        delayedPrint("The total number of rounds of rage per day is renewed after resting for 8 hours, although these hours do not need to be consecutive.");
-                        delayedPrint("While in rage, a barbarian gains a +4 morale bonus to her Strength and Constitution, as well as a +2 morale bonus on Will saves.");
-                        delayedPrint("In addition, she takes a –2 penalty to Armor Class.");
-                        delayedPrint("The increase to Constitution grants the barbarian 2 hit points per Hit Dice, but these disappear when the rage ends and are not lost first like temporary hit points.");
-                        delayedPrint("While in rage, a barbarian cannot use any Charisma-, Dexterity-, or Intelligence-based skills (except Acrobatics, Fly, Intimidate, and Ride) or any ability that requires patience or concentration.");
-                        delayedPrint("A barbarian can end her rage as a free action and is fatigued after rage for a number of rounds equal to 2 times the number of rounds spent in the rage.");
-                        delayedPrint("A barbarian cannot enter a new rage while fatigued or exhausted but can otherwise enter rage multiple times during a single encounter or combat.");
-                        delayedPrint("If a barbarian falls unconscious, her rage immediately ends, placing her in peril of death.");
-                        break;
-                    case 3:
-                        delayedPrint("As a barbarian gains levels, she learns to use her rage in new ways.");
-                        delayedPrint("Starting at 2nd level, a barbarian gains a rage power.");
-                        delayedPrint("She gains another rage power for every two levels of barbarian attained after 2nd level.");
-                        delayedPrint("A barbarian gains the benefits of rage powers only while raging, and some of these powers require the barbarian to take an action first.");
-                        delayedPrint("Unless otherwise noted, a barbarian cannot select an individual power more than once.");
-                        boolean break_out_of_the_loop = false;
-                        while (!break_out_of_the_loop){
-                            delayedPrint("Rage Powers:");
-                            delayedPrint("1.  Animal Fury");
-                            delayedPrint("2.  Clear Mind");
-                            delayedPrint("3.  Fearless Rage");
-                            delayedPrint("4.  Guarded Stance");
-                            delayedPrint("5.  Increased Damage Reduction");
-                            delayedPrint("6.  Internal Fortitude");
-                            delayedPrint("7.  Intimidating Glare");
-                            delayedPrint("8.  Knockback");
-                            delayedPrint("9.  Low-Light Vision");
-                            delayedPrint("10. Mighty Swing");
-                            delayedPrint("11. Moment of Clarity");
-                            delayedPrint("12. Night Vision");
-                            delayedPrint("13. No Escape");
-                            delayedPrint("14. Powerful Blow");
-                            delayedPrint("15. Quick Reflexes");
-                            delayedPrint("16. Raging Climber");
-                            delayedPrint("17. Raging Leaper");
-                            delayedPrint("18. Raging Swimmer");
-                            delayedPrint("19. Renewed Vigor");
-                            delayedPrint("20. Rolling Dodge");
-                            delayedPrint("21. Roused Anger");
-                            delayedPrint("22. Scent");
-                            delayedPrint("23. Strength Surge");
-                            delayedPrint("24. Superstition");
-                            delayedPrint("25. Surprise Accuracy");
-                            delayedPrint("26. Swift Foot");
-                            delayedPrint("27. Terrifying Howl");
-                            delayedPrint("28. Unexpected Strike");
-                            delayedPrint("29. Return to Class Features");
-                            option = chooseOption(29);
-                            switch (option){
-                                case 1:
-                                    delayedPrint("While raging, the barbarian gains a bite attack.");
-                                    delayedPrint("If used as part of a full attack action, the bite attack is made at the barbarian's full base attack bonus –5. If the bite hits, it deals 1d4 points of damage (assuming the barbarian is Medium; 1d3 points of damage if Small) plus half the barbarian's Strength modifier.");
-                                    delayedPrint("A barbarian can make a bite attack as part of the action to maintain or break free from a grapple.");
-                                    delayedPrint("This attack is resolved before the grapple check is made. If the bite attack hits, any grapple checks made by the barbarian against the target this round are at a +2 bonus.");
-                                    break;
-                                case 2:
-                                    delayedPrint("A barbarian may reroll a failed Will save.");
-                                    delayedPrint("This power is used as an immediate action after the first save is attempted, but before the results are revealed by the GM.");
-                                    delayedPrint("The barbarian must take the second result, even if it is worse.");
-                                    delayedPrint("A barbarian must be at least 8th level before selecting this power.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 3:
-                                    delayedPrint("While raging, the barbarian is immune to the shaken and frightened conditions.");
-                                    delayedPrint("A barbarian must beat least 12th level before selecting this rage power.");
-                                    break;
-                                case 4:
-                                    delayedPrint("The barbarian gains a +1 dodge bonus to her Armor Class against melee attacks for a number of rounds equal to the barbarian's current Constitution modifier (minimum 1).");
-                                    delayedPrint("This bonus increases by +1 for every 6 levels the barbarian has attained.");
-                                    delayedPrint("Activating this ability is a move action that does not provoke an attack of opportunity.");
-                                    break;
-                                case 5:
-                                    delayedPrint("The barbarian's damage reduction increases by 1/—.");
-                                    delayedPrint("This increase is always active while the barbarian is raging.");
-                                    delayedPrint("A barbarian can select this rage power up to three times. Its effects stack.");
-                                    delayedPrint("A barbarian must be at least 8th level before selecting this rage power.");
-                                    break;
-                                case 6:
-                                    delayedPrint("While raging, the barbarian is immune to the sickened and nauseated conditions.");
-                                    delayedPrint("A barbarian must be at least 8th level before selecting this rage power.");
-                                    break;
-                                case 7:
-                                    delayedPrint("The barbarian can make an Intimidate check against one adjacent foe as a move action.");
-                                    delayedPrint("If the barbarian successfully demoralizes her opponent, the foe is shaken for 1d4 rounds + 1 round for every 5 points by which the barbarian's check exceeds the DC.");
-                                    break;
-                                case 8:
-                                    delayedPrint("Once per round, the barbarian can make a bull rush attempt against one target in place of a melee attack.");
-                                    delayedPrint("If successful, the target takes damage equal to the barbarian's Strength modifier and is moved back as normal.");
-                                    delayedPrint("The barbarian does not need to move with the target if successful.");
-                                    delayedPrint("This does not provoke an attack of opportunity.");
-                                    break;
-                                case 9:
-                                    delayedPrint("The barbarian's senses sharpen and she gains low-light vision while raging.");
-                                    break;
-                                case 10:
-                                    delayedPrint("The barbarian automatically confirms a critical hit.");
-                                    delayedPrint("This power is used as an immediate action once a critical threat has been determined.");
-                                    delayedPrint("A barbarian must be at least 12th level before selecting this power.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 11:
-                                    delayedPrint("The barbarian does not gain any benefits or take any of the penalties from rage for 1 round.");
-                                    delayedPrint("This includes the penalty to Armor Class and the restriction on what actions can be performed.");
-                                    delayedPrint("This round still counts against her total number of rounds of rage per day.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 12:
-                                    delayedPrint("The barbarian's senses grow incredibly sharp while raging and she gains darkvision 60 feet.");
-                                    delayedPrint("A barbarian must have low-light vision as a rage power or a racial trait to select this rage power.");
-                                    break;
-                                case 13:
-                                    delayedPrint("The barbarian can move up to double her normal speed as an immediate action but she can only use this ability when an adjacent foe uses a withdraw action to move away from her.");
-                                    delayedPrint("She must end her movement adjacent to the enemy that used the withdraw action.");
-                                    delayedPrint("The barbarian provokes attacks of opportunity as normal during this movement.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 14:
-                                    delayedPrint("The barbarian gains a +1 bonus on a single damage roll.");
-                                    delayedPrint("This bonus increases by +1 for every 4 levels the barbarian has attained.");
-                                    delayedPrint("This power is used as a swift action before the roll to hit is made.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 15:
-                                    delayedPrint("While raging, the barbarian can make one additional attack of opportunity per round.");
-                                    break;
-                                case 16:
-                                    delayedPrint("When raging, the barbarian adds her level as an enhancement bonus on all Climb skill checks.");
-                                    break;
-                                case 17:
-                                    delayedPrint("When raging, the barbarian adds her level as an enhancement bonus on all Acrobatics skill checks made to jump.");
-                                    delayedPrint("When making a jump in this way, the barbarian is always considered to have a running start.");
-                                    break;
-                                case 18:
-                                    delayedPrint("When raging, the barbarian adds her level as an enhancement bonus on all Swim skill checks.");
-                                    break;
-                                case 19:
-                                    delayedPrint("As a standard action, the barbarian heals 1d8 points of damage + her Constitution modifier.");
-                                    delayedPrint("For every four levels the barbarian has attained above 4th, this amount of damage healed increases by 1d8, to a maximum of 5d8 at 20th level.");
-                                    delayedPrint("A barbarian must be at least 4th level before selecting this power.");
-                                    delayedPrint("This power can be used only once per day and only while raging.");
-                                    break;
-                                case 20:
-                                    delayedPrint("The barbarian gains a +1 dodge bonus to her Armor Class against ranged attacks for a number of rounds equal to the barbarian's current Constitution modifier (minimum 1).");
-                                    delayedPrint("This bonus increases by +1 for every 6 levels the barbarian has attained.");
-                                    delayedPrint("Activating this ability is a move action that does not provoke an attack of opportunity.");
-                                    break;
-                                case 21:
-                                    delayedPrint("The barbarian may enter a rage even if fatigued.");
-                                    delayedPrint("While raging after using this ability, the barbarian is immune to the fatigued condition.");
-                                    delayedPrint("Once this rage ends, the barbarian is exhausted for 10 minutes per round spent raging.");
-                                    break;
-                                case 22:
-                                    delayedPrint("The barbarian gains the scent ability while raging and can use this ability to locate unseen foes.");
-                                    break;
-                                case 23:
-                                    delayedPrint("The barbarian adds her barbarian level on one Strength check or combat maneuver check, or to her Combat Maneuver Defense when an opponent attempts a maneuver against her.");
-                                    delayedPrint("This power is used as an immediate action.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 24:
-                                    delayedPrint("The barbarian gains a +2 morale bonus on saving throws made to resist spells, supernatural abilities, and spell-like abilities.");
-                                    delayedPrint("This bonus increases by +1 for every 4 levels the barbarian has attained.");
-                                    delayedPrint("While raging, the barbarian cannot be a willing target of any spell and must make saving throws to resist all spells, even those cast by allies.");
-                                    break;
-                                case 25:
-                                    delayedPrint("The barbarian gains a +1 morale bonus on one attack roll.");
-                                    delayedPrint("This bonus increases by +1 for every 4 levels the barbarian has attained.");
-                                    delayedPrint("This power is used as a swift action before the roll to hit is made.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 26:
-                                    delayedPrint("The barbarian gains a 5-foot enhancement bonus to her speed.");
-                                    delayedPrint("This increase is always active while the barbarian is raging.");
-                                    delayedPrint("A barbarian can select this rage power up to three times. Its effects stack.");
-                                    break;
-                                case 27:
-                                    delayedPrint("The barbarian unleashes a terrifying howl as a standard action.");
-                                    delayedPrint("All shaken enemies within 30 feet must make a Will save (DC equal to 10 + 1/2 the barbarian's level + the barbarian's Strength modifier) or be panicked for 1d4+1 rounds.");
-                                    delayedPrint("Once an enemy has made a save versus terrifying howl (successful or not), it is immune to this power for 24 hours.");
-                                    delayedPrint("A barbarian must have the intimidating glare rage power to select this rage power.");
-                                    delayedPrint("A barbarian must be at least 8th level before selecting this power.");
-                                    break;
-                                case 28:
-                                    delayedPrint("The barbarian can make an attack of opportunity against a foe that moves into any square threatened by the barbarian, regardless of whether or not that movement would normally provoke an attack of opportunity.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    delayedPrint("A barbarian must be at least 8th level before selecting this power.");
-                                    break;
-                                case 29:
-                                    break_out_of_the_loop = true;
-                                    break;
-                            }
-                        }
-                        break;
-                    case 4:
-                        delayedPrint("At 2nd level, a barbarian gains the ability to react to danger before her senses would normally allow her to do so.");
-                        delayedPrint("She cannot be caught flat-footed, even if the attacker is invisible.");
-                        delayedPrint("She still loses her Dexterity bonus to AC if immobilized.");
-                        delayedPrint("A barbarian with this ability can still lose her Dexterity bonus to AC if an opponent successfully uses the feint action against her.");
-                        delayedPrint("If a barbarian already has uncanny dodge from a different class, she automatically gains improved uncanny dodge instead.");
-                        break;
-                    case 5:
-                        delayedPrint("At 3rd level, a barbarian gains a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to AC against attacks made by traps.");
-                        delayedPrint("These bonuses increase by +1 every three barbarian levels thereafter (6th, 9th, 12th, 15th, and 18th level).");
-                        delayedPrint("Trap sense bonuses gained from multiple classes stack.");
-                        break;
-                    case 6:
-                        delayedPrint("At 5th level and higher, a barbarian can no longer be flanked.");
-                        delayedPrint("This defense denies a rogue the ability to sneak attack the barbarian by flanking her, unless the attacker has at least four more rogue levels than the target has barbarian levels.");
-                        delayedPrint("If a character already has uncanny dodge (see above) from another class, the levels from the classes that grant uncanny dodge stack to determine the minimum rogue level required to flank the character.");
-                        break;
-                    case 7:
-                        delayedPrint("At 7th level, a barbarian gains damage reduction.");
-                        delayedPrint("Subtract 1 from the damage the barbarian takes each time she is dealt damage from a weapon or a natural attack.");
-                        delayedPrint("At 10th level, and every three barbarian levels thereafter (13th, 16th, and 19th level), this damage reduction rises by 1 point.");
-                        delayedPrint("Damage reduction can reduce damage to 0 but not below 0.");
-                        break;
-                    case 8:
-                        delayedPrint("At 11th level, when a barbarian enters rage, the morale bonus to her Strength and Constitution increases to +6 and the morale bonus on her Will saves increases to +3.");
-                        break;
-                    case 9:
-                        delayedPrint("While in rage, a barbarian of 14th level or higher gains a +4 bonus on Will saves to resist enchantment spells.");
-                        delayedPrint("This bonus stacks with all other modifiers, including the morale bonus on Will saves she also receives during her rage.");
-                        break;
-                    case 10:
-                        delayedPrint("Starting at 17th level, a barbarian no longer becomes fatigued at the end of her rage.");
-                        break;
-                    case 11:
-                        delayedPrint("At 20th level, when a barbarian enters rage, the morale bonus to her Strength and Constitution increases to +8 and the morale bonus on her Will saves increases to +4.");
-                        break;
-                    case 12:
-                        chooseClass();
-                        break;
-                }
-                break;
-            case 8:
-                delayedPrint("Level 1: Base Attack Bonus +1, Fort Save +2, Ref Save +0, Will Save +0.");
-                delayedPrint("Level 2: Base Attack Bonus +2, Fort Save +3, Ref Save +0, Will Save +0.");
-                delayedPrint("Level 3: Base Attack Bonus +3, Fort Save +3, Ref Save +1, Will Save +1.");
-                delayedPrint("Level 4: Base Attack Bonus +4, Fort Save +4, Ref Save +1, Will Save +1.");
-                delayedPrint("Level 5: Base Attack Bonus +5, Fort Save +4, Ref Save +1, Will Save +1.");
-                delayedPrint("Level 6: Base Attack Bonus +6/+1, Fort Save +5, Ref Save +2, Will Save +2.");
-                delayedPrint("Level 7: Base Attack Bonus +7/+2, Fort Save +5, Ref Save +2, Will Save +2.");
-                delayedPrint("Level 8: Base Attack Bonus +8/+3, Fort Save +6, Ref Save +2, Will Save +2.");
-                delayedPrint("Level 9: Base Attack Bonus +9/+4, Fort Save +6, Ref Save +3, Will Save +3.");
-                delayedPrint("Level 10: Base Attack Bonus +10/+5, Fort Save +7, Ref Save +3, Will Save +3.");
-                delayedPrint("Level 11: Base Attack Bonus +11/+6/+1, Fort Save +7, Ref Save +3, Will Save +3.");
-                delayedPrint("Level 12: Base Attack Bonus +12/+7/+2, Fort Save +8, Ref Save +4, Will Save +4.");
-                delayedPrint("Level 13: Base Attack Bonus +13/+8/+3, Fort Save +8, Ref Save +4, Will Save +4.");
-                delayedPrint("Level 14: Base Attack Bonus +14/+9/+4, Fort Save +9, Ref Save +4, Will Save +4.");
-                delayedPrint("Level 15: Base Attack Bonus +15/+10/+5, Fort Save +9, Ref Save +5, Will Save +5.");
-                delayedPrint("Level 16: Base Attack Bonus +16/+11/+6/+1, Fort Save +10, Ref Save +5, Will Save +5.");
-                delayedPrint("Level 17: Base Attack Bonus +17/+12/+7/+2, Fort Save +10, Ref Save +5, Will Save +5.");
-                delayedPrint("Level 18: Base Attack Bonus +18/+13/+8/+3, Fort Save +11, Ref Save +6, Will Save +6.");
-                delayedPrint("Level 19: Base Attack Bonus +19/+14/+9/+4, Fort Save +11, Ref Save +6, Will Save +6.");
-                delayedPrint("Level 20: Base Attack Bonus +20/+15/+9/+5, Fort Save +12, Ref Save +6, Will Save +6.");
-                break;
-            case 9:
-                delayedPrint("You chose barbarian");
-                System.exit(-1);
-                break;
-            case 10:
                 chooseClass();
                 break;
         }
@@ -2806,17 +2264,10 @@ public class Main {
 
         delayedPrint("Bard:");
         delayedPrint("What would you like to know about Bards?");
-        delayedPrint("1.  Basic Description");
-        delayedPrint("2.  Role");
-        delayedPrint("3.  Alignment");
-        delayedPrint("4.  Hit Die");
-        delayedPrint("5.  Class Skills");
-        delayedPrint("6.  Weapon and Armor Proficiencies");
-        delayedPrint("7.  Class Features");
-        delayedPrint("8.  Base attack bonus and save bonus by level");
-        delayedPrint("9.  Choose Bard as your class");
-        delayedPrint("10. Return to Class Screen");
-        int option = chooseOption(10);
+        delayedPrint("1. Basic Description");
+        delayedPrint("2. Choose Bard as your class");
+        delayedPrint("3. Return to Class Screen");
+        int option = chooseOption(3);
         switch (option) {
             case 1:
                 delayedPrint("Untold wonders and secrets exist for those skillful enough to discover them.");
@@ -2826,357 +2277,14 @@ public class Main {
                 delayedPrint("For bards, every day brings its own opportunities, adventures, and challenges, and only by bucking the odds, knowing the most, and being the best might they claim the treasures of each.");
                 break;
             case 2:
-                delayedPrint("Bards capably confuse and confound their foes while inspiring their allies to ever-greater daring.");
-                delayedPrint("While accomplished with both weapons and magic, the true strength of bards lies outside melee, where they can support their companions and undermine their foes without fear of interruptions to their performances.");
+                delayedPrint("You chose Bard");
                 break;
             case 3:
-                delayedPrint("Any");
-                break;
-            case 4:
-                delayedPrint("8 sided die");
-                break;
-            case 5:
-                delayedPrint("The bard's class skills are Acrobatics (Dex), Appraise (Int), Bluff (Cha), Climb (Str), Craft (Int), Diplomacy (Cha), Disguise (Cha), Escape Artist (Dex), Intimidate (Cha), Knowledge (all) (Int), Linguistics (Int), Perception (Wis), Perform (Cha), Profession (Wis), Sense Motive (Wis), Sleight of Hand (Dex), Spellcraft (Int), Stealth (Dex), and Use Magic Device (Cha).");
-                delayedPrint("Skill Ranks: 6 + Your Intelligence Modifier");
-                break;
-            case 6:
-                delayedPrint("A bard is proficient with all simple weapons, plus the longsword, rapier, sap, short sword, shortbow, and whip. Bards are also proficient with light armor and shields (except tower shields).");
-                delayedPrint("A bard can cast bard spells while wearing light armor and use a shield without incurring the normal arcane spell failure chance.");
-                delayedPrint("Like any other arcane spellcaster, a bard wearing medium or heavy armor incurs a chance of arcane spell failure if the spell in question has a somatic component.");
-                delayedPrint("A multiclass bard still incurs the normal arcane spell failure chance for arcane spells received from other classes.");
-                break;
-            case 7:
-                delayedPrint("Class Features:");
-                delayedPrint("1. Spells");
-                delayedPrint("2. Bardic Knowledge");
-                delayedPrint("3. Bardic Performance");
-                delayedPrint("4. Versatile Performance");
-                delayedPrint("5. Well-Versed");
-                delayedPrint("6. Lore Master");
-                delayedPrint("7. Jack-of-All-Trades");
-                delayedPrint("8. Return to Bard");
-                option = chooseOption(12);
-                switch (option){
-                    case 1:
-                        delayedPrint("A bard casts arcane spells drawn from the bard spell list.");
-                        delayedPrint("He can cast any spell he knows without preparing it ahead of time.");
-                        delayedPrint("Every bard spell has a verbal component (song, recitation, or music).");
-                        delayedPrint("To learn or cast a spell, a bard must have a Charisma score equal to at least 10 + the spell level.");
-                        delayedPrint("The Difficulty Class for a saving throw against a bard's spell is 10 + the spell level + the bard's Charisma modifier.");
-                        delayedPrint("Like other spellcasters, a bard can cast only a certain number of spells of each spell level per day.");
-                        delayedPrint("His base daily spell allotment is:");
-                        delayedPrint("Spells per Day:");
-                        delayedPrint("Level 1: 1 1st level spell");
-                        delayedPrint("Level 2: 2 1st level spells");
-                        delayedPrint("Level 3: 3 1st level spells");
-                        delayedPrint("Level 4: 3 1st level spells and 1 2nd level spell");
-                        delayedPrint("Level 5: 4 1st level spells and 2 2nd level spells");
-                        delayedPrint("Level 6: 4 1st level spells and 3 2nd level spells");
-                        delayedPrint("Level 7: 4 1st level spells, 3 2nd level spells, and 1 3rd level spell");
-                        delayedPrint("Level 8: 4 1st level spells, 4 2nd level spells, and 2 3rd level spells");
-                        delayedPrint("Level 9: 5 1st level spells, 4 2nd level spells, and 3 3rd level spells");
-                        delayedPrint("Level 10: 5 1st level spells, 4 2nd level spells, 3 3rd level spells, and 1 4th level spell");
-                        delayedPrint("Level 11: 5 1st level spells, 4 2nd level spells, 4 3rd level spells, and 2 4th level spells");
-                        delayedPrint("Level 12: 5 1st level spells, 5 2nd level spells, 4 3rd level spells, and 3 4th level spells");
-                        delayedPrint("Level 13: 5 1st level spells, 5 2nd level spells, 4 3rd level spells, 3 4th level spells, and 1 5th level spell");
-                        delayedPrint("Level 14: 5 1st level spells, 5 2nd level spells, 4 3rd level spells, 4 4th level spells, and 2 5th level spells");
-                        delayedPrint("Level 15: 5 1st level spells, 5 2nd level spells, 5 3rd level spells, 4 4th level spells, and 3 5th level spells");
-                        delayedPrint("Level 16: 5 1st level spells, 5 2nd level spells, 5 3rd level spells, 4 4th level spells, 3 5th level spells, and 1 6th level spells");
-                        delayedPrint("Level 17: 5 1st level spells, 5 2nd level spells, 5 3rd level spells, 4 4th level spells, 4 5th level spells, and 2 6th level spells");
-                        delayedPrint("Level 18: 5 1st level spells, 5 2nd level spells, 5 3rd level spells, 5 4th level spells, 4 5th level spells, and 3 6th level spells");
-                        delayedPrint("Level 19: 5 1st level spells, 5 2nd level spells, 5 3rd level spells, 5 4th level spells, 5 5th level spells, and 4 6th level spells");
-                        delayedPrint("Level 20: 5 1st level spells, 5 2nd level spells, 5 3rd level spells, 5 4th level spells, 5 5th level spells, and 5 6th level spells");
-                        delayedPrint("In addition, he receives bonus spells per day if he has a high Charisma score.");
-                        delayedPrint("The bard's selection of spells is extremely limited.");
-                        delayedPrint("A bard begins play knowing four 0-level spells and two 1st-level spells of the bard's choice.");
-                        delayedPrint("At each new bard level, he gains one or more new spells, as indicated here:");
-                        delayedPrint("Level 1: 4 Cantrips and 2 1st level spells");
-                        delayedPrint("Level 2: 5 Cantrips and 3 1st level spells");
-                        delayedPrint("Level 3: 6 Cantrips and 4 1st level spells");
-                        delayedPrint("Level 4: 6 Cantrips, 4 1st level spells, and 2 2nd level spells");
-                        delayedPrint("Level 5: 6 Cantrips, 4 1st level spells, and 3 2nd level spells");
-                        delayedPrint("Level 6: 6 Cantrips, 4 1st level spells, and 4 2nd level spells");
-                        delayedPrint("Level 7: 6 Cantrips, 5 1st level spells, 4 2nd level spells, and 2 3rd level spells");
-                        delayedPrint("Level 8: 6 Cantrips, 5 1st level spells, 4 2nd level spells, and 3 3rd level spells");
-                        delayedPrint("Level 9: 6 Cantrips, 5 1st level spells, 4 2nd level spells, and 4 3rd level spells");
-                        delayedPrint("Level 10: 6 Cantrips, 5 1st level spells, 5 2nd level spells, 4 3rd level spells, and 2 4th level spells");
-                        delayedPrint("Level 11: 6 Cantrips, 6 1st level spells, 5 2nd level spells, 4 3rd level spells, and 3 4th level spells");
-                        delayedPrint("Level 12: 6 Cantrips, 6 1st level spells, 5 2nd level spells, 4 3rd level spells, and 4 4th level spells");
-                        delayedPrint("Level 13: 6 Cantrips, 6 1st level spells, 5 2nd level spells, 5 3rd level spells, 4 4th level spells, and 2 5th level spells");
-                        delayedPrint("Level 14: 6 Cantrips, 6 1st level spells, 6 2nd level spells, 5 3rd level spells, 4 4th level spells, and 3 5th level spells");
-                        delayedPrint("Level 15: 6 Cantrips, 6 1st level spells, 6 2nd level spells, 5 3rd level spells, 4 4th level spells, and 4 5th level spells");
-                        delayedPrint("Level 16: 6 Cantrips, 6 1st level spells, 6 2nd level spells, 5 3rd level spells, 5 4th level spells, 4 5th level spells, and 2 6th level spells");
-                        delayedPrint("Level 17: 6 Cantrips, 6 1st level spells, 6 2nd level spells, 6 3rd level spells, 5 4th level spells, 4 5th level spells, and 3 6th level spells");
-                        delayedPrint("Level 18: 6 Cantrips, 6 1st level spells, 6 2nd level spells, 6 3rd level spells, 5 4th level spells, 4 5th level spells, and 4 6th level spells");
-                        delayedPrint("Level 19: 6 Cantrips, 6 1st level spells, 6 2nd level spells, 6 3rd level spells, 5 4th level spells, 5 5th level spells, and 4 6th level spells");
-                        delayedPrint("Level 20: 6 Cantrips, 6 1st level spells, 6 2nd level spells, 6 3rd level spells, 6 4th level spells, 5 5th level spells, and 5 6th level spells");
-                        delayedPrint("(Unlike spells per day, the number of spells a bard knows is not affected by his Charisma score. The number of Bard Spells Known are fixed.)");
-                        delayedPrint("Upon reaching 5th level, and at every third bard level after that (8th, 11th, and so on), a bard can choose to learn a new spell in place of one he already knows.");
-                        delayedPrint("In effect, the bard “loses” the old spell in exchange for the new one.");
-                        delayedPrint("The new spell's level must be the same as that of the spell being exchanged, and it must be at least one level lower than the highest-level bard spell the bard can cast.");
-                        delayedPrint("A bard may swap only a single spell at any given level and must choose whether or not to swap the spell at the same time that he gains new spells known for the level.");
-                        delayedPrint("A bard need not prepare his spells in advance.");
-                        delayedPrint("He can cast any spell he knows at any time, assuming he has not yet used up his allotment of spells per day for the spell's level.");
-                        break;
-                    case 2:
-                        delayedPrint("A bard adds half his class level (minimum 1) to all Knowledge skill checks and may make all Knowledge skill checks untrained.");
-                        break;
-                    case 3:
-                        delayedPrint("A bard is trained to use the Perform skill to create magical effects on those around him, including himself if desired.");
-                        delayedPrint("He can use this ability for a number of rounds per day equal to 4 + his Charisma modifier.");
-                        delayedPrint("At each level after 1st a bard can use bardic performance for 2 additional rounds per day.");
-                        delayedPrint("Each round, the bard can produce any one of the types of bardic performance that he has mastered, as indicated by his level.");
-                        delayedPrint("Starting a bardic performance is a standard action, but it can be maintained each round as a free action.");
-                        delayedPrint("Changing a bardic performance from one effect to another requires the bard to stop the previous performance and start a new one as a standard action.");
-                        delayedPrint("A bardic performance cannot be disrupted, but it ends immediately if the bard is killed, paralyzed, stunned, knocked unconscious, or otherwise prevented from taking a free action to maintain it each round.");
-                        delayedPrint("A bard cannot have more than one bardic performance in effect at one time.");
-                        delayedPrint("At 7th level, a bard can start a bardic performance as a move action instead of a standard action.");
-                        delayedPrint("At 13th level, a bard can start a bardic performance as a swift action.");
-                        delayedPrint("Each bardic performance has audible components, visual components, or both.");
-                        delayedPrint("If a bardic performance has audible components, the targets must be able to hear the bard for the performance to have any effect, and such performances are language dependent.");
-                        delayedPrint("A deaf bard has a 20% chance to fail when attempting to use a bardic performance with an audible component.");
-                        delayedPrint("If he fails this check, the attempt still counts against his daily limit.");
-                        delayedPrint("Deaf creatures are immune to bardic performances with audible components.");
-                        delayedPrint("If a bardic performance has a visual component, the targets must have line of sight to the bard for the performance to have any effect.");
-                        delayedPrint("A blind bard has a 50% chance to fail when attempting to use a bardic performance with a visual component.");
-                        delayedPrint("If he fails this check, the attempt still counts against his daily limit.");
-                        delayedPrint("Blind creatures are immune to bardic performances with visual components.");
-                        boolean break_out_of_the_loop = false;
-                        while (!break_out_of_the_loop){
-                            delayedPrint("Bardic Performances:");
-                            delayedPrint("1.  Countersong");
-                            delayedPrint("2.  Distraction");
-                            delayedPrint("3.  Fascinate");
-                            delayedPrint("4.  Inspire Courage");
-                            delayedPrint("5.  Inspire Competence");
-                            delayedPrint("6.  Suggestion");
-                            delayedPrint("7.  Dirge of Doom");
-                            delayedPrint("8.  Inspire Greatness");
-                            delayedPrint("9.  Soothing Performance");
-                            delayedPrint("10. Frightening Tune");
-                            delayedPrint("11. Inspire Heroics");
-                            delayedPrint("12. Mass Suggestion");
-                            delayedPrint("13. Deadly Performance");
-                            delayedPrint("14. Return to Class Features");
-                            option = chooseOption(14);
-                            switch (option){
-                                case 1:
-                                    delayedPrint("At 1st level, a bard learns to counter magic effects that depend on sound (but not spells that have verbal components).");
-                                    delayedPrint("Each round of the countersong he makes a Perform (keyboard, percussion, wind, string, or sing) skill check.");
-                                    delayedPrint("Any creature within 30 feet of the bard (including the bard himself) that is affected by a sonic or language-dependent magical attack may use the bard's Perform check result in place of its saving throw if, after the saving throw is rolled, the Perform check result proves to be higher.");
-                                    delayedPrint("If a creature within range of the countersong is already under the effect of a noninstantaneous sonic or language-dependent magical attack, it gains another saving throw against the effect each round it hears the countersong, but it must use the bard's Perform skill check result for the save.");
-                                    delayedPrint("Countersong does not work on effects that don't allow saves. Countersong relies on audible components.");
-                                    break;
-                                case 2:
-                                    delayedPrint("A barbarian may reroll a failed Will save.");
-                                    delayedPrint("This power is used as an immediate action after the first save is attempted, but before the results are revealed by the GM.");
-                                    delayedPrint("The barbarian must take the second result, even if it is worse.");
-                                    delayedPrint("A barbarian must be at least 8th level before selecting this power.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 3:
-                                    delayedPrint("While raging, the barbarian is immune to the shaken and frightened conditions.");
-                                    delayedPrint("A barbarian must beat least 12th level before selecting this rage power.");
-                                    break;
-                                case 4:
-                                    delayedPrint("The barbarian gains a +1 dodge bonus to her Armor Class against melee attacks for a number of rounds equal to the barbarian's current Constitution modifier (minimum 1).");
-                                    delayedPrint("This bonus increases by +1 for every 6 levels the barbarian has attained.");
-                                    delayedPrint("Activating this ability is a move action that does not provoke an attack of opportunity.");
-                                    break;
-                                case 5:
-                                    delayedPrint("The barbarian's damage reduction increases by 1/—.");
-                                    delayedPrint("This increase is always active while the barbarian is raging.");
-                                    delayedPrint("A barbarian can select this rage power up to three times. Its effects stack.");
-                                    delayedPrint("A barbarian must be at least 8th level before selecting this rage power.");
-                                    break;
-                                case 6:
-                                    delayedPrint("While raging, the barbarian is immune to the sickened and nauseated conditions.");
-                                    delayedPrint("A barbarian must be at least 8th level before selecting this rage power.");
-                                    break;
-                                case 7:
-                                    delayedPrint("The barbarian can make an Intimidate check against one adjacent foe as a move action.");
-                                    delayedPrint("If the barbarian successfully demoralizes her opponent, the foe is shaken for 1d4 rounds + 1 round for every 5 points by which the barbarian's check exceeds the DC.");
-                                    break;
-                                case 8:
-                                    delayedPrint("Once per round, the barbarian can make a bull rush attempt against one target in place of a melee attack.");
-                                    delayedPrint("If successful, the target takes damage equal to the barbarian's Strength modifier and is moved back as normal.");
-                                    delayedPrint("The barbarian does not need to move with the target if successful.");
-                                    delayedPrint("This does not provoke an attack of opportunity.");
-                                    break;
-                                case 9:
-                                    delayedPrint("The barbarian's senses sharpen and she gains low-light vision while raging.");
-                                    break;
-                                case 10:
-                                    delayedPrint("The barbarian automatically confirms a critical hit.");
-                                    delayedPrint("This power is used as an immediate action once a critical threat has been determined.");
-                                    delayedPrint("A barbarian must be at least 12th level before selecting this power.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 11:
-                                    delayedPrint("The barbarian does not gain any benefits or take any of the penalties from rage for 1 round.");
-                                    delayedPrint("This includes the penalty to Armor Class and the restriction on what actions can be performed.");
-                                    delayedPrint("This round still counts against her total number of rounds of rage per day.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 12:
-                                    delayedPrint("The barbarian's senses grow incredibly sharp while raging and she gains darkvision 60 feet.");
-                                    delayedPrint("A barbarian must have low-light vision as a rage power or a racial trait to select this rage power.");
-                                    break;
-                                case 13:
-                                    delayedPrint("The barbarian can move up to double her normal speed as an immediate action but she can only use this ability when an adjacent foe uses a withdraw action to move away from her.");
-                                    delayedPrint("She must end her movement adjacent to the enemy that used the withdraw action.");
-                                    delayedPrint("The barbarian provokes attacks of opportunity as normal during this movement.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 14:
-                                    delayedPrint("The barbarian gains a +1 bonus on a single damage roll.");
-                                    delayedPrint("This bonus increases by +1 for every 4 levels the barbarian has attained.");
-                                    delayedPrint("This power is used as a swift action before the roll to hit is made.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 15:
-                                    delayedPrint("While raging, the barbarian can make one additional attack of opportunity per round.");
-                                    break;
-                                case 16:
-                                    delayedPrint("When raging, the barbarian adds her level as an enhancement bonus on all Climb skill checks.");
-                                    break;
-                                case 17:
-                                    delayedPrint("When raging, the barbarian adds her level as an enhancement bonus on all Acrobatics skill checks made to jump.");
-                                    delayedPrint("When making a jump in this way, the barbarian is always considered to have a running start.");
-                                    break;
-                                case 18:
-                                    delayedPrint("When raging, the barbarian adds her level as an enhancement bonus on all Swim skill checks.");
-                                    break;
-                                case 19:
-                                    delayedPrint("As a standard action, the barbarian heals 1d8 points of damage + her Constitution modifier.");
-                                    delayedPrint("For every four levels the barbarian has attained above 4th, this amount of damage healed increases by 1d8, to a maximum of 5d8 at 20th level.");
-                                    delayedPrint("A barbarian must be at least 4th level before selecting this power.");
-                                    delayedPrint("This power can be used only once per day and only while raging.");
-                                    break;
-                                case 20:
-                                    delayedPrint("The barbarian gains a +1 dodge bonus to her Armor Class against ranged attacks for a number of rounds equal to the barbarian's current Constitution modifier (minimum 1).");
-                                    delayedPrint("This bonus increases by +1 for every 6 levels the barbarian has attained.");
-                                    delayedPrint("Activating this ability is a move action that does not provoke an attack of opportunity.");
-                                    break;
-                                case 21:
-                                    delayedPrint("The barbarian may enter a rage even if fatigued.");
-                                    delayedPrint("While raging after using this ability, the barbarian is immune to the fatigued condition.");
-                                    delayedPrint("Once this rage ends, the barbarian is exhausted for 10 minutes per round spent raging.");
-                                    break;
-                                case 22:
-                                    delayedPrint("The barbarian gains the scent ability while raging and can use this ability to locate unseen foes.");
-                                    break;
-                                case 23:
-                                    delayedPrint("The barbarian adds her barbarian level on one Strength check or combat maneuver check, or to her Combat Maneuver Defense when an opponent attempts a maneuver against her.");
-                                    delayedPrint("This power is used as an immediate action.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 24:
-                                    delayedPrint("The barbarian gains a +2 morale bonus on saving throws made to resist spells, supernatural abilities, and spell-like abilities.");
-                                    delayedPrint("This bonus increases by +1 for every 4 levels the barbarian has attained.");
-                                    delayedPrint("While raging, the barbarian cannot be a willing target of any spell and must make saving throws to resist all spells, even those cast by allies.");
-                                    break;
-                                case 25:
-                                    delayedPrint("The barbarian gains a +1 morale bonus on one attack roll.");
-                                    delayedPrint("This bonus increases by +1 for every 4 levels the barbarian has attained.");
-                                    delayedPrint("This power is used as a swift action before the roll to hit is made.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    break;
-                                case 26:
-                                    delayedPrint("The barbarian gains a 5-foot enhancement bonus to her speed.");
-                                    delayedPrint("This increase is always active while the barbarian is raging.");
-                                    delayedPrint("A barbarian can select this rage power up to three times. Its effects stack.");
-                                    break;
-                                case 27:
-                                    delayedPrint("The barbarian unleashes a terrifying howl as a standard action.");
-                                    delayedPrint("All shaken enemies within 30 feet must make a Will save (DC equal to 10 + 1/2 the barbarian's level + the barbarian's Strength modifier) or be panicked for 1d4+1 rounds.");
-                                    delayedPrint("Once an enemy has made a save versus terrifying howl (successful or not), it is immune to this power for 24 hours.");
-                                    delayedPrint("A barbarian must have the intimidating glare rage power to select this rage power.");
-                                    delayedPrint("A barbarian must be at least 8th level before selecting this power.");
-                                    break;
-                                case 28:
-                                    delayedPrint("The barbarian can make an attack of opportunity against a foe that moves into any square threatened by the barbarian, regardless of whether or not that movement would normally provoke an attack of opportunity.");
-                                    delayedPrint("This power can only be used once per rage.");
-                                    delayedPrint("A barbarian must be at least 8th level before selecting this power.");
-                                    break;
-                                case 29:
-                                    break_out_of_the_loop = true;
-                                    break;
-                            }
-                        }
-                        break;
-                    case 4:
-                        delayedPrint("At 2nd level, a barbarian gains the ability to react to danger before her senses would normally allow her to do so.");
-                        delayedPrint("She cannot be caught flat-footed, even if the attacker is invisible.");
-                        delayedPrint("She still loses her Dexterity bonus to AC if immobilized.");
-                        delayedPrint("A barbarian with this ability can still lose her Dexterity bonus to AC if an opponent successfully uses the feint action against her.");
-                        delayedPrint("If a barbarian already has uncanny dodge from a different class, she automatically gains improved uncanny dodge instead.");
-                        break;
-                    case 5:
-                        delayedPrint("At 3rd level, a barbarian gains a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to AC against attacks made by traps.");
-                        delayedPrint("These bonuses increase by +1 every three barbarian levels thereafter (6th, 9th, 12th, 15th, and 18th level).");
-                        delayedPrint("Trap sense bonuses gained from multiple classes stack.");
-                        break;
-                    case 6:
-                        delayedPrint("At 5th level and higher, a barbarian can no longer be flanked.");
-                        delayedPrint("This defense denies a rogue the ability to sneak attack the barbarian by flanking her, unless the attacker has at least four more rogue levels than the target has barbarian levels.");
-                        delayedPrint("If a character already has uncanny dodge (see above) from another class, the levels from the classes that grant uncanny dodge stack to determine the minimum rogue level required to flank the character.");
-                        break;
-                    case 7:
-                        delayedPrint("At 7th level, a barbarian gains damage reduction.");
-                        delayedPrint("Subtract 1 from the damage the barbarian takes each time she is dealt damage from a weapon or a natural attack.");
-                        delayedPrint("At 10th level, and every three barbarian levels thereafter (13th, 16th, and 19th level), this damage reduction rises by 1 point.");
-                        delayedPrint("Damage reduction can reduce damage to 0 but not below 0.");
-                        break;
-                    case 8:
-                        delayedPrint("At 11th level, when a barbarian enters rage, the morale bonus to her Strength and Constitution increases to +6 and the morale bonus on her Will saves increases to +3.");
-                        break;
-                    case 9:
-                        delayedPrint("While in rage, a barbarian of 14th level or higher gains a +4 bonus on Will saves to resist enchantment spells.");
-                        delayedPrint("This bonus stacks with all other modifiers, including the morale bonus on Will saves she also receives during her rage.");
-                        break;
-                    case 10:
-                        delayedPrint("Starting at 17th level, a barbarian no longer becomes fatigued at the end of her rage.");
-                        break;
-                    case 11:
-                        delayedPrint("At 20th level, when a barbarian enters rage, the morale bonus to her Strength and Constitution increases to +8 and the morale bonus on her Will saves increases to +4.");
-                        break;
-                    case 12:
-                        chooseClass();
-                        break;
-                }
-                break;
-            case 8:
-                delayedPrint("Level 1: Base Attack Bonus +1, Fort Save +2, Ref Save +0, Will Save +0.");
-                delayedPrint("Level 2: Base Attack Bonus +2, Fort Save +3, Ref Save +0, Will Save +0.");
-                delayedPrint("Level 3: Base Attack Bonus +3, Fort Save +3, Ref Save +1, Will Save +1.");
-                delayedPrint("Level 4: Base Attack Bonus +4, Fort Save +4, Ref Save +1, Will Save +1.");
-                delayedPrint("Level 5: Base Attack Bonus +5, Fort Save +4, Ref Save +1, Will Save +1.");
-                delayedPrint("Level 6: Base Attack Bonus +6/+1, Fort Save +5, Ref Save +2, Will Save +2.");
-                delayedPrint("Level 7: Base Attack Bonus +7/+2, Fort Save +5, Ref Save +2, Will Save +2.");
-                delayedPrint("Level 8: Base Attack Bonus +8/+3, Fort Save +6, Ref Save +2, Will Save +2.");
-                delayedPrint("Level 9: Base Attack Bonus +9/+4, Fort Save +6, Ref Save +3, Will Save +3.");
-                delayedPrint("Level 10: Base Attack Bonus +10/+5, Fort Save +7, Ref Save +3, Will Save +3.");
-                delayedPrint("Level 11: Base Attack Bonus +11/+6/+1, Fort Save +7, Ref Save +3, Will Save +3.");
-                delayedPrint("Level 12: Base Attack Bonus +12/+7/+2, Fort Save +8, Ref Save +4, Will Save +4.");
-                delayedPrint("Level 13: Base Attack Bonus +13/+8/+3, Fort Save +8, Ref Save +4, Will Save +4.");
-                delayedPrint("Level 14: Base Attack Bonus +14/+9/+4, Fort Save +9, Ref Save +4, Will Save +4.");
-                delayedPrint("Level 15: Base Attack Bonus +15/+10/+5, Fort Save +9, Ref Save +5, Will Save +5.");
-                delayedPrint("Level 16: Base Attack Bonus +16/+11/+6/+1, Fort Save +10, Ref Save +5, Will Save +5.");
-                delayedPrint("Level 17: Base Attack Bonus +17/+12/+7/+2, Fort Save +10, Ref Save +5, Will Save +5.");
-                delayedPrint("Level 18: Base Attack Bonus +18/+13/+8/+3, Fort Save +11, Ref Save +6, Will Save +6.");
-                delayedPrint("Level 19: Base Attack Bonus +19/+14/+9/+4, Fort Save +11, Ref Save +6, Will Save +6.");
-                delayedPrint("Level 20: Base Attack Bonus +20/+15/+9/+5, Fort Save +12, Ref Save +6, Will Save +6.");
-                break;
-            case 9:
-                delayedPrint("You chose barbarian");
-                System.exit(-1);
-                break;
-            case 10:
                 chooseClass();
                 break;
+
         }
-        classBarbarian();
+        classBard();
 
     }
 
