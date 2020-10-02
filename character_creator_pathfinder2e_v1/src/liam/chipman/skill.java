@@ -2,11 +2,19 @@ package liam.chipman;
 
 class skill {
     private String name;
-    private int ability_mod;
     private int ranks;
     private int misc_mod;
     private boolean is_class_skill;
     private boolean trained_only;
+    private String ability_score_used;
+
+    public String getAbility_score_used() {
+        return ability_score_used;
+    }
+
+    public void setAbility_score_used(String ability_score_used) {
+        this.ability_score_used = ability_score_used;
+    }
 
     public String getName() {
         return name;
@@ -14,14 +22,6 @@ class skill {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getAbility_mod() {
-        return ability_mod;
-    }
-
-    public void setAbility_mod(int ability_mod) {
-        this.ability_mod = ability_mod;
     }
 
     public int getRanks() {
@@ -56,7 +56,30 @@ class skill {
         this.trained_only = trained_only;
     }
 
-    int calcSkillBonus(){
+    int calcSkillBonus(player player){
+        int ability_mod;
+        switch (ability_score_used){
+            case "str":
+                ability_mod = player.calcAbilityScoreModifier(player.getStr_score());
+                break;
+            case "dex":
+                ability_mod = player.calcAbilityScoreModifier(player.getDex_score());
+                break;
+            case "con":
+                ability_mod = player.calcAbilityScoreModifier(player.getCon_score());
+                break;
+            case "int":
+                ability_mod = player.calcAbilityScoreModifier(player.getInt_score());
+                break;
+            case "wis":
+                ability_mod = player.calcAbilityScoreModifier(player.getWis_score());
+                break;
+            case "cha":
+                ability_mod = player.calcAbilityScoreModifier(player.getCha_score());
+                break;
+            default:
+                ability_mod = 0;
+        }
         if (trained_only && ranks <= 0){
             Main.delayedPrint("You Can't Use This Skill.");
         }
@@ -71,12 +94,12 @@ class skill {
         }
     }
 
-    skill (String name, int ability_mod, int ranks, int misc_mod, boolean is_class_skill, boolean trained_only) {
+    skill (String name, int ranks, int misc_mod, boolean is_class_skill, boolean trained_only, String ability_score_used) {
         this.name = name;
-        this.ability_mod = ability_mod;
         this.ranks = ranks;
         this.misc_mod = misc_mod;
         this.is_class_skill = is_class_skill;
         this.trained_only = trained_only;
+        this.ability_score_used = ability_score_used;
     }
 }

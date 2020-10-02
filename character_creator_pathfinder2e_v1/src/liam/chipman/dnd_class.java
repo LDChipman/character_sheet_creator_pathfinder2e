@@ -25,7 +25,7 @@ class dnd_class {
                 break;
         }
         skill_ranks = player.calcAbilityScoreModifier(player.getInt_score()) + skill_ranks;
-        if (player.getRace() == "Human"){
+        if (player.getRace().equals("Human")){
             skill_ranks += 1;
         }
         while (skill_ranks > 0) {

@@ -41,6 +41,11 @@ class half_elf extends race{
         player.addTrait_or_feature(addRacialTrait("Elf Blood", "You count as both elven and human", "You count as both elves and humans for any effect related to race."));
         player.addTrait_or_feature(addRacialTrait("Elven Immunities", "You are immune to magical sleep and get +2 on saving throws vs. enchantments", "You are immune to magic sleep effects and get a +2 racial saving throw bonus against enchantment spells and effects."));
         player.addTrait_or_feature(addRacialTrait("Keen Senses", "+2 to Perception", "You receive a +2 racial bonus on Perception skill checks."));
+        for (int i = 0; i < player.getSkills().size(); i++){
+            if (player.getSkills().get(i).getName().equals("Perception")){
+                player.getSkills().get(i).setMisc_mod(player.getSkills().get(i).getMisc_mod() + 2);
+            }
+        }
         player.addTrait_or_feature(addRacialTrait("Multitalented", "You choose two favored classes at first level", "You choose two favored classes at first level and gain +1 hit point or +1 skill point whenever you take a level in either one of those classes."));
         player.addLanguage("Common");
         player.addLanguage("Elven");

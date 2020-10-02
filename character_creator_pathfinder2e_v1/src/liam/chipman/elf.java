@@ -14,6 +14,11 @@ class elf extends race{
         player.addTrait_or_feature(addRacialTrait("Elven Immunities", "You are immune to magical sleep and get +2 on saving throws vs. enchantments", "You are immune to magic sleep effects and get a +2 racial saving throw bonus against enchantment spells and effects."));
         player.addTrait_or_feature(addRacialTrait("Elven Magic", "+2 vs. spell resistance, +2 spellcraft to find out the magic properties of an item", "You receive a +2 racial bonus on caster level checks made to overcome spell resistance. In addition, you receive a +2 racial bonus on Spellcraft skill checks made to identify the properties of magic items."));
         player.addTrait_or_feature(addRacialTrait("Keen Senses", "+2 to Perception", "You receive a +2 racial bonus on Perception skill checks."));
+        for (int i = 0; i < player.getSkills().size(); i++){
+            if (player.getSkills().get(i).getName().equals("Perception")){
+                player.getSkills().get(i).setMisc_mod(player.getSkills().get(i).getMisc_mod() + 2);
+            }
+        }
         player.addProficiency("longbows (including composite longbows)");
         player.addProficiency("longswords");
         player.addProficiency("rapiers");

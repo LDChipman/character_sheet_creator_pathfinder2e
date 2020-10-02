@@ -2246,10 +2246,7 @@ public class Main {
                 break;
             case 2:
                 delayedPrint("You Chose Barbarian");
-                character.setDnd_class("Barbarian");
-                character.resetSkills();
-                dnd_class dnd_class = new dnd_class();
-                dnd_class.addRanks(character);
+                new barbarian(character);
                 System.out.println(character);
                 break;
             case 3:
@@ -2278,6 +2275,8 @@ public class Main {
                 break;
             case 2:
                 delayedPrint("You chose Bard");
+                new bard(character);
+                System.out.println(character);
                 break;
             case 3:
                 chooseClass();
@@ -2289,6 +2288,32 @@ public class Main {
     }
 
     private static void classCleric() {
+        delayedPrint("Cleric:");
+        delayedPrint("What would you like to know about Clerics?");
+        delayedPrint("1. Basic Description");
+        delayedPrint("2. Choose Cleric as your class");
+        delayedPrint("3. Return to Class Screen");
+        int option = chooseOption(3);
+        switch (option) {
+            case 1:
+                delayedPrint("In faith and the miracles of the divine, many find a greater purpose.");
+                delayedPrint("Called to serve powers beyond most mortal understanding, all priests preach wonders and provide for the spiritual needs of their people.");
+                delayedPrint("Clerics are more than mere priests, though; these emissaries of the divine work the will of their deities through strength of arms and the magic of their gods.");
+                delayedPrint("Devoted to the tenets of the religions and philosophies that inspire them, these ecclesiastics quest to spread the knowledge and influence of their faith.");
+                delayedPrint("Yet while they might share similar abilities, clerics prove as different from one another as the divinities they serve, with some offering healing and redemption, others judging law and truth, and still others spreading conflict and corruption.");
+                delayedPrint("The ways of the cleric are varied, yet all who tread these paths walk with the mightiest of allies and bear the arms of the gods themselves.");
+                break;
+            case 2:
+                delayedPrint("You chose Cleric");
+                new cleric(character);
+                System.out.println(character);
+                break;
+            case 3:
+                chooseClass();
+                break;
+
+        }
+        classCleric();
     }
 
     private static void classDruid() {

@@ -19,7 +19,31 @@ class gnome extends race{
         player.addTrait_or_feature(addRacialTrait("Hatred", "+1 to hit vs. reptilian and goblinoids", "You receive a +1 bonus on attack rolls against humanoid creatures of the reptilian and goblinoid subtype due to special training against these hated foes."));
         player.addTrait_or_feature(addRacialTrait("Illusion Resistance", "+2 on saving throws vs. illusion", "You get a +2 racial saving throw bonus against illusion spells or effects."));
         player.addTrait_or_feature(addRacialTrait("Keen Senses", "+2 to Perception", "You receive a +2 racial bonus on Perception skill checks."));
+        for (int i = 0; i < player.getSkills().size(); i++){
+            if (player.getSkills().get(i).getName().equals("Perception")){
+                player.getSkills().get(i).setMisc_mod(player.getSkills().get(i).getMisc_mod() + 2);
+            }
+        }
         player.addTrait_or_feature(addRacialTrait("Obsessive", "+2 to Craft or Profession", "Gnomes receive a +2 racial bonus on a Craft or Profession skill of their choice."));
+        Main.delayedPrint("As a Gnome you get a +2 bonus to Craft or Profession");
+        Main.delayedPrint("1. Craft");
+        Main.delayedPrint("2. Profession");
+        int option = Main.chooseOption(2);
+        switch (option){
+            case 1:
+                for (int i = 0; i < player.getSkills().size(); i++){
+                    if (player.getSkills().get(i).getName().equals("Craft")){
+                        player.getSkills().get(i).setMisc_mod(player.getSkills().get(i).getMisc_mod() + 2);
+                    }
+                }
+                break;
+            case 2:
+                for (int i = 0; i < player.getSkills().size(); i++){
+                    if (player.getSkills().get(i).getName().equals("Profession")){
+                        player.getSkills().get(i).setMisc_mod(player.getSkills().get(i).getMisc_mod() + 2);
+                    }
+                }
+        }
         player.addProficiency("you treat any weapon with the name \"gnome\" in its name as a martial weapon.");
         player.addLanguage("Common");
         player.addLanguage("Gnome");

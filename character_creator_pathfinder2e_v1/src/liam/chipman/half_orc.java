@@ -38,6 +38,11 @@ class half_orc extends race{
         player.setSpeed(30);
         player.setVision("You can see in the dark up to 60 feet.");
         player.addTrait_or_feature(addRacialTrait("Intimidating", "+2 to intimidation", "Half-orcs receive a +2 racial bonus on Intimidate skill checks due to their fearsome nature."));
+        for (int i = 0; i < player.getSkills().size(); i++){
+            if (player.getSkills().get(i).getName().equals("Intimidation")){
+                player.getSkills().get(i).setMisc_mod(player.getSkills().get(i).getMisc_mod() + 2);
+            }
+        }
         player.addTrait_or_feature(addRacialTrait("Orc Blood", "You count as both orc and human", "You count as both orc and humans for any effect related to race."));
         player.addTrait_or_feature(addRacialTrait("Orc Ferocity", "Once per day when brought to 0 hp fight for one more round", "Once per day, when a half-orc is brought below 0 hit points but not killed, he can fight on for one more round as if disabled. At the end of his next turn, unless brought to above 0 hit points, he immediately falls unconscious and begins dying."));
         player.addProficiency("greataxes");

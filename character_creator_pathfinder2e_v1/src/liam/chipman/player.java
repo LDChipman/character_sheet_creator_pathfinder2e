@@ -6,6 +6,8 @@ import java.util.List;
 class player{
 
     private int total_level;
+    private String deity;
+    private List<String> domains;
 
     //ability scores
     private int str_score;
@@ -32,6 +34,51 @@ class player{
 
     //Class
     private String dnd_class;
+    private List<String> alignment_restrictions;
+    private List<Integer> hit_dice;
+    private String[] favored_classes;
+    private int base_attack_bonus;
+    private int base_fortitude_save;
+    private int base_reflex_save;
+    private int base_will_save;
+
+    //Spells
+    private int level_1_spells_per_day;
+    private int cantrips_knows;
+    private int level_1_spells_known;
+    private int level_1_domain_spells_per_day;
+
+    public int getBase_attack_bonus() {
+        return base_attack_bonus;
+    }
+
+    public void setBase_attack_bonus(int base_attack_bonus) {
+        this.base_attack_bonus = base_attack_bonus;
+    }
+
+    public int getBase_fortitude_save() {
+        return base_fortitude_save;
+    }
+
+    public void setBase_fortitude_save(int base_fortitude_save) {
+        this.base_fortitude_save = base_fortitude_save;
+    }
+
+    public int getBase_reflex_save() {
+        return base_reflex_save;
+    }
+
+    public void setBase_reflex_save(int base_reflex_save) {
+        this.base_reflex_save = base_reflex_save;
+    }
+
+    public int getBase_will_save() {
+        return base_will_save;
+    }
+
+    public void setBase_will_save(int base_will_save) {
+        this.base_will_save = base_will_save;
+    }
 
     //Skills
     private List<skill> skills;
@@ -179,8 +226,32 @@ class player{
         return skills;
     }
 
+    public List<String> getAlignment_restrictions() {
+        return alignment_restrictions;
+    }
+
+    public void setAlignment_restrictions(List<String> alignment_restrictions) {
+        this.alignment_restrictions = alignment_restrictions;
+    }
+
+    public void addAlignment_restrictions(String alignment_restriction){
+        this.alignment_restrictions.add(alignment_restriction);
+    }
+
     public void setSkills(List<skill> skills) {
         this.skills = skills;
+    }
+
+    public List<Integer> getHit_dice() {
+        return hit_dice;
+    }
+
+    public void setHit_dice(List<Integer> hit_dice) {
+        this.hit_dice = hit_dice;
+    }
+
+    public void addHit_dice(int hit_die){
+        this.hit_dice.add(hit_die);
     }
 
     public String toString(){
@@ -199,6 +270,40 @@ class player{
         info.append("Vision: ").append(this.vision).append("\n");
         info.append("Proficiencies: ").append(this.proficiencies).append("\n");
         info.append("Languages: ").append(this.languages).append("\n");
+        info.append("Class: ").append(this.dnd_class).append("\n");
+        info.append("Base Attack Bonus: ").append(this.base_attack_bonus).append("\n");
+        info.append("Base Fortitude Save: ").append(this.base_fortitude_save).append("\n");
+        info.append("Base Reflex Save: ").append(this.base_reflex_save).append("\n");
+        info.append("Base Will Save: ").append(this.base_will_save).append("\n");
+        info.append("Deity: ").append(this.deity).append("\n");
+        info.append("Level 1 Spells Per Day: ").append(this.level_1_spells_per_day).append("\n");
+        info.append("Level 1 Domain Spells Per Day: ").append(this.level_1_domain_spells_per_day).append("\n");
+        info.append("Cantrips/Orisons Known: ").append(this.cantrips_knows).append("\n");
+        info.append("Level 1 Spells Known: ").append(this.level_1_spells_known).append("\n");
+        info.append("Domains: ");
+        for (String domain : this.domains) {
+            info.append(domain);
+            info.append(" ");
+        }
+        info.append("\n");
+        info.append("Alignment Restriction(s): ");
+        for (String alignment_restriction : this.alignment_restrictions) {
+            info.append(alignment_restriction);
+            info.append(" ");
+        }
+        info.append("\n");
+        info.append("Hit Dice: d");
+        for (Integer hit_die : this.hit_dice) {
+            info.append(hit_die);
+            info.append(" ");
+        }
+        info.append("\n");
+        info.append("Favored Class: ");
+        for (String favored_class : this.favored_classes) {
+            info.append(favored_class);
+            info.append(" ");
+        }
+        info.append("\n");
         info.append("Traits and Features:" + "\n");
         for (trait_or_feature traits_and_feature : this.traits_and_features) {
             info.append("\n");
@@ -212,52 +317,117 @@ class player{
         for (skill skill : this.skills) {
             info.append("\n");
             info.append("Name: ").append(skill.getName()).append("\n");
-            info.append("Ability Modifier: ").append(skill.getAbility_mod()).append("\n");
             info.append("Skill Ranks: ").append(skill.getRanks()).append("\n");
             info.append("Misc Mod: ").append(skill.getMisc_mod()).append("\n");
             info.append("Class Skill: ").append(skill.isIs_class_skill()).append("\n");
             info.append("Trained Only: ").append(skill.isTrained_only()).append("\n");
+            info.append("Ability Score Used: ").append(skill.getAbility_score_used()).append("\n");
             info.append("\n");
         }
         return info.toString();
     }
 
+    public String[] getFavored_classes() {
+        return favored_classes;
+    }
+
+    public void setFavored_classes(String[] favored_classes) {
+        this.favored_classes = favored_classes;
+    }
+
+    public void setFavored_class(int index, String favored_class){
+        this.favored_classes[index] = favored_class;
+    }
+
     public void resetSkills() {
-        skills.add(new skill("Acrobatics",                calcAbilityScoreModifier(dex_score), 0, 0, false, false));
-        skills.add(new skill("Appraise",                  calcAbilityScoreModifier(int_score), 0, 0, false, false));
-        skills.add(new skill("Bluff",                     calcAbilityScoreModifier(cha_score), 0, 0, false, false));
-        skills.add(new skill("Climb",                     calcAbilityScoreModifier(str_score), 0, 0, false, false));
-        skills.add(new skill("Craft",                     calcAbilityScoreModifier(int_score), 0, 0, false, false));
-        skills.add(new skill("Diplomacy",                 calcAbilityScoreModifier(cha_score), 0, 0, false, false));
-        skills.add(new skill("Disable Device",            calcAbilityScoreModifier(dex_score), 0, 0, false, true));
-        skills.add(new skill("Disguise",                  calcAbilityScoreModifier(cha_score), 0, 0, false, false));
-        skills.add(new skill("Escape Artist",             calcAbilityScoreModifier(dex_score), 0, 0, false, false));
-        skills.add(new skill("Fly",                       calcAbilityScoreModifier(dex_score), 0, 0, false, false));
-        skills.add(new skill("Handle Animal",             calcAbilityScoreModifier(cha_score), 0, 0, false, true));
-        skills.add(new skill("Heal",                      calcAbilityScoreModifier(wis_score), 0, 0, false, false));
-        skills.add(new skill("Intimidate",                calcAbilityScoreModifier(cha_score), 0, 0, false, false));
-        skills.add(new skill("Knowledge (Arcana)",        calcAbilityScoreModifier(int_score), 0, 0, false, true));
-        skills.add(new skill("Knowledge (Dungeoneering)", calcAbilityScoreModifier(int_score), 0, 0, false, true));
-        skills.add(new skill("Knowledge (Engineering)",   calcAbilityScoreModifier(int_score), 0, 0, false, true));
-        skills.add(new skill("Knowledge (Geography)",     calcAbilityScoreModifier(int_score), 0, 0, false, true));
-        skills.add(new skill("Knowledge (History)",       calcAbilityScoreModifier(int_score), 0, 0, false, true));
-        skills.add(new skill("Knowledge (Local)",         calcAbilityScoreModifier(int_score), 0, 0, false, true));
-        skills.add(new skill("Knowledge (Nature)",        calcAbilityScoreModifier(int_score), 0, 0, false, true));
-        skills.add(new skill("Knowledge (Nobility)",      calcAbilityScoreModifier(int_score), 0, 0, false, true));
-        skills.add(new skill("Knowledge (Planes)",        calcAbilityScoreModifier(int_score), 0, 0, false, true));
-        skills.add(new skill("Knowledge (Religion)",      calcAbilityScoreModifier(int_score), 0, 0, false, true));
-        skills.add(new skill("Linguistics",               calcAbilityScoreModifier(int_score), 0, 0, false, true));
-        skills.add(new skill("Perception",                calcAbilityScoreModifier(wis_score), 0, 0, false, false));
-        skills.add(new skill("Perform",                   calcAbilityScoreModifier(cha_score), 0, 0, false, false));
-        skills.add(new skill("Profession",                calcAbilityScoreModifier(wis_score), 0, 0, false, false));
-        skills.add(new skill("Ride",                      calcAbilityScoreModifier(dex_score), 0, 0, false, false));
-        skills.add(new skill("Sense Motive",              calcAbilityScoreModifier(wis_score), 0, 0, false, false));
-        skills.add(new skill("Sleight of Hand",           calcAbilityScoreModifier(dex_score), 0, 0, false, true));
-        skills.add(new skill("Spellcraft",                calcAbilityScoreModifier(int_score), 0, 0, false, true));
-        skills.add(new skill("Stealth",                   calcAbilityScoreModifier(dex_score), 0, 0, false, false));
-        skills.add(new skill("Survival",                  calcAbilityScoreModifier(wis_score), 0, 0, false, false));
-        skills.add(new skill("Swim",                      calcAbilityScoreModifier(str_score), 0, 0, false, false));
-        skills.add(new skill("Use Magic Device",          calcAbilityScoreModifier(cha_score), 0, 0, false, true));
+        skills.clear();
+        skills.add(new skill("Acrobatics",                0, 0, false, false, "dex"));
+        skills.add(new skill("Appraise",                  0, 0, false, false, "int"));
+        skills.add(new skill("Bluff",                     0, 0, false, false, "cha"));
+        skills.add(new skill("Climb",                     0, 0, false, false, "str"));
+        skills.add(new skill("Craft",                     0, 0, false, false, "int"));
+        skills.add(new skill("Diplomacy",                 0, 0, false, false, "cha"));
+        skills.add(new skill("Disable Device",            0, 0, false, true, "dex"));
+        skills.add(new skill("Disguise",                  0, 0, false, false, "cha"));
+        skills.add(new skill("Escape Artist",             0, 0, false, false, "dex"));
+        skills.add(new skill("Fly",                       0, 0, false, false, "dex"));
+        skills.add(new skill("Handle Animal",             0, 0, false, true, "cha"));
+        skills.add(new skill("Heal",                      0, 0, false, false, "wis"));
+        skills.add(new skill("Intimidate",                0, 0, false, false, "cha"));
+        skills.add(new skill("Knowledge (Arcana)",        0, 0, false, true, "int"));
+        skills.add(new skill("Knowledge (Dungeoneering)", 0, 0, false, true, "int"));
+        skills.add(new skill("Knowledge (Engineering)",   0, 0, false, true, "int"));
+        skills.add(new skill("Knowledge (Geography)",     0, 0, false, true, "int"));
+        skills.add(new skill("Knowledge (History)",       0, 0, false, true, "int"));
+        skills.add(new skill("Knowledge (Local)",         0, 0, false, true, "int"));
+        skills.add(new skill("Knowledge (Nature)",        0, 0, false, true, "int"));
+        skills.add(new skill("Knowledge (Nobility)",      0, 0, false, true, "int"));
+        skills.add(new skill("Knowledge (Planes)",        0, 0, false, true, "int"));
+        skills.add(new skill("Knowledge (Religion)",      0, 0, false, true, "int"));
+        skills.add(new skill("Linguistics",               0, 0, false, true, "int"));
+        skills.add(new skill("Perception",                0, 0, false, false, "wis"));
+        skills.add(new skill("Perform",                   0, 0, false, false, "cha"));
+        skills.add(new skill("Profession",                0, 0, false, false, "wis"));
+        skills.add(new skill("Ride",                      0, 0, false, false, "dex"));
+        skills.add(new skill("Sense Motive",              0, 0, false, false, "wis"));
+        skills.add(new skill("Sleight of Hand",           0, 0, false, true, "dex"));
+        skills.add(new skill("Spellcraft",                0, 0, false, true, "int"));
+        skills.add(new skill("Stealth",                   0, 0, false, false, "dex"));
+        skills.add(new skill("Survival",                  0, 0, false, false, "wis"));
+        skills.add(new skill("Swim",                      0, 0, false, false, "str"));
+        skills.add(new skill("Use Magic Device",          0, 0, false, true, "cha"));
+    }
+
+    public int getLevel_1_spells_per_day() {
+        return level_1_spells_per_day;
+    }
+
+    public void setLevel_1_spells_per_day(int level_1_spells_per_day) {
+        this.level_1_spells_per_day = level_1_spells_per_day;
+    }
+
+    public int getCantrips_knows() {
+        return cantrips_knows;
+    }
+
+    public void setCantrips_knows(int cantrips_knows) {
+        this.cantrips_knows = cantrips_knows;
+    }
+
+    public int getLevel_1_spells_known() {
+        return level_1_spells_known;
+    }
+
+    public void setLevel_1_spells_known(int level_1_spells_known) {
+        this.level_1_spells_known = level_1_spells_known;
+    }
+
+    public String getDeity() {
+        return deity;
+    }
+
+    public void setDeity(String deity) {
+        this.deity = deity;
+    }
+
+    public List<String> getDomains() {
+        return domains;
+    }
+
+    public void setDomains(List<String> domains) {
+        this.domains = domains;
+    }
+
+    public void addDomain(String domain){
+        this.domains.add(domain);
+    }
+
+    public int getLevel_1_domain_spells_per_day() {
+        return level_1_domain_spells_per_day;
+    }
+
+    public void setLevel_1_domain_spells_per_day(int level_1_domain_spells_per_day) {
+        this.level_1_domain_spells_per_day = level_1_domain_spells_per_day;
     }
 
     public player() {
@@ -265,6 +435,17 @@ class player{
         languages = new ArrayList();
         traits_and_features = new ArrayList<trait_or_feature>();
         skills = new ArrayList<skill>();
+        alignment_restrictions = new ArrayList<String>();
+        hit_dice = new ArrayList<Integer>();
+        favored_classes = new String[2];
+        domains = new ArrayList<String>();
+        resetSkills();
+        this.setBase_fortitude_save(0);
+        this.setBase_reflex_save(0);
+        this.setBase_will_save(0);
+        this.setLevel_1_spells_known(0);
+        this.setCantrips_knows(0);
+        this.setLevel_1_spells_per_day(0);
     }
 
 }
